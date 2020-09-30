@@ -1,0 +1,16 @@
+uuid: fb6c6834-2ceb-4e84-9caa-c184d9c631ab
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _D9q3XSnP6ik9we9UuoTvZsQKPuYNp_G9PfwVtWzgnQ
+id: document
+label: Файл
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_document
+field_map:
+  name: name

@@ -1,0 +1,19 @@
+uuid: da136120-eeae-4033-9068-769be81bdf35
+name: 'Ангелинская Нефтебаза'
+mail: test@test.ru
+slogan: ''
+page:
+  403: /node/2
+  404: /node/3
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''
+phone: '8 (800) 285-65-32'
+email: info@aneft.ru
+address: 'г. Красондар, ул. Талалихина 65/2'
+telegram: anb

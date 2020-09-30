@@ -1,0 +1,23 @@
+name: ANB
+type: theme
+description: 'ANB Theme'
+package: custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: stable
+
+libraries:
+  - anb/global
+  - core/jquery
+  - core/drupal
+
+regions:
+  header_top: Header (Top)
+  header_bottom: Header (Bottom)
+  top_content: Top content
+  content: Page content
+  bottom_content: Bottom content
+  footer: Footer
+
+libraries-override:
+  system/base: false

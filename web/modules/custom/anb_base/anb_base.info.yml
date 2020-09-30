@@ -1,0 +1,6 @@
+name: ANB Base
+type: module
+description: Custom functionality.
+package: custom
+core: 8.x
+core_version_requirement: ^8 || ^9

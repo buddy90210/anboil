@@ -1,0 +1,131 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function anb_base_preprocess_menu(&$variables) {
+  if (!isset($variables['menu_name'])) {
+    return;
+  }
+
+  $menu_name = $variables['menu_name'];
+
+  // Account menu link url.
+  if ($menu_name === 'account') {
+    foreach($variables['items'] as $key => &$item) {
+      // Disable logout link.
+      $link_route_name = $item['url']->getRouteName();
+      if ($link_route_name === 'user.logout') {
+        unset($variables['items'][$key]);
+      }
+
+      // Change user account link title.
+      if ($link_route_name === 'user.page' || $link_route_name === 'user.login') {
+        $item['title'] = [
+          '#theme' => 'account_menu_link',
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * Company information on site information setting form.
+ *
+ * Implements hook_form_FORM_ID_alter(): system_site_information_settings.
+ */
+function anb_base_form_system_site_information_settings_alter(array &$form, FormStateInterface $form_state) {
+  $form['contacts'] = [
+    '#type' => 'details',
+    '#title' => new TranslatableMarkup('Contacts'),
+    '#open' => true,
+    '#weight' => -1,
+  ];
+
+  $form['contacts']['phone'] = [
+    '#type' => 'textfield',
+    '#title' => new TranslatableMarkup('Phone number'),
+    '#default_value' => \Drupal::config('system.site')->get('phone'),
+  ];
+
+  $form['contacts']['email'] = [
+    '#type' => 'textfield',
+    '#title' => new TranslatableMarkup('E-mail'),
+    '#default_value' => \Drupal::config('system.site')->get('email'),
+  ];
+
+  $form['contacts']['address'] = [
+    '#type' => 'textfield',
+    '#title' => new TranslatableMarkup('Address'),
+    '#default_value' => \Drupal::config('system.site')->get('address'),
+  ];
+
+  $form['contacts']['telegram'] = [
+    '#type' => 'textfield',
+    '#title' => new TranslatableMarkup('Telegram'),
+    '#default_value' => \Drupal::config('system.site')->get('telegram'),
+  ];
+
+  $form['#submit'][] = 'anb_base_form_system_site_information_settings_submit';
+}
+
+/**
+ * Update company information on site information setting form submit.
+ */
+function anb_base_form_system_site_information_settings_submit(array &$form, FormStateInterface $form_state) {
+  $configs = ['phone', 'email', 'address', 'telegram'];
+
+  foreach ($configs as $config) {
+    \Drupal::configFactory()->getEditable('system.site')->set($config, $form_state->getValue($config))->save();
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function anb_base_form_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $block = $form_state->getFormObject()->getEntity();
+  $form['has_container'] = [
+    '#type' => 'checkbox',
+    '#title' => 'Содержимое по центру',
+    '#weight' => 1,
+  ];
+
+  $block_settings = $block->getThirdPartySettings('anb_base');
+  if (!empty($block_settings)) {
+    if (isset($block_settings['has_container'])) {
+      $form['has_container']['#default_value'] = $block_settings['has_container'];
+    }
+  }
+
+  $form['actions']['submit']['#submit'][] = 'anb_base_form_block_form_submit';
+}
+
+// Set container variable for a block.
+function anb_base_form_block_form_submit(array &$form, FormStateInterface $form_state) {
+  $block = $form_state->getFormObject()->getEntity();
+  $has_container = $form_state->getValues()['has_container'];
+
+  $block->setThirdPartySetting('anb_base', 'has_container', $has_container);
+  $block->save();
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function anb_base_preprocess_block(&$variables) {
+  if (!empty($variables['elements']['#id'])) {
+    $block = Block::load($variables['elements']['#id']);
+    if ($block && $has_container = $block->getThirdPartySetting('anb_base', 'has_container')) {
+      $variables['has_container'] = true;
+    }
+  }
+}

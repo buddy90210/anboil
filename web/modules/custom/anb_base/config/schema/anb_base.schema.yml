@@ -1,0 +1,16 @@
+system.site:
+  type: config_object
+  label: 'Contacts'
+  mapping:
+    phone:
+      type: string
+      label: 'Phone'
+    email:
+      type: string
+      label: 'E-mail'
+    address:
+      type: string
+      label: 'Address'
+    telegram:
+      type: string
+      label: 'Telegram'

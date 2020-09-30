@@ -1,0 +1,28 @@
+definitions:
+  contact__site_page:
+    weight: -50
+    menu_name: footer
+    parent: ''
+    expanded: false
+    enabled: false
+  standard__front_page:
+    weight: -50
+    menu_name: main
+    parent: ''
+    enabled: false
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__article':
+    weight: 1
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    enabled: true
+    expanded: false
+  user__logout:
+    enabled: true
+    menu_name: account
+    parent: ''
+    expanded: false
+    weight: 10
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
+langcode: ru

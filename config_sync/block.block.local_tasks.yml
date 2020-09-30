@@ -1,0 +1,27 @@
+uuid: 4e2af3aa-2b2e-426f-a73d-99c2a98b37d9
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_base
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+_core:
+  default_config_hash: QGjPb4o7TUNVbw6YGPbrBOrruW4MYBzzD-gem_jOJZ8
+id: local_tasks
+theme: anb
+region: top_content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Вкладки
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

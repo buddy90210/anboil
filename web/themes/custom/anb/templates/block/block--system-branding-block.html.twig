@@ -1,0 +1,13 @@
+{% extends "block.html.twig" %}
+{% block content %}
+  {% spaceless %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" rel="home" class="{{ block_class ~ '__logo' }}">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+      {% if site_name %}
+        <span class="{{ block_class }}__sitename">{{ site_name }}</span>
+      {% endif %}
+    </a>
+  {% endif %}
+  {% endspaceless %}
+{% endblock %}

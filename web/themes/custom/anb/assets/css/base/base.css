@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+/* ------------------------- CSS reset ------------------------- */
+html, body, main, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, input, select, textarea{margin: 0;padding: 0;font-size: 100%;vertical-align: baseline;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}blockquote, q{quotes: none;}blockquote:before, blockquote:after,q:before, q:after{content: '';content: none;}table{border-collapse: collapse;border-spacing: 0;}input[type="submit"]{cursor: pointer;border:none;}input,select, textarea{outline: none;resize:none;-webkit-appearance:none;}html,body{height: 100%;margin:0;padding: 0;}fieldset{border:none;}
+
+/* ------------------------- Variables ------------------------- */
+:root {
+  /* Base color */
+  --base-color: #EF0A0F;
+  --base-color-hover: #D00005;
+  --base-color-light: #FFF6F6;
+
+  /* Layout */
+  --spacer: 5rem;
+
+  /* Fonts */
+  --base-font: 'Montserrat', sans-serif;
+  --base-font-color: #272727;
+
+  /* Borders */
+  --border-color: #eaeaea;
+
+  /* Buttons */
+  --button-height: 65px;
+  --button-padding: 0 3.125rem;
+
+  /* Colors */
+  --color-gray: #878787;
+  --color-success: #34C931;
+  --color-success-light: #c3e4ac;
+  --color-warning: #EF9328;
+  --color-danger: #F44336;
+  --color-danger-light: #ffd6dc;
+  --color-disabled: #ccc;
+
+  /* Sprite */
+  --sprite: url(/themes/custom/anb/assets/img/sprt.svg) no-repeat;
+}
+
+/* ------------------------- Base layout styles ------------------------- */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--base-font);
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1330px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bottom_content {
+  margin-top: 5rem;
+}
+
+.footer {
+  margin-top: 5rem;
+}
+
+.bottom_content ~ .footer {
+  margin-top: 0;
+}
+
+/* ------------------------- Hidden elements ------------------------- */
+.visually-hidden {
+  display: none !important;
+}
+
+/* ------------------------- Animations ------------------------- */
+@keyframes fadeIn{from{visibility: hidden;;transition: all 300ms cubic-bezier(.2,0,.2,1);opacity: 0;}to{visibility: visible;opacity: 1;}}
+@keyframes loader {0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}
+
+/* ------------------------- Maintenance page ------------------------- */
+.maintenance-page {
+  background-color: var(--base-color);
+}
+
+.maintenance-page .dialog-off-canvas-main-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.maintenance-container {
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 3px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, .2);
+}

@@ -1,0 +1,75 @@
+global:
+  css:
+    base:
+      assets/css/base/base.css: {}
+      assets/css/base/vendor.css: {}
+    component:
+      assets/css/components/elements.css: {}
+      assets/css/components/form.css: {}
+    layout:
+      assets/css/layout/header.css: {}
+      assets/css/layout/sidebar.css: {}
+      assets/css/layout/footer.css: {}
+  js:
+    assets/js/base.js: {}
+    assets/js/vendor.js: {}
+
+front:
+  css:
+    theme:
+      assets/css/content/front.css: {}
+  js:
+    assets/js/front.js: {}
+
+production:
+  css:
+    theme:
+      assets/css/content/production.css: {}
+  js:
+    assets/js/production.js: {}
+
+services:
+  css:
+    theme:
+      assets/css/content/services.css: {}
+  js:
+    assets/js/services.js: {}
+
+jobs:
+  css:
+    theme:
+      assets/css/content/jobs.css: {}
+  js:
+    assets/js/jobs.js: {}
+
+clients_partners:
+  css:
+    theme:
+      assets/css/content/clients-partners.css: {}
+  js:
+    assets/js/clients-partners.js: {}
+
+
+about:
+  css:
+    theme:
+      assets/css/content/about.css: {}
+  js:
+    assets/js/about.js: {}
+
+blog:
+  css:
+    theme:
+      assets/css/content/blog.css: {}
+
+contacts:
+  css:
+    theme:
+      assets/css/content/contacts.css: {}
+
+promotions:
+  css:
+    theme:
+      assets/css/content/promotions.css: {}
+  js:
+    assets/js/promotions.js: {}

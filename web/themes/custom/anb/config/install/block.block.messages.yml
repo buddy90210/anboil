@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - anb
+id: messages
+theme: anb
+region: top_content
+weight: -1
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Сообщения
+  provider: system
+  label_display: '0'
+visibility: {  }

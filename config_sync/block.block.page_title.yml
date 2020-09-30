@@ -1,0 +1,25 @@
+uuid: 740526b0-4978-4903-aa75-546f139e05a4
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_base
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+_core:
+  default_config_hash: RpcJaLK1wgAeuwunkx17409kAMAa3GoVYe5QpsjY9fs
+id: page_title
+theme: anb
+region: top_content
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

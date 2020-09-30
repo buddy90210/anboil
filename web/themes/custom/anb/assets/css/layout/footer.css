@@ -1,0 +1,144 @@
+/* ------------------------- Footer ------------------------- */
+.footer {
+  border-top: 1px solid var(--border-color);
+  background-color: #fff;
+}
+
+.footer-top,
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-contacts {
+  width: 56%;
+  border-right: 1px solid var(--border-color);
+  padding: 4.5rem 4.5rem 4.5rem 0;
+  font-size: 1.0625rem;
+}
+
+.footer-contacts__column {
+  width: 60%;
+}
+
+.footer-contacts__column:last-child {
+  width: 37.5%;
+}
+
+.footer-contacts__phone a {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--base-font-color);
+}
+
+.footer-contacts__phone a:hover {
+  color: var(--base-color);
+}
+
+.footer-contacts .button {
+  width: 100%;
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.footer-contacts__email {
+  margin-top: 1rem;
+}
+
+.footer-contacts__bottom {
+  margin-top: 3.75rem;
+}
+
+.footer-contacts__address__sign {
+  color: #A99696;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  margin-bottom: .5rem;
+}
+
+.footer-contacts__address__value {
+  font-style: normal;
+}
+
+.footer-contacts__messengers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-contacts__messenger {
+  display: block;
+  margin-right: 1.5rem;
+}
+
+.footer-contacts__messenger a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--base-color-light);
+  border-radius: 50%;
+}
+
+.footer-contacts__messenger a:hover {
+  background-color: var(--base-color);
+}
+
+.footer-contacts__messenger path {
+  transition: .2s ease;
+}
+
+.footer-contacts__messenger a:hover path {
+  fill: #fff;
+}
+
+.footer-menu {
+  width: 44%;
+  padding: 4.5rem 0 4.5rem 4.5rem;
+}
+
+.footer-menu .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-menu .menu li {
+  display: block;
+  width: 49%;
+  margin-bottom: 1.5rem;
+}
+
+.footer-menu .menu li a {
+  font-size: 0.9375rem;
+  color: var(--base-font-color);
+}
+
+.footer-menu .menu li a:hover,
+.footer-menu .menu li a.is-active {
+  color: var(--base-color);
+}
+
+.footer-copyright {
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-copyright__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.9375rem;
+  color: var(--color-gray);
+}
+
+.footer-copyright__policy a {
+  color: var(--color-gray);
+}
+
+.footer-copyright__policy a:hover {
+  color: var(--base-color);
+}

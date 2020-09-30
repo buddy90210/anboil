@@ -1,0 +1,18 @@
+uuid: ae614a9b-6c13-44a5-ae3f-a055af1d2545
+langcode: ru
+status: false
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    disabled_form_message: 'Эта контактная форма отключена.'
+_core:
+  default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
+id: personal
+label: 'Персональная контактная форма'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Ваше сообщение отправлено.'
+redirect: ''

@@ -1,0 +1,9 @@
+{% set class = "footer-copyright" %}
+<div class="{{ class }}">
+  <div class="{{ class }}__content container">
+    <p class="{{ class }}__value">© 2006-{{ now|date('Y') }}&nbsp;г. ООО «АНБ»</p>
+    <p class="{{ class }}__policy">
+      <a href="{{ policy_url }}">Политика конфиденциальности</a>
+    </p>
+  </div>
+</div>

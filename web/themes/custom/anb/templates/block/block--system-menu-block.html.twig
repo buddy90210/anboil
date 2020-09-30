@@ -1,0 +1,13 @@
+{% do attributes.removeAttribute('id') %}
+{% spaceless %}
+<nav{{ attributes.addClass(block_class) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <p{{ title_attributes.addClass(block_class ~ '__heading heading') }}>{{ label }}</p>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</nav>
+{% endspaceless %}

@@ -1,0 +1,249 @@
+/* ------------------------- Header ------------------------- */
+.header {
+  position: relative;
+  background: url(../../img/header.jpg) no-repeat center;
+  background-size: cover;
+  font-size: 0.75rem;
+  color: #fff;
+  z-index: 8;
+}
+
+/* ------------------------- Header navigation ------------------------- */
+.header-top__content,
+.header-bottom__content{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top {
+  border-bottom: 1px solid rgb(228 228 228 / .1);
+}
+
+.header-menu {
+  width: auto;
+}
+
+.header-menu li {
+  display: block;
+}
+
+.header-menu .menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu .menu > li > a,
+.header-account .menu li a {
+  display: flex;
+  align-items: center;
+  padding: 1.69rem 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #f8f8f8;
+}
+
+.header-menu .menu > li:first-child > a {
+  padding-left: 0;
+}
+
+.header-menu .menu > li > a:hover,
+.header-menu .menu > li > a.is-active,
+.header-account .menu li a:hover,
+.header-account .menu li a.is-active {
+  color: var(--base-color);
+}
+
+.header-menu li.has-childs > a:after {
+  content: '';
+  display: block;
+  margin: 0 0 0 10px;
+  width: 10px;
+  height: 6px;
+  background: var(--sprite) 0 0;
+}
+
+.header-menu li.has-childs {
+  position: relative;
+}
+
+.header-menu li.has-childs ul {
+  display: none;
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 2px 4px rgba(181, 179, 179, 0.25);
+  z-index: 9;
+  transition: opacity .2s ease;
+}
+
+.header-menu li.has-childs:hover ul {
+  display: block;
+  animation: fadeIn .2s ease;
+}
+
+.header-menu li.has-childs ul li a {
+  display: block;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-menu li.has-childs ul li:last-child a {
+  border-bottom: 0;
+}
+
+.header-menu li.has-childs ul li a:hover {
+  background-color: var(--base-color-light);
+}
+
+.header-bottom {
+  padding: 1.5rem 0;
+}
+
+.header-account {
+  width: 20%;
+}
+
+.header-account .menu li {
+  display: block;
+}
+
+.header-account .menu li a {
+  background-color: rgb(228 228 228 / .1);
+  padding: 1.69rem 2rem;
+}
+
+.header-account .menu li a:hover {
+  background-color: rgb(228 228 228 / .12);
+}
+
+.header-account .menu li a svg {
+  margin-right: 1rem;
+}
+
+.header-account .menu li a svg path {
+  transition: .2s ease;
+}
+
+.header-account .menu li a:hover svg path,
+.header-account .menu li a.is-active svg path{
+  fill: var(--base-color);
+}
+
+.header .branding {
+  width: auto;
+}
+
+.header .branding__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .branding__logo img {
+  width: 107px;
+}
+
+.header .branding__sitename {
+  max-width: 130px;
+  margin-left: 1.6rem;
+  line-height: 1.8;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #f8f8f8;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-actions__item {
+  position: relative;
+  display: block;
+  margin-right: 2.625rem;
+}
+
+.header-actions__link {
+  display: block;
+  position: relative;
+  padding-left: 38px;
+  line-height: 2;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.header-actions__link:hover {
+  color: var(--base-color);
+}
+
+.header-actions__link svg {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.header-actions__link path {
+  transition: .2s ease;
+}
+
+.header-actions__link:hover path {
+  stroke: var(--base-color);
+}
+
+.header-actions__link[data-modal="consultmodal"]:hover path {
+  stroke: none;
+  fill: var(--base-color);
+}
+
+.header-phone {
+  width: 20%;
+  padding-left: 25px;
+}
+
+.header-phone a {
+  position: relative;
+  display: block;
+  font-weight: 500;
+  font-size: 1.4375rem;
+  color: #f8f8f8;
+}
+
+.header-phone a:hover {
+  color: var(--color-success);
+}
+
+.header-phone a:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: -25px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-success);
+  box-shadow: 0 0 15px #34C931;
+  border-radius: 50%;
+}
+
+.header-phone__sign {
+  display: block;
+  margin-top: .2rem;
+  color: #f8f8f8;
+  font-size: 0.8125rem;
+  letter-spacing: 0.1px;
+  opacity: .5;
+}

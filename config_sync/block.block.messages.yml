@@ -1,0 +1,22 @@
+uuid: d577afbc-5db0-46d4-915d-2485dd76ec05
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - anb
+_core:
+  default_config_hash: EsJF9G5FVqvhwNBRTZfPnFBd7S2aMtzICMIDFAhNCx0
+id: messages
+theme: anb
+region: top_content
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Сообщения
+  provider: system
+  label_display: '0'
+visibility: {  }

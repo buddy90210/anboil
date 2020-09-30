@@ -1,0 +1,26 @@
+uuid: 3304ce56-09bb-4e6e-9287-4d93907a1006
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_base
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+_core:
+  default_config_hash: 6UlRo7CSAnBkH-AbN3DZxGtTX5KLtgPOoVak8Jw0AGo
+id: page_content
+theme: anb
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

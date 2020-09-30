@@ -1,0 +1,269 @@
+/* ------------------------- Form elements ------------------------- */
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-item {
+  margin-bottom: 25px;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.form-item .description {
+  margin-top: .5rem;
+  font-size: 0.825rem;
+  color: var(--color-gray);
+}
+
+input,
+textarea,
+.filefield label {
+  display: block;
+  width: 100%;
+  font-family: var(--base-font);
+  height: var(--button-height);
+  line-height: var(--button-height);
+  border: 1px solid var(--border-color);
+  color: var(--base-font-color);
+  background-color: #fff;
+  padding: 0 1.25rem;
+  border-radius: 3px;
+  font-size: 0.94rem;
+  transition: .2s ease;
+}
+
+textarea {
+  padding: 1.25rem;;
+  height: 170px;
+  line-height: 1.4;
+}
+
+input::placeholder {
+  color: var(--color-gray);
+}
+
+input:hover {
+  border-color: var(--base-color);
+}
+
+input:focus {
+  border-color: var(--base-color);
+  box-shadow: 0 0 0 4px var(--base-color-light);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.js-form-type-radio,
+.js-form-type-checkbox {
+  position: relative;
+  padding-left: 30px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: none;
+}
+
+input[type="radio"]:checked {
+  background: var(--sprite) no-repeat 4px -313px var(--base-color);
+  border-color: var(--base-color);
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--input-border-color);
+}
+
+input[type="checkbox"]:checked {
+  transition: none;
+  background: var(--sprite) 4px -314px var(--base-color);
+  border-color: var(--base-color);
+  box-shadow: 0px 2px 10px rgba(0, 70, 180, 0.25);
+}
+.agreement-field .form-item {
+  padding-left: 35px;
+}
+
+.agreement-field label {
+  position: relative;
+  display: block;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 300;
+  transition: opacity .2s ease;
+}
+
+.agreement-field label:hover {
+  opacity: .7;
+}
+
+.agreement-field input {
+  cursor: pointer;
+  top: 4px;
+}
+
+/* ------------------------- Modal forms ------------------------- */
+.modals {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modals.is-visible {
+  display: flex;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 100;
+}
+
+.modals.is-visible .modal-overlay {
+  display: block;
+  animation: fadeIn .4s ease;
+}
+
+.modal-form {
+  position: relative;
+  display: none;
+  width: 460px;
+  height: auto;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 20px rgba(209, 208, 208, 0.25);
+  border-radius: 3px;
+  z-index: 101;
+}
+
+.modal-form.is-visible {
+  display: block;
+}
+
+.modal-form__heading {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-form .form-item {
+  margin-bottom: 15px;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="email"],
+.modal-form input[type="tel"]{
+  height: calc(var(--button-height) * 0.8);
+  line-height: calc(var(--button-height) * 0.8);
+}
+
+.modal-form textarea {
+  height: 100px;
+}
+
+.modal-form .form-actions {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--base-color);
+  color: #fff;
+  line-height: 40px;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  z-index: 9;
+}
+
+.close-icon:hover {
+  background-color: var(--base-color-hover);
+}
+
+/* ------------------------- Filefield ------------------------- */
+.filefield {
+  width: 100%;
+}
+
+.filefield .js-form-managed-file {
+  position: relative;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.filefield input {
+  display: none;
+}
+
+.filefield .file~input[name*="remove_button"] {
+  display: block;
+  line-height: 30px;
+  height: 30px;
+  font-size: 0.94rem;
+  width: auto;
+  margin: 0 0 0 1rem;
+  padding: 0 1rem;
+}
+
+.filefield label {
+  position: relative;
+  margin: 0;
+  border: 2px dashed rgba(0, 0, 0, .2);
+  background-color: transparent;
+  color: #fff;
+  line-height: calc(var(--button-height) - 4px);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.filefield label:hover {
+  border-color: rgba(0, 0, 0, .6);
+}

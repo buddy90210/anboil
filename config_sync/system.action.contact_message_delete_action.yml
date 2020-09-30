@@ -1,0 +1,16 @@
+uuid: 8b7a0604-046a-465a-8f32-b8a4de513be4
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - contact_storage
+  module:
+    - contact
+_core:
+  default_config_hash: ugOcAZ_g8S26-iGCjTlbSpuxDahvhMV5FYi0jNsn1rk
+id: contact_message_delete_action
+label: 'Delete contact message'
+type: contact_message
+plugin: 'entity:delete_action:contact_message'
+configuration: {  }

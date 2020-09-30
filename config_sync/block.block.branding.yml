@@ -1,0 +1,25 @@
+uuid: f445516f-c65a-4d6d-939d-bf7435bc2c91
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - anb
+_core:
+  default_config_hash: rdG4ZePW6MgGNhYYKHvBDxFLwMLKJ3LjLvQNLqBl8vg
+id: branding
+theme: anb
+region: header_bottom
+weight: -3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендинг сайта'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

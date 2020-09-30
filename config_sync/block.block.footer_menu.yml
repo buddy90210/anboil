@@ -1,0 +1,29 @@
+uuid: 56fa20ae-8d4b-43b1-a8da-c421d6996aa2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - anb_base
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 0
+id: footer_menu
+theme: anb
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Нижнее меню'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: c88ab714-d77f-4dbe-8729-a652483954c4
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: Статья
+type: article
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

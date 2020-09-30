@@ -1,0 +1,5 @@
+{% set class = "header-phone" %}
+<p class="{{ class }}">
+  <a href="tel:{{ phone|replace({'(' : '', '-' : '', ')' : '', ' ' : ''}) }}">{{ phone }}</a>
+  <span class="{{ class }}__sign">Звонок по России бесплатный</span>
+</p>
