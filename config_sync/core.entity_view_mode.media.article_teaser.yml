@@ -1,0 +1,10 @@
+uuid: b20246e6-147a-4fae-ba42-a65af588a3e4
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_teaser
+label: 'Article Teaser'
+targetEntityType: media
+cache: true

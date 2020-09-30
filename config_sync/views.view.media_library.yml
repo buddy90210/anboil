@@ -218,7 +218,7 @@ display:
             operator_list: {  }
           is_grouped: true
           group_info:
-            label: Published
+            label: Опубликовано
             description: ''
             identifier: status
             optional: true
@@ -229,7 +229,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Опубликовано
                 operator: '='
                 value: '1'
               2:
@@ -1162,7 +1162,7 @@ display:
             link_to_entity: false
         uid:
           id: uid
-          label: Author
+          label: Автор
           table: media_field_revision
           field: uid
           relationship: none

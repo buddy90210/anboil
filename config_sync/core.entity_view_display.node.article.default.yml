@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.field_image
-    - image.style.large
+    - field.field.node.article.field_article_photo
     - node.type.article
   module:
-    - image
     - text
     - user
 _core:
@@ -34,10 +32,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  field_article_photo: true
   langcode: true
+  links: true

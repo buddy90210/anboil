@@ -3,9 +3,13 @@ langcode: ru
 status: true
 dependencies:
   module:
+    - anb_base
     - system
   theme:
     - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
 _core:
   default_config_hash: EsJF9G5FVqvhwNBRTZfPnFBd7S2aMtzICMIDFAhNCx0
 id: messages

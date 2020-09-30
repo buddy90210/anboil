@@ -46,6 +46,18 @@ function anb_theme($existing, $type, $theme, $path) {
 }
 
 /**
+ * Implements hook_page_attachments_alter().
+ */
+function anb_page_attachments_alter(array &$attachments) {
+  $current_route = \Drupal::routeMatch()->getRouteName();
+
+  // Blog library.
+  if ($current_route === 'view.blog.all') {
+    $attachments['#attached']['library'][] = 'anb/blog';
+  }
+}
+
+/**
  * Implements hook_preprocess_html().
  */
 function anb_preprocess_html(&$variables) {

@@ -24,6 +24,7 @@ html, body, main, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, b
   --button-padding: 0 3.125rem;
 
   /* Colors */
+  --color-gray-base: #A99696;
   --color-gray: #878787;
   --color-success: #34C931;
   --color-success-light: #c3e4ac;

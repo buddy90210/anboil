@@ -169,7 +169,7 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #A99696;
+  color: var(--color-gray-base);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -379,7 +379,7 @@ img {
 }
 
 .pager__item a:hover {
-  color: var(--base-font-color);
+  color: #fff;
   background-color: var(--base-color);
 }
 

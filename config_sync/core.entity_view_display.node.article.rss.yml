@@ -1,11 +1,11 @@
 uuid: 271f164d-d77d-47bf-98a5-44217c01956a
 langcode: ru
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.rss
     - field.field.node.article.body
-    - field.field.node.article.field_image
+    - field.field.node.article.field_article_photo
     - node.type.article
   module:
     - user
@@ -21,5 +21,6 @@ content:
     region: content
 hidden:
   body: true
+  field_article_photo: true
   field_image: true
   langcode: true
