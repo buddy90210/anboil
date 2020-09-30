@@ -1,0 +1,10 @@
+uuid: edf9e4ad-e8cb-41fd-8416-b29a359e8d29
+langcode: ru
+status: true
+dependencies: {  }
+id: contacts_block
+label: 'Блок контактов'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

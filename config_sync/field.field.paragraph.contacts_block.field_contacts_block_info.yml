@@ -1,0 +1,21 @@
+uuid: f11b0cee-3cfa-480a-8589-f810f57cdf1d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contacts_block_info
+    - paragraphs.paragraphs_type.contacts_block
+  module:
+    - text
+id: paragraph.contacts_block.field_contacts_block_info
+field_name: field_contacts_block_info
+entity_type: paragraph
+bundle: contacts_block
+label: 'Контактная информация'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

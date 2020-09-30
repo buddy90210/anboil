@@ -1,0 +1,31 @@
+uuid: 162660ff-1766-4d21-88f0-92317631354b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.contacts
+    - field.storage.block_content.field_maps
+    - paragraphs.paragraphs_type.map
+  module:
+    - entity_reference_revisions
+id: block_content.contacts.field_maps
+field_name: field_maps
+entity_type: block_content
+bundle: contacts
+label: Карты
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      map: map
+    target_bundles_drag_drop:
+      map:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

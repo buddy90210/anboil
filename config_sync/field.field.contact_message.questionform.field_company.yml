@@ -1,0 +1,19 @@
+uuid: fcbd1800-17ee-4b06-9037-c636d2fc19ba
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.questionform
+    - field.storage.contact_message.field_company
+id: contact_message.questionform.field_company
+field_name: field_company
+entity_type: contact_message
+bundle: questionform
+label: Компания
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,34 @@
+uuid: 368414f4-727a-4f81-92d4-348e6f1e5ee0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contacts_block.field_contacts_block_info
+    - field.field.paragraph.contacts_block.field_contacts_block_title
+    - paragraphs.paragraphs_type.contacts_block
+  module:
+    - text
+id: paragraph.contacts_block.default
+targetEntityType: paragraph
+bundle: contacts_block
+mode: default
+content:
+  field_contacts_block_info:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_contacts_block_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

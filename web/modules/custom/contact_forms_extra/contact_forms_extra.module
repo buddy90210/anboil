@@ -14,7 +14,7 @@ use Drupal\Core\Url;
 /**
  * Implements hook_form_alter().
  */
-function contact_forms_extra_module_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+function contact_forms_extra_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
   // Contact forms.
   if (strpos($form_id, 'contact_message_') === 0) {
     // Fields customization.
@@ -29,6 +29,8 @@ function contact_forms_extra_module_form_alter(&$form, FormStateInterface &$form
     $text_fields = [
       'field_phone',
       'field_email',
+      'field_company',
+      'message'
     ];
     foreach ($text_fields as $text_field) {
       if (!isset($form[$text_field])) {
@@ -43,7 +45,7 @@ function contact_forms_extra_module_form_alter(&$form, FormStateInterface &$form
     $form['#attributes']['class'][] = $class_name;
 
     $form['actions']['submit']['#ajax'] = [
-      'callback' => 'contact_forms_extra_module_contact_form_sent',
+      'callback' => 'contact_forms_extra_contact_form_sent',
       'event' => 'click',
     ];
   }
@@ -54,9 +56,6 @@ function contact_forms_extra_module_form_alter(&$form, FormStateInterface &$form
     $form['field_attachment']['#attributes']['class'][] = 'filefield';
   }
 
-  // Subject field.
-  $form['subject']['#attributes']['class'][] = 'visually-hidden';
-
   // Agreement field.
   if (isset($form['field_agreement'])) {
     $form['field_agreement']['widget']['value']['#default_value'] = true;
@@ -64,7 +63,7 @@ function contact_forms_extra_module_form_alter(&$form, FormStateInterface &$form
     $form['field_agreement']['#attributes']['class'][] = 'agreement-field';
     $form['field_agreement']['#attributes']['class'][] = 'link';
 
-    $url = Url::fromRoute('entity.node.canonical', ['node' => 9])->toString();
+    $url = Url::fromRoute('entity.node.canonical', ['node' => 10])->toString();
     $form['field_agreement']['widget']['value']['#title'] = 'Даю согласие на <a target="_blank" href="'.$url.'">обработку персональных денных</a>';
 
     // Move to actions.
@@ -78,13 +77,18 @@ function contact_forms_extra_module_form_alter(&$form, FormStateInterface &$form
         'form.'.$form_selector.' input[name="field_agreement[value]"]' => ['checked' => false],
       ],
     ];
+  };
+
+  // Question form.
+  if ($form_id === 'contact_message_questionform_form') {
+    $form['message']['widget'][0]['value']['#attributes']['placeholder'] = 'Ваш вопрос';
   }
 }
 
 /**
  * Submit callback for contact forms.
  */
-function contact_forms_extra_module_contact_form_sent(&$form, FormStateInterface $form_state) {
+function contact_forms_extra_contact_form_sent(&$form, FormStateInterface $form_state) {
   $form_state->setRebuild();
 
   // Add messages.

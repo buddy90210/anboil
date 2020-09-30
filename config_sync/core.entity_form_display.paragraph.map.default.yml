@@ -1,0 +1,32 @@
+uuid: 5d2bf91e-9f7a-4637-9ab5-b1eb957496e4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_map_code
+    - field.field.paragraph.map.field_map_title
+    - paragraphs.paragraphs_type.map
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_map_code:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_map_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

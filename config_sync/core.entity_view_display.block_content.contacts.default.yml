@@ -1,0 +1,35 @@
+uuid: 87e5c5b9-7efa-4659-80a0-419018576fb2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.contacts
+    - field.field.block_content.contacts.field_contacts_blocks
+    - field.field.block_content.contacts.field_maps
+  module:
+    - entity_reference_revisions
+id: block_content.contacts.default
+targetEntityType: block_content
+bundle: contacts
+mode: default
+content:
+  field_contacts_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_maps:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

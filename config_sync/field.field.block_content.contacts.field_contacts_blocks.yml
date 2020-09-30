@@ -1,0 +1,34 @@
+uuid: 6faa23ec-870b-4a76-9640-e4847f0b4f28
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.contacts
+    - field.storage.block_content.field_contacts_blocks
+    - paragraphs.paragraphs_type.contacts_block
+  module:
+    - entity_reference_revisions
+id: block_content.contacts.field_contacts_blocks
+field_name: field_contacts_blocks
+entity_type: block_content
+bundle: contacts
+label: 'Блоки контактов'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contacts_block: contacts_block
+    target_bundles_drag_drop:
+      contacts_block:
+        enabled: true
+        weight: 3
+      map:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

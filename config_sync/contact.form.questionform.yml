@@ -1,0 +1,21 @@
+uuid: 3509c345-e8e7-4854-937c-65f5413a30f6
+langcode: ru
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Отправить
+    show_preview: false
+    disabled_form_message: 'Эта контактная форма отключена.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: questionform
+label: 'Задать вопрос'
+recipients:
+  - test@test.ru
+reply: ''
+weight: 0
+message: 'Ваша заявка получена!'
+redirect: ''

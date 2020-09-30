@@ -1,0 +1,10 @@
+uuid: ba8f667b-531f-4992-93a4-876aaf599361
+langcode: ru
+status: true
+dependencies: {  }
+id: map
+label: Карта
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

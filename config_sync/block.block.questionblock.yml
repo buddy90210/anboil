@@ -1,0 +1,29 @@
+uuid: 64272a73-384a-48e7-82e8-4a81963d03a2
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0e0874b2-89d8-4a17-a77e-485cf5eaa58a'
+  module:
+    - anb_base
+    - block_content
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: questionblock
+theme: anb
+region: bottom_content
+weight: 0
+provider: null
+plugin: 'block_content:0e0874b2-89d8-4a17-a77e-485cf5eaa58a'
+settings:
+  id: 'block_content:0e0874b2-89d8-4a17-a77e-485cf5eaa58a'
+  label: 'Есть вопросы?'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

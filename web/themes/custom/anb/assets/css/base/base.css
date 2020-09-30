@@ -57,7 +57,7 @@ body {
   padding-right: 15px;
 }
 
-.bottom_content {
+.bottom-content {
   margin-top: 5rem;
 }
 
@@ -65,7 +65,7 @@ body {
   margin-top: 5rem;
 }
 
-.bottom_content ~ .footer {
+.bottom-content ~ .footer {
   margin-top: 0;
 }
 

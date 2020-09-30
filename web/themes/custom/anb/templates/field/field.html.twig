@@ -1,21 +1,21 @@
-{% set field_name = field_name|replace({'field_':''}) ~ '-field' %}
+{% set field_name = field_name|replace({'field-':''}) %}
 {% set field_item_name = field_name|replace({'field_':''}) ~ '__item' %}
 {%
   set title_classes = [
-    field_name ~ '__label',
-    'label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
+  field_name ~ '__label',
+  'label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
 %}
 <div{{ attributes.addClass(field_name) }}>
   {% if label_hidden == false %}
-  <p{{ title_attributes.addClass(title_classes) }}>{{ label }}</p>
+    <p{{ title_attributes.addClass(title_classes) }}>{{ label }}</p>
   {% endif %}
 
   {% if multiple %}
     <div class="{{ field_name }}__items">
       {% for item in items %}
-      <div{{ item.attributes.addClass(field_item_name) }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass(field_item_name) }}>{{ item.content }}</div>
       {% endfor %}
     </div>
 

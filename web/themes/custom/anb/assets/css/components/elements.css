@@ -58,34 +58,34 @@ a.is-active {
 }
 
 /* ------------------------- Text field ------------------------- */
-.body-field {
+.body {
   font-size: 1.0625rem;
   line-height: 1.7;
 }
 
-.body-field p {
+.body p {
   margin-bottom: 1rem;
 }
 
-.body-field p:last-child {
+.body p:last-child {
   margin-bottom: 0;
 }
 
-.body-field ul {
+.body ul {
   margin-left: 20px;
   margin-bottom: 1rem;
 }
 
-.body-field li {
+.body li {
   line-height: 1.5;
   margin-bottom: .6rem;
 }
 
-.body-field li:last-child {
+.body li:last-child {
   margin-bottom: 0;
 }
 
-.body-field strong {
+.body strong {
   font-weight: 500;
 }
 

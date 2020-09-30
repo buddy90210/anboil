@@ -1,0 +1,11 @@
+uuid: 11169a47-5816-4250-b45b-76f0f730d759
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.contacts
+id: block_content.contacts
+target_entity_type_id: block_content
+target_bundle: contacts
+default_langcode: site_default
+language_alterable: false

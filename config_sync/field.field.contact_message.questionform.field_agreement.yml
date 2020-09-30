@@ -1,0 +1,23 @@
+uuid: 53e2a8fe-b449-4fd9-bac0-f5fabba23e94
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.questionform
+    - field.storage.contact_message.field_agreement
+id: contact_message.questionform.field_agreement
+field_name: field_agreement
+entity_type: contact_message
+bundle: questionform
+label: 'Согласие на обработку персональных данных'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Согласие на обработку персональных данных'
+  off_label: 'Согласие на обработку персональных данных'
+field_type: boolean

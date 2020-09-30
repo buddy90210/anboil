@@ -1,0 +1,19 @@
+uuid: 1df7fef6-1fe4-4855-a171-efe24125a2b1
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_contacts_block_info
+field_name: field_contacts_block_info
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

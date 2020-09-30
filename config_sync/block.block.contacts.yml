@@ -1,0 +1,34 @@
+uuid: 3101f27e-ee52-441a-9265-2f97aff9548e
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:contacts:fdf65425-8027-4ec0-b767-3bb371deb67e'
+  module:
+    - anb_base
+    - block_content
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: contacts
+theme: anb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:fdf65425-8027-4ec0-b767-3bb371deb67e'
+settings:
+  id: 'block_content:fdf65425-8027-4ec0-b767-3bb371deb67e'
+  label: Контакты
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/9
+    negate: false

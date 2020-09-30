@@ -1,0 +1,8 @@
+uuid: 993fa075-1b07-4097-bbfa-0bac388b19fd
+langcode: ru
+status: true
+dependencies: {  }
+id: contacts
+label: Контакты
+revision: 0
+description: ''

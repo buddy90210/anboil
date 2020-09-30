@@ -1,0 +1,19 @@
+uuid: d31bafd4-6395-4801-ac9f-8f93089be1af
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_code
+    - paragraphs.paragraphs_type.map
+id: paragraph.map.field_map_code
+field_name: field_map_code
+entity_type: paragraph
+bundle: map
+label: Адрес
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

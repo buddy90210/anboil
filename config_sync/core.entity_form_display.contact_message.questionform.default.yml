@@ -1,0 +1,60 @@
+uuid: dfa0d99a-b1aa-4e87-93e3-48f6e7b5ec59
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.questionform
+    - field.field.contact_message.questionform.field_agreement
+    - field.field.contact_message.questionform.field_company
+    - field.field.contact_message.questionform.field_phone
+id: contact_message.questionform.default
+targetEntityType: contact_message
+bundle: questionform
+mode: default
+content:
+  field_agreement:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_company:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  mail:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 4
+    settings:
+      rows: 12
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  copy: true
+  langcode: true
+  preview: true
+  subject: true
