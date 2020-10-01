@@ -1,0 +1,15 @@
+uuid: fa6f8e8d-9dba-475c-afdc-88da611a4ebd
+langcode: ru
+status: true
+dependencies: {  }
+name: promo
+label: promo
+effects:
+  c64e80b2-bbcb-4176-8567-a8fa30ec2122:
+    uuid: c64e80b2-bbcb-4176-8567-a8fa30ec2122
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 414
+      height: 300
+      anchor: center-center

@@ -1,0 +1,24 @@
+{% set class = "promo" %}
+<article class="{{ class }}">
+  <i class="{{ class }}__icon"></i>
+
+  <figure class="{{ class }}__photo">
+    {{ content.field_promo_photo.0 }}
+  </figure>
+
+  <div class="{{ class }}__inner">
+    <time class="{{ class }}__published">
+      {{ paragraph.created.value|date('d.m.Y') }}&nbsp;г.
+    </time>
+
+    <p class="{{ class }}__title">
+      {{ content.field_promo_title.0 }}
+    </p>
+
+    <p class="{{ class }}__description">
+      {{ content.field_promo_description.0 }}
+    </p>
+
+    <button class="{{ class }}__button button button--flat modal-trigger" data-modal="promoform">Получить скидку</button>
+  </div>
+</article>

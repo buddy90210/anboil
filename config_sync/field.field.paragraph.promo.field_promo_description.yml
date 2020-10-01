@@ -1,0 +1,19 @@
+uuid: 9d754bb0-74ba-4580-882d-02c87527ea57
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_description
+    - paragraphs.paragraphs_type.promo
+id: paragraph.promo.field_promo_description
+field_name: field_promo_description
+entity_type: paragraph
+bundle: promo
+label: 'Краткое описание'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

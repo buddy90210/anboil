@@ -1,0 +1,40 @@
+uuid: 0c8815c9-7e3e-467b-b3b2-5fd258c03d4b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.promos
+    - field.storage.block_content.field_promos
+    - paragraphs.paragraphs_type.promo
+  module:
+    - entity_reference_revisions
+id: block_content.promos.field_promos
+field_name: field_promos
+entity_type: block_content
+bundle: promos
+label: Акция
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      promo: promo
+    target_bundles_drag_drop:
+      contacts_block:
+        weight: 5
+        enabled: false
+      logo_block:
+        weight: 6
+        enabled: false
+      map:
+        weight: 7
+        enabled: false
+      promo:
+        enabled: true
+        weight: 8
+field_type: entity_reference_revisions

@@ -1,0 +1,11 @@
+uuid: 511d2a5f-3779-4448-9333-e8aeb0ca1535
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.promos
+id: block_content.promos
+target_entity_type_id: block_content
+target_bundle: promos
+default_langcode: site_default
+language_alterable: false

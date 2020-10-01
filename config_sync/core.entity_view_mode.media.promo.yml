@@ -1,0 +1,10 @@
+uuid: 3d524a51-26e6-4086-9893-aa3902a64a0f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.promo
+label: Promo
+targetEntityType: media
+cache: true

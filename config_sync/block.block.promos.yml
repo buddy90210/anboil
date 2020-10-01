@@ -1,0 +1,34 @@
+uuid: c8876d34-9a31-4b5a-bc8d-2ea2e422b53f
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:promos:dca3ba25-594e-4d39-8f96-1337a101f522'
+  module:
+    - anb_base
+    - block_content
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: promos
+theme: anb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:dca3ba25-594e-4d39-8f96-1337a101f522'
+settings:
+  id: 'block_content:dca3ba25-594e-4d39-8f96-1337a101f522'
+  label: Акции
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/6
+    negate: false

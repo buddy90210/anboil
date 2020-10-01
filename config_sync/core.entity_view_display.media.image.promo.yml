@@ -1,0 +1,33 @@
+uuid: 79b6c9da-c770-42ef-bd54-6edc26fd7816
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.promo
+    - field.field.media.image.field_media_image
+    - image.style.promo
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.promo
+targetEntityType: media
+bundle: image
+mode: promo
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: promo
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

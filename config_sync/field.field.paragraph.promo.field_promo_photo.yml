@@ -1,0 +1,28 @@
+uuid: d247a5e8-49b5-442b-8a04-d4aed4284a1b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_photo
+    - media.type.image
+    - paragraphs.paragraphs_type.promo
+id: paragraph.promo.field_promo_photo
+field_name: field_promo_photo
+entity_type: paragraph
+bundle: promo
+label: 'Фото акции'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

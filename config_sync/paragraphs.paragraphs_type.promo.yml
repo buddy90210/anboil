@@ -1,0 +1,10 @@
+uuid: 57bad833-c7a6-4e4a-ab20-a3767dd5fd18
+langcode: ru
+status: true
+dependencies: {  }
+id: promo
+label: Акция
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

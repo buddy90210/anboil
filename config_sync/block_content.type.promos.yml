@@ -1,0 +1,8 @@
+uuid: 27f7ad59-e520-40c4-806e-e8566b7abd04
+langcode: ru
+status: true
+dependencies: {  }
+id: promos
+label: Акции
+revision: 0
+description: ''
