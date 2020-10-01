@@ -47,7 +47,7 @@ clients_partners:
     theme:
       assets/css/content/clients-partners.css: {}
   js:
-    assets/js/clients-partners.js: {}
+    assets/js/clients-partners.js: {weight: -1}
 
 
 about:

@@ -1,0 +1,28 @@
+uuid: ce4ae2df-1183-43a0-894e-6e8b1b5f6bb7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_logo_image
+    - media.type.image
+    - paragraphs.paragraphs_type.logo_block
+id: paragraph.logo_block.field_logo_image
+field_name: field_logo_image
+entity_type: paragraph
+bundle: logo_block
+label: Логотип
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

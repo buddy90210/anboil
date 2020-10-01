@@ -1,0 +1,33 @@
+uuid: eae96652-1d00-48e1-8cf0-68560ac07d77
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.client_partner
+    - field.field.media.image.field_media_image
+    - image.style.client_partner
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.client_partner
+targetEntityType: media
+bundle: image
+mode: client_partner
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: client_partner
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

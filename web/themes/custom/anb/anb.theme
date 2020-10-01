@@ -58,10 +58,15 @@ function anb_page_attachments_alter(array &$attachments) {
     $attachments['#attached']['library'][] = 'anb/blog';
   }
 
-  // Contacts library.
   if ($node !== null) {
+    // Contacts library.
     if ($node->id() === '9') {
       $attachments['#attached']['library'][] = 'anb/contacts';
+    }
+
+    // Clients/partners.
+    if ($node->id() === '7' || $node->id() === '8') {
+      $attachments['#attached']['library'][] = 'anb/clients_partners';
     }
   }
 }
@@ -70,8 +75,6 @@ function anb_page_attachments_alter(array &$attachments) {
  * Implements hook_preprocess_html().
  */
 function anb_preprocess_html(&$variables) {
-  $current_route = \Drupal::routeMatch()->getRouteName();
-
   if (\Drupal::service('path.matcher')->isFrontPage()) {
     $variables['attributes']['class'][] = 'is-front';
   }
@@ -86,6 +89,15 @@ function anb_preprocess_page(&$variables) {
   // Layout attributes.
   $layout_attributes = new Attribute();
   $layout_attributes->addClass('main-layout');
+
+  // Specific background pages.
+  $node_id = \Drupal::routeMatch()->getRawParameters()->get('node');
+  $background_nids = ['7','8'];
+
+  if (in_array($node_id, $background_nids)) {
+    $layout_attributes->addClass('main-layout--background');
+  }
+
   $variables['layout_attributes'] = $layout_attributes;
 
   // Header.

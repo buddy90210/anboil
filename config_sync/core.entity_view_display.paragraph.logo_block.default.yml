@@ -1,0 +1,31 @@
+uuid: 1a4c895f-8e35-4dcb-8c83-233ab2489f72
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_block.field_logo_image
+    - field.field.paragraph.logo_block.field_logo_title
+    - paragraphs.paragraphs_type.logo_block
+id: paragraph.logo_block.default
+targetEntityType: paragraph
+bundle: logo_block
+mode: default
+content:
+  field_logo_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: client_partner
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_logo_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

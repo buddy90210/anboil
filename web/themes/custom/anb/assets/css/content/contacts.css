@@ -12,7 +12,8 @@
 .map {
   background-color: #fff;
   filter: drop-shadow(0px 4px 40px rgba(223, 203, 182, 0.3));
-  border: 1px solid var(--base-color-light);
+  border: 1px solid var(--border-color-light);
+  border-radius: 3px;
   padding: 1rem;
 }
 

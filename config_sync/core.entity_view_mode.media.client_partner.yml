@@ -1,0 +1,10 @@
+uuid: df353e31-287d-4c97-86ab-fc16bf630250
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.client_partner
+label: Client/Partner
+targetEntityType: media
+cache: true

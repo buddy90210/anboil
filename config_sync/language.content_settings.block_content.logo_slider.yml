@@ -1,0 +1,11 @@
+uuid: 13607f1b-2754-4ce3-9178-a112e5493e0b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_slider
+id: block_content.logo_slider
+target_entity_type_id: block_content
+target_bundle: logo_slider
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,37 @@
+uuid: c7d6a377-f219-4190-9738-2652e9f50023
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_slider
+    - field.storage.block_content.field_logo_blocks
+    - paragraphs.paragraphs_type.logo_block
+  module:
+    - entity_reference_revisions
+id: block_content.logo_slider.field_logo_blocks
+field_name: field_logo_blocks
+entity_type: block_content
+bundle: logo_slider
+label: Клиент/партнёр
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      logo_block: logo_block
+    target_bundles_drag_drop:
+      contacts_block:
+        weight: 4
+        enabled: false
+      logo_block:
+        enabled: true
+        weight: 5
+      map:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: a41ad4c0-c262-474f-9f02-12b7956f4d03
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_logo_title
+    - paragraphs.paragraphs_type.logo_block
+id: paragraph.logo_block.field_logo_title
+field_name: field_logo_title
+entity_type: paragraph
+bundle: logo_block
+label: Название
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: 892c53b9-57a2-499b-b983-8a6bcd3159b3
+langcode: ru
+status: true
+dependencies: {  }
+id: logo_block
+label: Клиент/партнёр
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

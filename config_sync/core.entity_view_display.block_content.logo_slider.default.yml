@@ -1,0 +1,25 @@
+uuid: 8f9929a5-983d-4c98-986b-80c24d6675cf
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_slider
+    - field.field.block_content.logo_slider.field_logo_blocks
+  module:
+    - entity_reference_revisions
+id: block_content.logo_slider.default
+targetEntityType: block_content
+bundle: logo_slider
+mode: default
+content:
+  field_logo_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

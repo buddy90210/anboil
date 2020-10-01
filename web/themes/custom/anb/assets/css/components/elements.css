@@ -235,7 +235,10 @@ img {
 }
 
 .slick-arrow {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  margin-top: -30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -259,6 +262,28 @@ img {
   transition: .2s ease;
 }
 
+.slick-next {
+  left: auto;
+  right: -100px;
+}
+
+.slick-prev {
+  background-color: transparent;
+  border: 1px solid var(--base-color);
+}
+
+.slick-prev:hover {
+  border-color: var(--base-color-hover);
+}
+
+.slick-prev svg path {
+  stroke: var(--base-color);
+}
+
+.slick-prev:hover svg path {
+  stroke: #fff;
+}
+
 .slick-prev svg {
   transform: rotate(180deg);
 }
@@ -269,6 +294,7 @@ img {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .slick-dots li {
@@ -442,8 +468,6 @@ div[data-drupal-messages] {
 .nav-tabs a {
   display: block;
   border: 1px solid transparent;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   padding: 1rem 1.5rem;
   white-space: nowrap;
   font-size: 0.94rem;
@@ -458,4 +482,61 @@ div[data-drupal-messages] {
   display: block;
   background-color: #fff;
   border-color: var(--border-color) var(--border-color) #fff;
+}
+
+/* --------------------------------- Background layout --------------------------------- */
+.main-layout--background {
+  background-color: var(--base-color-light);
+}
+
+.main-layout--background .breadcrumbs {
+  background-color: #fff;
+}
+
+.main-layout--background + .bottom-content {
+  margin-top: 0;
+}
+
+/* ------------------------- Features ------------------------- */
+.features {
+  margin-top: var(--spacer);
+  padding: var(--spacer) 0;
+  background-color: #fff;
+}
+
+.features .body ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.features .body ul li {
+  position: relative;
+  display: block;
+  width: 32%;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  padding-left: 90px;
+}
+
+.features .body ul li svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.features .body ul li em {
+  display: block;
+  margin-bottom: -15px;
+  font-style: normal;
+  font-size: 1.0625rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.features .body ul li em u {
+  text-decoration: none;
+  color: var(--base-color);
 }

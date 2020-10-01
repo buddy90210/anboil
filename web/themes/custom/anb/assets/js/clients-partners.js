@@ -1,0 +1,18 @@
+(function ($, Drupal) {
+  Drupal.behaviors.clients_partners = {
+    attach: function (context, settings) {
+
+      'use strict';
+
+      $('.logo-blocks__items', context).slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+        responsive: [
+          {breakpoint: 960, settings: {slidesToShow: 2, slidesToScroll: 2}},
+        ]
+      });
+    }
+  };
+})(jQuery, Drupal);

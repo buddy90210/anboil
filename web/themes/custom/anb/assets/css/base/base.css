@@ -18,6 +18,7 @@ html, body, main, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, b
 
   /* Borders */
   --border-color: #eaeaea;
+  --border-color-light: #F6E8E8;
 
   /* Buttons */
   --button-height: 65px;
@@ -58,11 +59,11 @@ body {
 }
 
 .bottom-content {
-  margin-top: 5rem;
+  margin-top: var(--spacer);
 }
 
 .footer {
-  margin-top: 5rem;
+  margin-top: var(--spacer);
 }
 
 .bottom-content ~ .footer {

@@ -1,0 +1,33 @@
+uuid: 784f8843-b06f-4cc7-84d9-e41c91eec146
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_block.field_logo_image
+    - field.field.paragraph.logo_block.field_logo_title
+    - paragraphs.paragraphs_type.logo_block
+  module:
+    - media_library
+id: paragraph.logo_block.default
+targetEntityType: paragraph
+bundle: logo_block
+mode: default
+content:
+  field_logo_image:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_logo_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
