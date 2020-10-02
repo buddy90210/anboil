@@ -1,0 +1,43 @@
+uuid: 5a07eb10-e203-4dca-94d1-c48b5398f0c8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.jobs
+    - field.storage.block_content.field_jobs
+    - paragraphs.paragraphs_type.job
+  module:
+    - entity_reference_revisions
+id: block_content.jobs.field_jobs
+field_name: field_jobs
+entity_type: block_content
+bundle: jobs
+label: Вакансия
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      job: job
+    target_bundles_drag_drop:
+      contacts_block:
+        weight: 6
+        enabled: false
+      job:
+        enabled: true
+        weight: 7
+      logo_block:
+        weight: 8
+        enabled: false
+      map:
+        weight: 9
+        enabled: false
+      promo:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

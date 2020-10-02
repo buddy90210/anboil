@@ -1,0 +1,11 @@
+uuid: ca593f91-4e7d-4603-bd49-8c7dd76dbbce
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.jobs
+id: block_content.jobs
+target_entity_type_id: block_content
+target_bundle: jobs
+default_langcode: site_default
+language_alterable: false

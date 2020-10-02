@@ -1,0 +1,10 @@
+uuid: 2562ebe4-371e-4b06-a25f-bfcd46ea60a1
+langcode: ru
+status: true
+dependencies: {  }
+id: job
+label: Вакансия
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

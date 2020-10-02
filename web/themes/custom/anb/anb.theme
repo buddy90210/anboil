@@ -73,6 +73,11 @@ function anb_page_attachments_alter(array &$attachments) {
     if ($node->id() === '6') {
       $attachments['#attached']['library'][] = 'anb/promotions';
     }
+
+    // Jobs.
+    if ($node->id() === '14') {
+      $attachments['#attached']['library'][] = 'anb/jobs';
+    }
   }
 }
 
@@ -97,7 +102,7 @@ function anb_preprocess_page(&$variables) {
 
   // Specific background pages.
   $node_id = \Drupal::routeMatch()->getRawParameters()->get('node');
-  $background_nids = ['6', '7','8'];
+  $background_nids = [6, 7, 8, 14];
 
   if (in_array($node_id, $background_nids)) {
     $layout_attributes->addClass('main-layout--background');
@@ -166,6 +171,11 @@ function anb_theme_suggestions_block_alter(array &$suggestions, array $variables
 function anb_preprocess_field(&$variables) {
   $field_name = $variables['field_name'];
   $variables['field_name'] = Html::cleanCssIdentifier($field_name);
+
+  // Jobs description field.
+  if ($field_name === 'field_job_description') {
+    $variables['attributes']['class'][] = 'body';
+  }
 }
 
 /**
@@ -183,6 +193,7 @@ function anb_theme_suggestions_field_alter(array &$suggestions, array $variables
   // Clean layout fields.
   $clean_fields = [
     'field_media_image',
+    'field_jobs',
   ];
   if (in_array($field_name, $clean_fields)) {
     $suggestions[] = 'field__clean';

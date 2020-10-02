@@ -1,0 +1,40 @@
+uuid: 6bed3bd3-794c-451b-9d19-cbf7ccc9124b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job.field_job_city
+    - field.field.paragraph.job.field_job_description
+    - field.field.paragraph.job.field_job_title
+    - paragraphs.paragraphs_type.job
+  module:
+    - text
+id: paragraph.job.default
+targetEntityType: paragraph
+bundle: job
+mode: default
+content:
+  field_job_city:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_job_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_job_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

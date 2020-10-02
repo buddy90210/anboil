@@ -1,0 +1,25 @@
+uuid: 7f1e4611-0aff-4685-a77d-1e4555dbf01c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.jobs
+    - field.field.block_content.jobs.field_jobs
+  module:
+    - entity_reference_revisions
+id: block_content.jobs.default
+targetEntityType: block_content
+bundle: jobs
+mode: default
+content:
+  field_jobs:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

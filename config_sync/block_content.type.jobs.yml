@@ -1,0 +1,8 @@
+uuid: 3c075ec3-d664-4599-aeba-0400f4e85f0e
+langcode: ru
+status: true
+dependencies: {  }
+id: jobs
+label: Вакансии
+revision: 0
+description: ''

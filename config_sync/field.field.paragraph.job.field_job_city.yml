@@ -1,0 +1,19 @@
+uuid: de236b4c-6edb-49c5-8309-32dba8668086
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_city
+    - paragraphs.paragraphs_type.job
+id: paragraph.job.field_job_city
+field_name: field_job_city
+entity_type: paragraph
+bundle: job
+label: Город
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

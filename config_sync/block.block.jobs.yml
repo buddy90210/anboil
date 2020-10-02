@@ -1,0 +1,34 @@
+uuid: f0aed2a5-26a9-48f1-bf09-7460682ea503
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:jobs:74ff56d3-6680-488e-9618-223a01e6c015'
+  module:
+    - anb_base
+    - block_content
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: jobs
+theme: anb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:74ff56d3-6680-488e-9618-223a01e6c015'
+settings:
+  id: 'block_content:74ff56d3-6680-488e-9618-223a01e6c015'
+  label: Вакансии
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/14
+    negate: false

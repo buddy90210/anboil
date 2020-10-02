@@ -1,0 +1,44 @@
+/* ------------------------- Jobs ------------------------- */
+.jobs {
+  padding-bottom: var(--spacer);
+}
+
+.job {
+  margin-bottom: 3.25rem;
+  padding: 3.75rem;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(188, 188, 188, 0.25);
+  border-radius: 3px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.job-city {
+  position: relative;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-base);
+  padding-left: 35px;
+}
+
+.job-city:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 20px;
+  height: 23px;
+  background: var(--sprite) 0 -278px;
+}
+
+.job-description {
+  margin-bottom: 2.5rem;
+}

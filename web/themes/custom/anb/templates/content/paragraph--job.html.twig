@@ -1,0 +1,13 @@
+{%
+  set classes = [
+  paragraph.bundle|clean_class,
+]
+%}
+{% block paragraph %}
+  <article{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content }}
+      <span class="{{ bundle }}__button button modal-trigger" data-modal="jobform">Отправить резюме</span>
+    {% endblock %}
+  </article>
+{% endblock paragraph %}

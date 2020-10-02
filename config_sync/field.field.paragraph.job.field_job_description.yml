@@ -1,0 +1,21 @@
+uuid: 42f729d7-64c4-469e-8ada-a9ce461444cb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_description
+    - paragraphs.paragraphs_type.job
+  module:
+    - text
+id: paragraph.job.field_job_description
+field_name: field_job_description
+entity_type: paragraph
+bundle: job
+label: Описание
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
