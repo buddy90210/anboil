@@ -1,0 +1,21 @@
+uuid: 7bfbf6b8-5f11-471f-9281-6e7a2e54c3ec
+langcode: ru
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_sent_from
+field_name: field_sent_from
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

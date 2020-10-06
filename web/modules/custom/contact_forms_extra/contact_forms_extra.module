@@ -56,6 +56,13 @@ function contact_forms_extra_form_alter(&$form, FormStateInterface &$form_state,
     $form['field_attachment']['#attributes']['class'][] = 'filefield';
   }
 
+  // Sent from page field.
+  if (isset($form['field_sent_from'])) {
+    unset($form['field_sent_from']['widget'][0]['value']['#title']);
+    $form['field_sent_from']['widget'][0]['value']['#default_value'] = \Drupal::service('path.current')->getPath();
+    $form['field_sent_from']['#attributes']['class'][] = 'visually-hidden';
+  }
+
   // Agreement field.
   if (isset($form['field_agreement'])) {
     $form['field_agreement']['widget']['value']['#default_value'] = true;

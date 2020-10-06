@@ -1,0 +1,21 @@
+uuid: 6610ce16-505a-471b-8f50-825f1b7842aa
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_preview_text
+    - taxonomy.vocabulary.catalog
+  module:
+    - text
+id: taxonomy_term.catalog.field_preview_text
+field_name: field_preview_text
+entity_type: taxonomy_term
+bundle: catalog
+label: 'Краткое описание'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

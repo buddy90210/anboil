@@ -6,7 +6,10 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\anb_catalog\CatalogManager;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Site\Settings;
 use Drupal\Core\Url;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_theme().
@@ -17,6 +20,12 @@ function anb_catalog_theme($existing, $type, $theme, $path) {
       'variables' => [
         'category_name' => NULL,
         'category_url' => NULL,
+      ]
+    ],
+    'category_cities' => [
+      'variables' => [
+        'block_title' => NULL,
+        'cities' => NULL,
       ]
     ]
   ];
@@ -87,4 +96,119 @@ function anb_catalog_preprocess_radios(&$variables) {
   if ($variables['element']['#name'] === 'category') {
     $variables['attributes']['class'][] = 'tabs';
   }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function anb_catalog_preprocess_block(&$variables) {
+  // H1 field value for page title block on catalog terms.
+  if ($variables['plugin_id'] === 'page_title_block') {
+    $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+
+    if (is_null($term)) {
+      return;
+    }
+
+    if ($term->bundle() === 'catalog') {
+      $custom_page_title = $term->field_page_title->value;
+
+      if (!is_null($custom_page_title)) {
+        $markup = new Markup();
+        $variables['content']['#title'] = $markup->create($custom_page_title);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function anb_catalog_preprocess_taxonomy_term(&$variables) {
+  $term = $variables['term'];
+
+  if ($term->bundle() === 'catalog') {
+    // Attach libraries.
+    $variables['#attached']['library'][] = 'anb/production';
+
+    // Term name variable.
+    $term_name = $term->getName();
+    $custom_page_title = $term->field_page_title->value;
+
+    if (!is_null($custom_page_title)) {
+      $term_name = $custom_page_title;
+    }
+
+    $markup = new Markup();
+    $variables['content']['term_name'] = $markup->create($term_name);
+
+    // Contacts variables for template.
+    $contacts_config = \Drupal::config('system.site')->getRawData();
+    $contacts = [
+      'phone' => $contacts_config['phone'],
+      'email' => $contacts_config['email'],
+    ];
+    $variables['content']['contacts'] = $contacts;
+
+    // Is child term variable (should render map block).
+    if ($term->parent->target_id !== '0') {
+      $variables['is_child_term'] = true;
+      $variables['yandex_api_key'] = Settings::get('yandex_api_key');
+      $variables['map_place'] = $term->getName();
+      $variables['#attached']['library'][] = 'anb/ymaps';
+    }
+  }
+}
+
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function anb_catalog_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  if ($view->id() === 'products' && $view->current_display === 'category') {
+    $products_category = NULL;
+    $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+
+    if (is_null($term)) {
+      return;
+    }
+
+    $parent_id = intval($term->parent->target_id);
+
+    // Show products for parent term if current term is a children.
+    if ($parent_id === 0) {
+      $products_category = intval($term->id());
+    } else {
+      $products_category = $parent_id;
+    }
+
+    $view->args[0] = $products_category;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function anb_catalog_preprocess_page(&$variables) {
+  $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+
+  if (is_null($term)) {
+    return;
+  }
+  if ($term->bundle() !== 'catalog') {
+    return;
+  }
+
+  // Add cities block at category term page.
+  $catalog_manager = new CatalogManager();
+  $cities_block = $catalog_manager->getCitiesTermsList($term);
+
+  if (!empty($cities_block)) {
+    $variables['page']['bottom_content']['cities'] = [
+      '#theme' => 'category_cities',
+      '#block_title' => $cities_block['block_title'],
+      '#cities' => $cities_block['cities'],
+    ];
+  }
+
 }

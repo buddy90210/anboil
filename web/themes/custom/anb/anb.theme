@@ -216,6 +216,7 @@ function anb_theme_suggestions_field_alter(array &$suggestions, array $variables
   $clean_fields = [
     'field_media_image',
     'field_jobs',
+    'name'
   ];
   if (in_array($field_name, $clean_fields)) {
     $suggestions[] = 'field__clean';

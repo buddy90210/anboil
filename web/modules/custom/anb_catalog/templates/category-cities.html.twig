@@ -1,0 +1,21 @@
+{% set class = "cities-block" %}
+<section class="{{ class }} container">
+  <h2>{{ block_title }}</h2>
+
+  <div class="{{ class }}__items">
+    {% for character, city_items in cities %}
+      <div class="{{ class }}-item">
+        <span class="{{ class }}-item__character">{{ character }}</span>
+
+        <ul class="{{ class }}-item__cities">
+          {% for city_item in city_items %}
+            <li class="{{ class }}-item__city"><a href="{{ city_item.url }}">{{ city_item.name }}</a></li>
+          {% endfor %}
+        </ul>
+        {% if city_items|length > 6 %}
+          <span class="{{ class }}__toggler"><i>ещё</i><svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L4 4L7 1" stroke="#EF0A0F" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

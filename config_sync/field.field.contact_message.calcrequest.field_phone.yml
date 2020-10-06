@@ -1,14 +1,14 @@
-uuid: e8d69148-4ef0-4e3e-9d05-26fadeae46fb
+uuid: a8a22807-60ea-4d8b-93f7-e1658c6278ea
 langcode: ru
 status: true
 dependencies:
   config:
-    - contact.form.questionform
+    - contact.form.calcrequest
     - field.storage.contact_message.field_phone
-id: contact_message.questionform.field_phone
+id: contact_message.calcrequest.field_phone
 field_name: field_phone
 entity_type: contact_message
-bundle: questionform
+bundle: calcrequest
 label: 'Номер телефона'
 description: ''
 required: true

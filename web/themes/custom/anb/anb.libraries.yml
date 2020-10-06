@@ -57,6 +57,10 @@ about:
   js:
     assets/js/about.js: {}
 
+ymaps:
+  js:
+    assets/js/ymaps.js: {}
+
 blog:
   css:
     theme:

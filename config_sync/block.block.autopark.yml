@@ -30,5 +30,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node/16
+    pages: "/node/16\r\n/catalog/*"
     negate: false

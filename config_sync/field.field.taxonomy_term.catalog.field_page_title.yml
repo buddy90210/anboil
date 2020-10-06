@@ -1,0 +1,21 @@
+uuid: 03adf29d-e96c-4333-a800-123f51d614f7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_page_title
+    - taxonomy.vocabulary.catalog
+  module:
+    - text
+id: taxonomy_term.catalog.field_page_title
+field_name: field_page_title
+entity_type: taxonomy_term
+bundle: catalog
+label: 'Заголовок страницы (H1)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

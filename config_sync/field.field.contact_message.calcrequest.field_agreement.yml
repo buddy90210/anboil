@@ -1,0 +1,23 @@
+uuid: e408d705-9635-4f8c-9487-c54e1464d223
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.calcrequest
+    - field.storage.contact_message.field_agreement
+id: contact_message.calcrequest.field_agreement
+field_name: field_agreement
+entity_type: contact_message
+bundle: calcrequest
+label: 'Согласие на обработку персональных данных'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Согласие на обработку персональных данных'
+  off_label: 'Согласие на обработку персональных данных'
+field_type: boolean
