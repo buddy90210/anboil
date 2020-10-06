@@ -1,0 +1,21 @@
+uuid: c0720ee6-350c-44ad-b152-836df511bc40
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_calc_description
+    - node.type.service
+  module:
+    - text
+id: node.service.field_calc_description
+field_name: field_calc_description
+entity_type: node
+bundle: service
+label: 'Краткое описание'
+description: 'Отображается рядом с формой калькулятора'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

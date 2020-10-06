@@ -1,0 +1,23 @@
+uuid: 7de5cc29-4cdb-4971-a34a-08abd7381c2b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: catalog_terms
+label: 'Catalog terms'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'catalog/[term:parents:join-path]/[term:name]'
+selection_criteria:
+  820a0faf-7967-4108-9e3d-6b80afc3a35b:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      catalog: catalog
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 820a0faf-7967-4108-9e3d-6b80afc3a35b
+selection_logic: and
+weight: -5
+relationships: {  }

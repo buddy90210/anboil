@@ -14,7 +14,7 @@ _core:
 id: page_title
 theme: anb
 region: top_content
-weight: -1
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

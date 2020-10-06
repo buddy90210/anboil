@@ -338,6 +338,7 @@ input[type="checkbox"]:checked {
 }
 
 .questionblock .form-wrapper.form-actions {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

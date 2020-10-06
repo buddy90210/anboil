@@ -1,0 +1,23 @@
+uuid: 238e272d-5322-47e3-b376-e5cfb132f191
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_density
+    - node.type.product
+id: node.product.field_density
+field_name: field_density
+entity_type: node
+bundle: product
+label: Плотность
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

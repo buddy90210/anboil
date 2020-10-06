@@ -112,6 +112,7 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: .3s ease;
 }
 
 .button::selection {
@@ -539,4 +540,169 @@ div[data-drupal-messages] {
 .features .body ul li em u {
   text-decoration: none;
   color: var(--base-color);
+}
+
+/* --------------------------------- Tabs --------------------------------- */
+.tabs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-bottom: 1px solid var(--border-color);
+  margin-top: -1.25rem;
+  margin-bottom: 3rem;
+}
+
+.tabs:before,
+.tabs:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.tabs:after {
+  left: auto;
+  right: -100%;
+}
+
+.tabs .form-item {
+  padding: 0;
+  margin: 0 2rem 0 0;
+}
+
+.tabs .form-item input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.tabs .form-item label {
+  position: relative;
+  bottom: -1px;
+  display: block;
+  padding: 1.25rem 1rem;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.0625rem;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.tabs .form-item input:checked + label,
+.tabs .form-item label:hover {
+  cursor: pointer;
+  color: var(--base-color);
+}
+
+.tabs .form-item input:checked + label {
+  border-color: var(--base-color);
+}
+
+/* --------------------------------- Not found --------------------------------- */
+.not-found {
+  background-color: var(--base-color-light);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1.4rem;
+  color: var(--color-gray-base);
+  border: 1px solid var(--border-color);
+}
+
+/* --------------------------------- Equipment slider --------------------------------- */
+.equipment-slider {
+  background-color: var(--base-color-light);
+  padding: var(--spacer) 0;
+}
+
+.equipment-slider .heading {
+  font-weight: 600;
+  font-size: 1.875rem;
+  margin-bottom: 3rem;
+}
+
+.equipment__item {
+  margin: 0 15px 15px 0;
+  background-color: #fff;
+  box-shadow: 0 4px 20px #FCEEEE;
+  border-radius: 3px;
+}
+
+.equipment-photo img {
+  display: block;
+}
+
+.equipment-title {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.equipment-title__label {
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-gray-base);
+  margin-bottom: .8rem;
+}
+
+.equipment-title__item {
+  font-weight: 500;
+  font-size: 1.375rem;
+}
+
+.equipment__item .characteristics {
+  padding: 2rem;
+}
+
+.characteristics__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted var(--border-color);
+}
+
+.characteristics__item:last-child {
+  margin-bottom: 0;
+}
+
+.characteristics__item > div {
+  position: relative;
+}
+
+.characteristics__item > div:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: calc(100% + 15px);
+  height: 2px;
+  background-color: #fff;
+}
+
+.characteristics__item > div:last-child:before {
+  left: -15px;
+}
+
+.characteristics__item .title {
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-gray-base);
+  padding-top: 5px;
+}
+
+.characteristics__item .value {
+  font-weight: 500;
 }

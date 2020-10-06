@@ -27,6 +27,18 @@
   Drupal.behaviors.base = {
     attach: function (context, settings) {
       /**
+       * Equipment slider.
+       */
+      $('.equipment__items', context).slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+        responsive: [
+          {breakpoint: 960, settings: {slidesToShow: 2, slidesToScroll: 2}},
+        ]
+      });
+      /**
        * Sliders customization.
        */
       let sliders = $('.slick-slider');

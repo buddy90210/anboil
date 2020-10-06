@@ -1,0 +1,16 @@
+{% set class = "filters-info" %}
+<footer class="{{ class }}">
+  <h3 class="{{ class }}__title">
+    <a href="{{ category_url }}">{{ category_name }}</a><span class="count-circle"></span>
+  </h3>
+
+  <ul class="{{ class }}__actions">
+    <li class="{{ class }}__action">
+      <span class="{{ class }}__button button button--flat modal-trigger" data-modal="deliveryterms">Уточнить условия доставки</span>
+    </li>
+
+    <li class="{{ class }}__action">
+      <span class="{{ class }}__button button modal-trigger" data-modal="deliverycalculate">Рассчитать доставку</span>
+    </li>
+  </ul>
+</footer>

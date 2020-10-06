@@ -1,0 +1,8 @@
+uuid: ae4535fc-6d31-4aa4-829d-dce8dc9ecd5e
+langcode: ru
+status: true
+dependencies: {  }
+id: equipment
+label: Оборудование
+revision: 0
+description: ''

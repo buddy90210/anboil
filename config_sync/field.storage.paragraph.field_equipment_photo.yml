@@ -1,0 +1,20 @@
+uuid: d1a22a73-ab4b-49d2-90de-9960e6921cf2
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_equipment_photo
+field_name: field_equipment_photo
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

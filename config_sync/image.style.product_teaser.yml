@@ -1,0 +1,15 @@
+uuid: 19b212ce-50b9-4cb5-93f6-8251e8007265
+langcode: ru
+status: true
+dependencies: {  }
+name: product_teaser
+label: product_teaser
+effects:
+  8d5afd8e-81c4-44c9-8e1b-00065017e7e5:
+    uuid: 8d5afd8e-81c4-44c9-8e1b-00065017e7e5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60
+      anchor: center-center

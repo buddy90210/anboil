@@ -1,0 +1,20 @@
+uuid: e03ac31a-ec3c-4b21-bb2e-8b02f154d34f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_item_price
+field_name: field_item_price
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

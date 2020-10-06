@@ -1,0 +1,10 @@
+uuid: a7e80596-7a1b-4134-9978-cf8fc082293a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.equipment
+label: Equipment
+targetEntityType: media
+cache: true

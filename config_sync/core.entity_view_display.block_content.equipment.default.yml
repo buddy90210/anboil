@@ -1,0 +1,25 @@
+uuid: 40a3509e-f25d-4447-a71a-e4b206449249
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.equipment
+    - field.field.block_content.equipment.field_equipment
+  module:
+    - entity_reference_revisions
+id: block_content.equipment.default
+targetEntityType: block_content
+bundle: equipment
+mode: default
+content:
+  field_equipment:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

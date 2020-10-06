@@ -1,0 +1,49 @@
+uuid: 45584885-38a1-4e07-a3ea-19cbc8cb4200
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.equipment
+    - field.storage.block_content.field_equipment
+    - paragraphs.paragraphs_type.equipment
+  module:
+    - entity_reference_revisions
+id: block_content.equipment.field_equipment
+field_name: field_equipment
+entity_type: block_content
+bundle: equipment
+label: Оборудование
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      equipment: equipment
+    target_bundles_drag_drop:
+      characteristics:
+        weight: 8
+        enabled: false
+      contacts_block:
+        weight: 9
+        enabled: false
+      equipment:
+        enabled: true
+        weight: 10
+      job:
+        weight: 11
+        enabled: false
+      logo_block:
+        weight: 12
+        enabled: false
+      map:
+        weight: 13
+        enabled: false
+      promo:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

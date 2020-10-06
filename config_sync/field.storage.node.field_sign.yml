@@ -1,0 +1,21 @@
+uuid: 921cd507-eced-4977-af2e-cc3bb81741ea
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sign
+field_name: field_sign
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

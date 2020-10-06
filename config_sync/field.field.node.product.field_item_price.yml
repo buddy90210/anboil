@@ -1,0 +1,23 @@
+uuid: 57d26a46-a404-459e-a69b-c4d7d93a2375
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_item_price
+    - node.type.product
+id: node.product.field_item_price
+field_name: field_item_price
+entity_type: node
+bundle: product
+label: 'Цена за литр'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' ₽'
+field_type: decimal

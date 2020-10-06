@@ -1,0 +1,11 @@
+uuid: 845b83e1-2585-4ac2-a33c-796b5efc6983
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.equipment
+id: block_content.equipment
+target_entity_type_id: block_content
+target_bundle: equipment
+default_langcode: site_default
+language_alterable: false

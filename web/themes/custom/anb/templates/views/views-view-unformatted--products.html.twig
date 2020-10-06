@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{%
+  set class = 'products'
+%}
+<ul class="{{ class }}-heading">
+  <li class="{{ class }}-heading__item {{ class }}-heading__item--title">Наименование</li>
+  <li class="{{ class }}-heading__item {{ class }}-heading__item--density">Плотность</li>
+  <li class="{{ class }}-heading__item {{ class }}-heading__item--item-price">Цена за литр</li>
+  <li class="{{ class }}-heading__item {{ class }}-heading__item--full-price">Цена за тонну</li>
+</ul>
+
+<div class="{{ class }}-items">
+  {% for row in rows %}
+    {{- row.content -}}
+  {% endfor %}
+</div>

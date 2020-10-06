@@ -1,0 +1,5 @@
+anb_services.calculation_settings_form:
+  title: 'Настройки калькуляторов'
+  parent: system.admin_config_system
+  route_name: anb_services.calculation_settings
+  weight: 100

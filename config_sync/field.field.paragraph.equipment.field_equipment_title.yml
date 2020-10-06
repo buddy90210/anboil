@@ -1,0 +1,19 @@
+uuid: b07dffa0-2d80-4e4b-b46f-abfc5dbc7768
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_equipment_title
+    - paragraphs.paragraphs_type.equipment
+id: paragraph.equipment.field_equipment_title
+field_name: field_equipment_title
+entity_type: paragraph
+bundle: equipment
+label: Наименование
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: 8f865119-2d3f-4ddb-82d5-e1a879e4b2c4
+langcode: ru
+status: true
+dependencies: {  }
+id: equipment
+label: Оборудование
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

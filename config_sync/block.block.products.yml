@@ -1,0 +1,33 @@
+uuid: d0909e4d-4d55-4a8d-9553-2cb3969aa1c2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.products
+  module:
+    - anb_base
+    - system
+    - views
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: products
+theme: anb
+region: top_content
+weight: -4
+provider: null
+plugin: 'views_block:products-all'
+settings:
+  id: 'views_block:products-all'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/16
+    negate: false

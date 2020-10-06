@@ -1,0 +1,10 @@
+uuid: cbf2e302-fc23-4ec6-96c5-866c507b6c2b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.product_teaser
+label: 'Product Teaser'
+targetEntityType: media
+cache: true

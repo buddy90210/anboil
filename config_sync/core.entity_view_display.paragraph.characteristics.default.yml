@@ -1,0 +1,30 @@
+uuid: f37abb57-f709-4a9f-9b21-2562679b015d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.characteristics.field_title
+    - field.field.paragraph.characteristics.field_value
+    - paragraphs.paragraphs_type.characteristics
+id: paragraph.characteristics.default
+targetEntityType: paragraph
+bundle: characteristics
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_value:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

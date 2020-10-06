@@ -1,0 +1,33 @@
+uuid: cba7aa09-1c56-4b53-b214-54ee1e054998
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.equipment
+    - field.field.media.image.field_media_image
+    - image.style.equipment
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.equipment
+targetEntityType: media
+bundle: image
+mode: equipment
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: equipment
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

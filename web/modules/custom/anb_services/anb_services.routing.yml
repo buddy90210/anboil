@@ -1,0 +1,9 @@
+anb_services.calculation_settings:
+  path: '/admin/calculation-settings'
+  defaults:
+    _form: '\Drupal\anb_services\Form\CalculationConfigForm'
+    _title: 'Настройки калькуляторов'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

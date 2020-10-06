@@ -1,0 +1,33 @@
+uuid: e2beedae-0d51-4331-867f-688e848b7562
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.product_teaser
+    - field.field.media.image.field_media_image
+    - image.style.product_teaser
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.product_teaser
+targetEntityType: media
+bundle: image
+mode: product_teaser
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: product_teaser
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

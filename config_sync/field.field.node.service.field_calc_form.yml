@@ -1,0 +1,21 @@
+uuid: c012e5bd-4776-48a7-bbf1-58bc65cff4d9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_calc_form
+    - node.type.service
+  module:
+    - options
+id: node.service.field_calc_form
+field_name: field_calc_form
+entity_type: node
+bundle: service
+label: 'Форма калькулятора'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,74 @@
+uuid: 1a73f82e-f469-48e5-bf2b-08d9f933a94e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.product.field_category
+    - field.field.node.product.field_density
+    - field.field.node.product.field_full_price
+    - field.field.node.product.field_item_price
+    - field.field.node.product.field_photo
+    - field.field.node.product.field_sign
+    - node.type.product
+  module:
+    - user
+id: node.product.teaser
+targetEntityType: node
+bundle: product
+mode: teaser
+content:
+  field_density:
+    type: number_decimal
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_full_price:
+    type: number_decimal
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ' '
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_item_price:
+    type: number_decimal
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ' '
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_photo:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: product_teaser
+      link: false
+    third_party_settings: {  }
+  field_sign:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  langcode: true
+  links: true

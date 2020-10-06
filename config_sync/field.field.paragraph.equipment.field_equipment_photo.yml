@@ -1,0 +1,28 @@
+uuid: 9b1b3e7a-634a-40b8-9448-baca1e17fe2c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_equipment_photo
+    - media.type.image
+    - paragraphs.paragraphs_type.equipment
+id: paragraph.equipment.field_equipment_photo
+field_name: field_equipment_photo
+entity_type: paragraph
+bundle: equipment
+label: Фотография
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

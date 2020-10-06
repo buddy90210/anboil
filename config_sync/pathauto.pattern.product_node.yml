@@ -1,0 +1,22 @@
+uuid: 45e254a0-2563-433b-be97-c26551da9d05
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: product_node
+label: 'Product node'
+type: 'canonical_entities:node'
+pattern: 'hidden/[node:title]'
+selection_criteria:
+  cc444c5c-f679-4896-9323-33be87fa1cab:
+    id: node_type
+    bundles:
+      product: product
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cc444c5c-f679-4896-9323-33be87fa1cab
+selection_logic: and
+weight: -5
+relationships: {  }

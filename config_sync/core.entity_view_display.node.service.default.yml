@@ -1,0 +1,39 @@
+uuid: 8468536b-f596-4337-8b2b-4aa1aaac6d41
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.service.body
+    - field.field.node.service.field_calc_description
+    - field.field.node.service.field_calc_form
+    - node.type.service
+  module:
+    - text
+    - user
+id: node.service.default
+targetEntityType: node
+bundle: service
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_calc_description:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_calc_form: true
+  langcode: true

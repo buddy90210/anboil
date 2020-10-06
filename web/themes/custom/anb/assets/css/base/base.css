@@ -58,6 +58,10 @@ body {
   padding-right: 15px;
 }
 
+.main-layout {
+  overflow: hidden;
+}
+
 .bottom-content {
   margin-top: var(--spacer);
 }

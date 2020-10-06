@@ -1,0 +1,8 @@
+uuid: 324e54f6-6089-4ee4-ae54-f39e466f0ee0
+langcode: ru
+status: true
+dependencies: {  }
+name: Продукция
+vid: catalog
+description: ''
+weight: 0

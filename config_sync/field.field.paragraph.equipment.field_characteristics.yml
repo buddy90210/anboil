@@ -1,0 +1,49 @@
+uuid: 9bf63e8b-c11e-486d-8381-0ea623263a91
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_characteristics
+    - paragraphs.paragraphs_type.characteristics
+    - paragraphs.paragraphs_type.equipment
+  module:
+    - entity_reference_revisions
+id: paragraph.equipment.field_characteristics
+field_name: field_characteristics
+entity_type: paragraph
+bundle: equipment
+label: Характеристики
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      characteristics: characteristics
+    target_bundles_drag_drop:
+      characteristics:
+        enabled: true
+        weight: 8
+      contacts_block:
+        weight: 9
+        enabled: false
+      equipment:
+        weight: 10
+        enabled: false
+      job:
+        weight: 11
+        enabled: false
+      logo_block:
+        weight: 12
+        enabled: false
+      map:
+        weight: 13
+        enabled: false
+      promo:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

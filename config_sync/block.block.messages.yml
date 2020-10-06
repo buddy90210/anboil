@@ -15,7 +15,7 @@ _core:
 id: messages
 theme: anb
 region: top_content
-weight: -2
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

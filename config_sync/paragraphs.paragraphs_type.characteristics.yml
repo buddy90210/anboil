@@ -1,0 +1,10 @@
+uuid: c8c9e8fc-fd96-464f-b9d2-8b5f806cae8e
+langcode: ru
+status: true
+dependencies: {  }
+id: characteristics
+label: Характеристики
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

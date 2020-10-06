@@ -1,0 +1,30 @@
+uuid: fa39915e-51ec-48ae-965c-4b6312c93b81
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_calc_form
+field_name: field_calc_form
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: services_delivery_form
+      label: 'Калькулятор доставки'
+    -
+      value: services_transshipment_form
+      label: 'Калькулятор перевалки'
+    -
+      value: services_storage_form
+      label: 'Калькулятор хранения'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

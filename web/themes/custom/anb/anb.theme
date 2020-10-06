@@ -78,6 +78,11 @@ function anb_page_attachments_alter(array &$attachments) {
     if ($node->id() === '14') {
       $attachments['#attached']['library'][] = 'anb/jobs';
     }
+
+    // Production.
+    if ($node->id() === '16') {
+      $attachments['#attached']['library'][] = 'anb/production';
+    }
   }
 }
 
@@ -106,6 +111,13 @@ function anb_preprocess_page(&$variables) {
 
   if (in_array($node_id, $background_nids)) {
     $layout_attributes->addClass('main-layout--background');
+  }
+
+  if (!is_null($node_id)) {
+    $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
+    if ($node->bundle() === 'service') {
+      //$layout_attributes->addClass('main-layout--background');
+    }
   }
 
   $variables['layout_attributes'] = $layout_attributes;
@@ -153,7 +165,17 @@ function anb_preprocess_page(&$variables) {
  * Implements hook_preprocess_block().
  */
 function anb_preprocess_block(&$variables) {
-  $variables['block_class'] = Html::cleanCssIdentifier($variables['elements']['#id']);
+  $block_class = Html::cleanCssIdentifier($variables['elements']['#id']);
+  $variables['block_class'] = $block_class;
+
+  // Content blocks.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $block = $variables['elements']['content']['#block_content'];
+
+    if ($block->bundle() === 'equipment') {
+      $variables['attributes']['class'][] = 'equipment-slider';
+    }
+  }
 }
 
 /**

@@ -1,0 +1,32 @@
+uuid: 93e80ca6-9dd2-4c01-9bf3-a7ab4a27557a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.characteristics.field_title
+    - field.field.paragraph.characteristics.field_value
+    - paragraphs.paragraphs_type.characteristics
+id: paragraph.characteristics.default
+targetEntityType: paragraph
+bundle: characteristics
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
