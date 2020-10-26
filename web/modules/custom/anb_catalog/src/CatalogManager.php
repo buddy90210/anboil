@@ -14,6 +14,8 @@ class CatalogManager {
 
   /**
    * Get top level categories for given vocabulary.
+   *
+   * @return array
    */
     public function getTopLevelCategories($vid) {
       $categories = [];
@@ -32,7 +34,7 @@ class CatalogManager {
   /**
    * Get childs-by-city terms for given term or it's parent term.
    *
-   * @param $tid int
+   * @param \Drupal\taxonomy\TermInterface $term
    * @return array
    */
     public function getCitiesTermsList($term) {
