@@ -83,6 +83,11 @@ function anb_page_attachments_alter(array &$attachments) {
     if ($node->id() === '16') {
       $attachments['#attached']['library'][] = 'anb/production';
     }
+
+    // Services.
+    if ($node->bundle() === 'service' || $node->id() === '4') {
+      $attachments['#attached']['library'][] = 'anb/services';
+    }
   }
 }
 
@@ -116,7 +121,7 @@ function anb_preprocess_page(&$variables) {
   if (!is_null($node_id)) {
     $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
     if ($node->bundle() === 'service') {
-      //$layout_attributes->addClass('main-layout--background');
+      $layout_attributes->addClass('main-layout--background');
     }
   }
 

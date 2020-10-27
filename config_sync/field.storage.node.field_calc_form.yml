@@ -15,9 +15,6 @@ settings:
       value: services_delivery_form
       label: 'Калькулятор доставки'
     -
-      value: services_transshipment_form
-      label: 'Калькулятор перевалки'
-    -
       value: services_storage_form
       label: 'Калькулятор хранения'
   allowed_values_function: ''

@@ -1,0 +1,29 @@
+uuid: 83f05b10-ee2a-4656-a0bc-ca03d229f67e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_base
+    - anb_services
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: calcforms
+theme: anb
+region: content
+weight: 0
+provider: null
+plugin: services_calculators_block
+settings:
+  id: services_calculators_block
+  label: 'Calcular forms block'
+  provider: anb_services
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/4
+    negate: false

@@ -1,0 +1,21 @@
+uuid: 23e94fce-8b92-4a18-81dd-ac1991b04cad
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_title
+    - node.type.service
+  module:
+    - text
+id: node.service.field_page_title
+field_name: field_page_title
+entity_type: node
+bundle: service
+label: 'Заголовок страницы'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.service.body
     - field.field.node.service.field_calc_description
     - field.field.node.service.field_calc_form
+    - field.field.node.service.field_page_title
     - node.type.service
   module:
     - text
@@ -32,4 +33,5 @@ content:
 hidden:
   field_calc_description: true
   field_calc_form: true
+  field_page_title: true
   langcode: true

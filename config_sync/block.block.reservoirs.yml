@@ -1,9 +1,9 @@
-uuid: a742a4d6-def5-43dc-9bd0-cb8517ba95da
+uuid: c12ef7d4-ff5e-42d1-a107-5d61ba262b23
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:equipment:e73cf57e-a044-4d67-8bde-03c33cabc55b'
+    - 'block_content:equipment:55689c22-00b1-4f8c-b938-b7c8cc6a0239'
   module:
     - anb_base
     - block_content
@@ -13,15 +13,15 @@ dependencies:
 third_party_settings:
   anb_base:
     has_container: 1
-id: autopark
+id: reservoirs
 theme: anb
 region: bottom_content
-weight: -9
+weight: -8
 provider: null
-plugin: 'block_content:e73cf57e-a044-4d67-8bde-03c33cabc55b'
+plugin: 'block_content:55689c22-00b1-4f8c-b938-b7c8cc6a0239'
 settings:
-  id: 'block_content:e73cf57e-a044-4d67-8bde-03c33cabc55b'
-  label: 'Наш автопарк'
+  id: 'block_content:55689c22-00b1-4f8c-b938-b7c8cc6a0239'
+  label: 'Наш резервуарный парк'
   provider: block_content
   label_display: visible
   status: true
@@ -30,5 +30,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/node/15\r\n/node/16\r\n/catalog/*\r\n"
+    pages: /node/18
     negate: false

@@ -1,0 +1,26 @@
+{% set class = "calculators" %}
+<section class="{{ class }} tabsgroup">
+  <p class="{{ class }}__heading">
+    Рассчитать стоимость<br/>
+    <span class="tab" data-tab="delivery">доставки /</span>
+    <span class="tab" data-tab="storage"> хранения и перевалки</span>
+  </p>
+
+  {% for key, form in forms %}
+    <div class="{{ class }}__form {{ class }}__form--{{ key }} tabcontent" data-tab="{{ key }}">
+      {{ form }}
+    </div>
+  {% endfor %}
+
+  <div class="service__actions visually-hidden">
+    <div class="service__results">
+      <p class="service__results__title service-heading">Результат:</p>
+      <div class="service__results__data"></div>
+    </div>
+
+    <div class="service__form">
+      <p class="service__form__title service-heading">Запросить точный расчёт</p>
+      {{ drupal_entity('contact_form', 'calcrequest', null, null, false) }}
+    </div>
+  </div>
+</section>

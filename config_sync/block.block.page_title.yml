@@ -26,5 +26,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/catalog/*'
+    pages: "/catalog/*\r\n/services/*\r\n/node/4"
     negate: true

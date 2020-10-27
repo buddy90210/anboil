@@ -20,7 +20,7 @@ class CalculationConfigForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'anb_base.settings_form',
+      'anb_services.settings_form',
     ];
   }
 
@@ -35,12 +35,34 @@ class CalculationConfigForm extends ConfigFormBase {
    * @inheritDoc
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['title'] = [
+    $config = $this->config('anb_services.settings_form');
+
+    $form['storage_price_default'] = [
       '#type' => 'textfield',
-      '#title' => 'Title',
+      '#title' => 'Стоимость хранения ГСМ (руб.)',
+      '#default_value' => $config->get('storage_price_default'),
+    ];
+
+    $form['storage_price_extra'] = [
+      '#type' => 'textfield',
+      '#title' => 'Стоимость хранения ГСМ более месяца (руб.)',
+      '#default_value' => $config->get('storage_price_extra'),
     ];
 
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * @inheritDoc
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $config = $this->configFactory->getEditable('anb_services.settings_form');
+
+    $config->set('storage_price_default', $form_state->getValue('storage_price_default'))
+    ->set('storage_price_extra', $form_state->getValue('storage_price_extra'))
+    ->save();
+
+    parent::submitForm($form, $form_state);
   }
 
 }

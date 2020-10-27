@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.service.body
     - field.field.node.service.field_calc_description
     - field.field.node.service.field_calc_form
+    - field.field.node.service.field_page_title
     - node.type.service
   module:
     - text
@@ -18,22 +19,25 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_calc_description:
-    weight: 2
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_page_title:
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_calc_form: true
   langcode: true
+  links: true

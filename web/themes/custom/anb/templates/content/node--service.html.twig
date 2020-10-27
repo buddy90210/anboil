@@ -1,4 +1,24 @@
 {% set class = "service" %}
 <article class="{{ class }}">
-  {{ content.calc_form }}
+  <section class="{{ class }}__top">
+    <h1>{{ page_title|raw }}</h1>
+    {{ content.field_calc_description }}
+  </section>
+
+  <div class="{{ class }}__calculator">
+    {{ content.calc_form }}
+  </div>
+
+  <div class="{{ class }}__actions visually-hidden">
+    <div class="{{ class }}__results">
+      <p class="{{ class }}__results__title service-heading">Результат:</p>
+      <div class="{{ class }}__results__data"></div>
+    </div>
+
+    <div class="{{ class }}__form">
+      <p class="{{ class }}__form__title service-heading">Запросить точный расчёт</p>
+      {{ drupal_entity('contact_form', 'calcrequest', null, null, false) }}
+    </div>
+  </div>
 </article>
+
