@@ -1,1 +1,182 @@
 /* ------------------------- Front page ------------------------- */
+.front-wrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 1;
+}
+
+.front-wrap__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front-wrap__video:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.is-front .header {
+  background: transparent;
+}
+
+.hero-slider {
+  position: relative;
+  padding: var(--spacer) 0 200px;
+  color: #fff;
+}
+
+.hero-slider .slider-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hero-slider .slider-nav__inner {
+  padding: 0;
+}
+
+.hero-slider .slick-arrow {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+
+.hero-slider .slick-prev {
+  margin-right: 1.75rem;
+}
+
+.hero-slider .slick-prev {
+  border-color: rgba(255, 255, 255, .3)
+}
+
+.hero-slider .slick-prev:hover {
+  border-color: var(--base-color);
+}
+
+.hero-slider .slick-prev svg path {
+  stroke: #fff;
+}
+
+.hero-slider .slick-next {
+  background-color: #fff;
+}
+
+.hero-slider .slick-next:hover {
+  background-color: var(--base-color);
+}
+
+.hero-slider .slick-next svg path {
+  stroke: var(--base-color);
+}
+
+.hero-slider .slick-next:hover svg path {
+  stroke: #fff;
+}
+
+.hero-slide {
+  padding: 0 2rem;
+}
+
+.hero-slide-text h1,
+.hero-slide-text h2 {
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 1.4;
+}
+
+.hero-slide-text h1 a,
+.hero-slide-text h2 a {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.hero-slide-text h1 a:hover,
+.hero-slide-text h2 a:hover {
+  color: var(--base-color);
+  border-color: var(--base-color);
+}
+
+.hero-slide-text p {
+  font-size: 1.1875rem;
+  line-height: 1.8;
+}
+
+.hero-slide .button {
+  margin-top: 2rem;
+}
+.front-wrap + .main-layout {
+  position: relative;
+  margin-top: -140px;
+  z-index: 2;
+}
+
+.calcforms-front {
+  position: relative;
+  z-index: 2;
+}
+
+.is-front .features {
+  max-width: 1440px;
+  margin: -159px auto var(--spacer);
+  padding-top: 240px;
+  background-color: var(--base-color-light);
+  border-radius: 0 0 120px 120px;
+}
+
+.products-front .tabs {
+  margin-top: 0;
+}
+
+.products-front__heading {
+  font-weight: bold;
+  font-size: 2.375rem;
+  margin-bottom: 2rem;
+}
+
+.products-front .filters,
+.products-front .products-wrap {
+  overflow: hidden;
+}
+
+.products-front .products-wrap {
+  box-shadow: 0 4px 20px rgba(188, 188, 188, 0.25);
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.products-front .products-heading,
+.products-front .products-items {
+  padding: 0 2rem;
+}
+
+.products-front .products-heading {
+  border-top: none;
+}
+
+.products-front .filters-info__actions {
+  display: none;
+}
+
+.products-front .button-wrap {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.services-front {
+  margin-top: var(--spacer);
+}
+

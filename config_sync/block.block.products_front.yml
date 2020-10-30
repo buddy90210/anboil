@@ -1,0 +1,33 @@
+uuid: 489ede5c-2d72-491a-9414-09e5ffebb826
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.products
+  module:
+    - anb_base
+    - system
+    - views
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: products_front
+theme: anb
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:products-front'
+settings:
+  id: 'views_block:products-front'
+  label: Продукция
+  provider: views
+  label_display: visible
+  views_label: Продукция
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

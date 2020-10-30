@@ -131,8 +131,8 @@ img {
   box-shadow: none;
 }
 
-.button-primary {
-  box-shadow: 0 4px 12px rgba(239, 10, 15, 0.2);
+.button--primary {
+  box-shadow: 0px 4px 12px rgba(239, 10, 15, 0.5);
 }
 
 .button[disabled] {

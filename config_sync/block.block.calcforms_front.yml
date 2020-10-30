@@ -1,4 +1,4 @@
-uuid: 83f05b10-ee2a-4656-a0bc-ca03d229f67e
+uuid: a4aba974-ac9b-4965-ad50-c755204c1e1d
 langcode: ru
 status: true
 dependencies:
@@ -11,19 +11,19 @@ dependencies:
 third_party_settings:
   anb_base:
     has_container: 1
-id: calcforms
+id: calcforms_front
 theme: anb
 region: content
-weight: -14
+weight: -13
 provider: null
 plugin: services_calculators_block
 settings:
   id: services_calculators_block
-  label: 'Calcular forms block (Services)'
+  label: 'Calcular forms block (Front)'
   provider: anb_services
   label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: /node/4
+    pages: '<front>'
     negate: false

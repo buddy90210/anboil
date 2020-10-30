@@ -30,5 +30,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/catalog/*\r\n/services/*"
+    pages: "<front>\r\n/catalog/*\r\n/services/*"
     negate: true

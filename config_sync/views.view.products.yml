@@ -337,3 +337,41 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  front:
+    display_plugin: block
+    id: front
+    display_title: 'Production (front)'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      pager:
+        type: some
+        options:
+          items_per_page: 8
+          offset: 0
+      defaults:
+        pager: false
+        footer: false
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<div class=\"button-wrap\">\r\n  <a href=\"/catalog\" class=\"button\">Перейти в каталог</a>\r\n</div>"
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }

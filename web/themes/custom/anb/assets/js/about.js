@@ -4,7 +4,7 @@
     attach: function (context, settings) {
       'use strict';
 
-      $('.certificates__items, context').slick({
+      $('.certificates__items', context).slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,

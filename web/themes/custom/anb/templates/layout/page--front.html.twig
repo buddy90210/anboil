@@ -1,0 +1,27 @@
+<div class="front-wrap">
+  <div class="front-wrap__video">
+    <video playsinline="" autoplay="true" muted="true" loop="true">
+      <source src="/themes/custom/anb/assets/video/front.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header class="header">
+    {{ page.header_top }}
+    {{ page.header_bottom }}
+  </header>
+
+  {{ drupal_entity('block', 'hero_slider', check_access=false) }}
+</div>
+
+<main{{ layout_attributes }}>
+  {{ page.top_content }}
+
+  <div class="main-layout__content">
+    {{ page.sidebar }}
+    {{ page.content }}
+  </div>
+</main>
+
+{{ page.bottom_content }}
+
+{{ page.footer }}

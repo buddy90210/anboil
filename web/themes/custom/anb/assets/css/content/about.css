@@ -20,7 +20,7 @@
   margin-bottom: 1rem;
 }
 
-.main-layout--about .features {
+.photo-block + .features {
   margin-top: 0;
 }
 

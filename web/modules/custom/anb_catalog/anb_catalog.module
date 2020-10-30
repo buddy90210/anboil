@@ -56,7 +56,7 @@ function anb_catalog_form_alter(&$form, FormStateInterface $form_state, $form_id
   }
 
   // Products view categories filter.
-  if ($form['#id'] === 'views-exposed-form-products-all') {
+  if ($form['#id'] === 'views-exposed-form-products-all' || $form['#id'] === 'views-exposed-form-products-front') {
     if (!isset($form['category'])) {
       return;
     }
@@ -165,7 +165,7 @@ function anb_catalog_preprocess_taxonomy_term(&$variables) {
  * Implements hook_views_pre_view().
  */
 function anb_catalog_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
-  if ($view->id() === 'products' && $view->current_display === 'category') {
+  if ($view->id() === 'products' && ($view->current_display === 'category')) {
     $products_category = NULL;
     $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
 

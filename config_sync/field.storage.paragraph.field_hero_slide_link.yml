@@ -1,0 +1,19 @@
+uuid: 4a0292d2-ac2b-48c5-9e86-87dd5228ee39
+langcode: ru
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_hero_slide_link
+field_name: field_hero_slide_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

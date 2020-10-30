@@ -1,0 +1,8 @@
+uuid: b2a96515-3f56-4537-b104-48f6267d22d6
+langcode: ru
+status: true
+dependencies: {  }
+id: hero_slider
+label: 'Первый экран'
+revision: 0
+description: ''

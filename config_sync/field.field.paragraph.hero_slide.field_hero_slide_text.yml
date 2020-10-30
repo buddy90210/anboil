@@ -1,0 +1,21 @@
+uuid: 2c36e485-950d-4c58-b45c-c24bb2822851
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_slide_text
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - text
+id: paragraph.hero_slide.field_hero_slide_text
+field_name: field_hero_slide_text
+entity_type: paragraph
+bundle: hero_slide
+label: Текст
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

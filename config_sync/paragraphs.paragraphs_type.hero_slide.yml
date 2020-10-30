@@ -1,0 +1,10 @@
+uuid: 2ee207ea-782f-41ff-aa7d-0752ca7fd8b7
+langcode: ru
+status: true
+dependencies: {  }
+id: hero_slide
+label: Слайд
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

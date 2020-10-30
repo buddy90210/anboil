@@ -1,0 +1,11 @@
+uuid: 86bd93eb-0e07-4331-8164-4c3ad6aa1e14
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_slider
+id: block_content.hero_slider
+target_entity_type_id: block_content
+target_bundle: hero_slider
+default_langcode: site_default
+language_alterable: false

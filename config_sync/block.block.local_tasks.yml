@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - anb_base
+    - system
   theme:
     - anb
 third_party_settings:
@@ -24,4 +25,8 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

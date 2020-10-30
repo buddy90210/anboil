@@ -1,0 +1,36 @@
+uuid: 8bff3d5e-0bd6-4d39-ba95-f035bad5c640
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_slide.field_hero_slide_link
+    - field.field.paragraph.hero_slide.field_hero_slide_text
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - link
+    - text
+id: paragraph.hero_slide.default
+targetEntityType: paragraph
+bundle: hero_slide
+mode: default
+content:
+  field_hero_slide_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_hero_slide_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

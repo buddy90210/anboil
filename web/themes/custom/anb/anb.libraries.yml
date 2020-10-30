@@ -19,7 +19,7 @@ front:
     theme:
       assets/css/content/front.css: {}
   js:
-    assets/js/front.js: {}
+    assets/js/front.js: {weight: -1}
 
 production:
   css:

@@ -51,11 +51,17 @@ function anb_theme($existing, $type, $theme, $path) {
 function anb_page_attachments_alter(array &$attachments) {
   $route = \Drupal::routeMatch();
   $current_route = $route->getRouteName();
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
   $node = $route->getParameter('node');
 
   // Blog library.
   if ($current_route === 'view.blog.all') {
     $attachments['#attached']['library'][] = 'anb/blog';
+  }
+
+  // Front.
+  if ($is_front) {
+    $attachments['#attached']['library'][] = 'anb/front';
   }
 
   if ($node !== null) {
@@ -85,12 +91,12 @@ function anb_page_attachments_alter(array &$attachments) {
     }
 
     // Production.
-    if ($node->id() === '16') {
+    if ($node->id() === '16' || $is_front) {
       $attachments['#attached']['library'][] = 'anb/production';
     }
 
     // Services.
-    if ($node->bundle() === 'service' || $node->id() === '4') {
+    if ($node->bundle() === 'service' || $node->id() === '4' || $is_front) {
       $attachments['#attached']['library'][] = 'anb/services';
     }
   }
@@ -127,10 +133,6 @@ function anb_preprocess_page(&$variables) {
     $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
     if ($node->bundle() === 'service') {
       $layout_attributes->addClass('main-layout--background');
-    }
-
-    if ($node->id('5')) {
-      $layout_attributes->addClass('main-layout--about');
     }
   }
 
@@ -254,7 +256,7 @@ function anb_theme_suggestions_field_alter(array &$suggestions, array $variables
   $clean_fields = [
     'field_media_image',
     'field_jobs',
-    'name'
+    'name',
   ];
   if (in_array($field_name, $clean_fields)) {
     $suggestions[] = 'field__clean';
@@ -289,3 +291,4 @@ function anb_preprocess_node(&$variables) {
     $variables['attributes']['class'][] = 'services-page';
   }
 }
+

@@ -26,5 +26,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node/4
+    pages: "/node/4\r\n<front>"
     negate: true

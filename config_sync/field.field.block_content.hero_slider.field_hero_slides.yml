@@ -1,0 +1,55 @@
+uuid: 6649e6bd-d6ca-45da-84e6-340ddea3812b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_slider
+    - field.storage.block_content.field_hero_slides
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - entity_reference_revisions
+id: block_content.hero_slider.field_hero_slides
+field_name: field_hero_slides
+entity_type: block_content
+bundle: hero_slider
+label: Слайды
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hero_slide: hero_slide
+    target_bundles_drag_drop:
+      certificate:
+        weight: 10
+        enabled: false
+      characteristics:
+        weight: 11
+        enabled: false
+      contacts_block:
+        weight: 12
+        enabled: false
+      equipment:
+        weight: 13
+        enabled: false
+      hero_slide:
+        enabled: true
+        weight: 14
+      job:
+        weight: 15
+        enabled: false
+      logo_block:
+        weight: 16
+        enabled: false
+      map:
+        weight: 17
+        enabled: false
+      promo:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions
