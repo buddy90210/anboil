@@ -1,0 +1,25 @@
+uuid: f87357c8-8bf8-4799-a7ae-f3d32ad26bc7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.docs
+    - field.field.block_content.docs.field_certificates
+  module:
+    - entity_reference_revisions
+id: block_content.docs.default
+targetEntityType: block_content
+bundle: docs
+mode: default
+content:
+  field_certificates:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

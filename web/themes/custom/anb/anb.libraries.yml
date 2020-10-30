@@ -55,7 +55,7 @@ about:
     theme:
       assets/css/content/about.css: {}
   js:
-    assets/js/about.js: {}
+    assets/js/about.js: {weight: -1}
 
 ymaps:
   js:

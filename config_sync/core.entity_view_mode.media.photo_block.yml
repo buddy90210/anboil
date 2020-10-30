@@ -1,0 +1,10 @@
+uuid: e61eb273-a059-499f-987c-2813c9f61764
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.photo_block
+label: 'Photo Block'
+targetEntityType: media
+cache: true

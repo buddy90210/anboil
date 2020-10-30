@@ -1,0 +1,31 @@
+uuid: d73d3a3a-ef9c-4972-9de5-332e788eb3df
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.certificate.field_certificate_photo
+    - field.field.paragraph.certificate.field_certificate_title
+    - paragraphs.paragraphs_type.certificate
+id: paragraph.certificate.default
+targetEntityType: paragraph
+bundle: certificate
+mode: default
+content:
+  field_certificate_photo:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: certificate
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_certificate_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+uuid: 2af26b76-bcfb-4dca-a48d-3e4b74ed03fd
+langcode: ru
+status: true
+dependencies: {  }
+id: docs
+label: Сертификаты
+revision: 0
+description: ''

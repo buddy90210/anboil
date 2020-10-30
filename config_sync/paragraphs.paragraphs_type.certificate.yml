@@ -1,0 +1,10 @@
+uuid: d1595525-88f0-4f56-8b8c-925768d5df55
+langcode: ru
+status: true
+dependencies: {  }
+id: certificate
+label: Сертификат
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

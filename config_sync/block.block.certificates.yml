@@ -1,9 +1,9 @@
-uuid: 8963cc22-7013-4f15-92dd-e5399de0a36f
+uuid: c9ee9f3b-85c9-419f-89db-9a8ca2288fd8
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:logo_slider:f68ddfe9-9156-4a77-94eb-4b68f063d6b2'
+    - 'block_content:docs:668bfa85-de0a-4408-9641-03c4aabe4227'
   module:
     - anb_base
     - block_content
@@ -13,22 +13,22 @@ dependencies:
 third_party_settings:
   anb_base:
     has_container: 1
-id: clients
+id: certificates
 theme: anb
 region: content
-weight: -8
+weight: -3
 provider: null
-plugin: 'block_content:f68ddfe9-9156-4a77-94eb-4b68f063d6b2'
+plugin: 'block_content:668bfa85-de0a-4408-9641-03c4aabe4227'
 settings:
-  id: 'block_content:f68ddfe9-9156-4a77-94eb-4b68f063d6b2'
-  label: 'Наши клиенты'
+  id: 'block_content:668bfa85-de0a-4408-9641-03c4aabe4227'
+  label: Сертификаты
   provider: block_content
-  label_display: '0'
+  label_display: visible
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /node/7
+    pages: /node/5
     negate: false

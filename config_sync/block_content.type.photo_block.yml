@@ -1,0 +1,8 @@
+uuid: a2dfe5f6-aebe-475f-955b-2ba5b871a371
+langcode: ru
+status: true
+dependencies: {  }
+id: photo_block
+label: 'Блок с фотографией'
+revision: 0
+description: ''

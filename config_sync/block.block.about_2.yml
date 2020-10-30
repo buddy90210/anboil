@@ -1,9 +1,9 @@
-uuid: 8963cc22-7013-4f15-92dd-e5399de0a36f
+uuid: 69c77322-dabe-46f9-8445-b8e939608272
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:logo_slider:f68ddfe9-9156-4a77-94eb-4b68f063d6b2'
+    - 'block_content:photo_block:65966f92-70c1-4c22-b41d-002611633852'
   module:
     - anb_base
     - block_content
@@ -13,15 +13,15 @@ dependencies:
 third_party_settings:
   anb_base:
     has_container: 1
-id: clients
+id: about_2
 theme: anb
 region: content
-weight: -8
+weight: -4
 provider: null
-plugin: 'block_content:f68ddfe9-9156-4a77-94eb-4b68f063d6b2'
+plugin: 'block_content:65966f92-70c1-4c22-b41d-002611633852'
 settings:
-  id: 'block_content:f68ddfe9-9156-4a77-94eb-4b68f063d6b2'
-  label: 'Наши клиенты'
+  id: 'block_content:65966f92-70c1-4c22-b41d-002611633852'
+  label: 'О компании (2)'
   provider: block_content
   label_display: '0'
   status: true
@@ -30,5 +30,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node/7
+    pages: /node/5
     negate: false

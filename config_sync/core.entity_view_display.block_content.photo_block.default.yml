@@ -1,0 +1,33 @@
+uuid: 587c2115-3b3d-45f9-b924-bcc1acb5c3dd
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.photo_block
+    - field.field.block_content.photo_block.body
+    - field.field.block_content.photo_block.field_photo_block_image
+  module:
+    - text
+id: block_content.photo_block.default
+targetEntityType: block_content
+bundle: photo_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_photo_block_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: photo_block
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: faa73974-4952-446e-9271-68c4cba290fb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_certificate_title
+    - paragraphs.paragraphs_type.certificate
+id: paragraph.certificate.field_certificate_title
+field_name: field_certificate_title
+entity_type: paragraph
+bundle: certificate
+label: 'Название документа'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,33 @@
+uuid: 2b3737ff-e2f7-4daa-9cc1-00c62cd9857c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.certificate
+    - field.field.media.image.field_media_image
+    - image.style.certificate
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.certificate
+targetEntityType: media
+bundle: image
+mode: certificate
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: certificate
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

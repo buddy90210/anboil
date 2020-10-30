@@ -1,0 +1,52 @@
+uuid: 74580444-4f1a-4cad-a360-5c3801393d3c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.docs
+    - field.storage.block_content.field_certificates
+    - paragraphs.paragraphs_type.certificate
+  module:
+    - entity_reference_revisions
+id: block_content.docs.field_certificates
+field_name: field_certificates
+entity_type: block_content
+bundle: docs
+label: Сертификаты
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      certificate: certificate
+    target_bundles_drag_drop:
+      certificate:
+        enabled: true
+        weight: 9
+      characteristics:
+        weight: 10
+        enabled: false
+      contacts_block:
+        weight: 11
+        enabled: false
+      equipment:
+        weight: 12
+        enabled: false
+      job:
+        weight: 13
+        enabled: false
+      logo_block:
+        weight: 14
+        enabled: false
+      map:
+        weight: 15
+        enabled: false
+      promo:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

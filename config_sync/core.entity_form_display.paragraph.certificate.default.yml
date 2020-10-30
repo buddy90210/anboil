@@ -1,0 +1,33 @@
+uuid: d6373140-2f83-493b-9fc8-710a8fbf76b6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.certificate.field_certificate_photo
+    - field.field.paragraph.certificate.field_certificate_title
+    - paragraphs.paragraphs_type.certificate
+  module:
+    - media_library
+id: paragraph.certificate.default
+targetEntityType: paragraph
+bundle: certificate
+mode: default
+content:
+  field_certificate_photo:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_certificate_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

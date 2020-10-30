@@ -16,7 +16,7 @@ third_party_settings:
 id: jobs
 theme: anb
 region: content
-weight: -7
+weight: -10
 provider: null
 plugin: 'block_content:74ff56d3-6680-488e-9618-223a01e6c015'
 settings:

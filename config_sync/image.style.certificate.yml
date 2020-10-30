@@ -1,0 +1,15 @@
+uuid: bc147620-4ac7-4a78-be56-7ac550947d07
+langcode: ru
+status: true
+dependencies: {  }
+name: certificate
+label: certificate
+effects:
+  503f86d8-a6c1-4221-9a65-703470c9aa6f:
+    uuid: 503f86d8-a6c1-4221-9a65-703470c9aa6f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 380
+      anchor: center-center

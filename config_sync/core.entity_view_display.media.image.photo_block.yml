@@ -1,0 +1,33 @@
+uuid: b0441de3-965c-4973-8569-342ba1f279da
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.photo_block
+    - field.field.media.image.field_media_image
+    - image.style.photo_block
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.photo_block
+targetEntityType: media
+bundle: image
+mode: photo_block
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: photo_block
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

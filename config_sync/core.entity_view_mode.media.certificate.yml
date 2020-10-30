@@ -1,0 +1,10 @@
+uuid: 90f51af9-1e04-43ea-b305-cd0ea6317a64
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.certificate
+label: Certificate
+targetEntityType: media
+cache: true

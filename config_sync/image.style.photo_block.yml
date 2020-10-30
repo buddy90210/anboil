@@ -1,0 +1,15 @@
+uuid: 4a723715-d680-4d40-b4ad-5c6f9cdc9ac2
+langcode: ru
+status: true
+dependencies: {  }
+name: photo_block
+label: photo_block
+effects:
+  f94ae422-66c1-46b8-b81d-397e48279932:
+    uuid: f94ae422-66c1-46b8-b81d-397e48279932
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 530
+      height: 385
+      anchor: center-center

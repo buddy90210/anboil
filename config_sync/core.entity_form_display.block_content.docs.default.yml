@@ -1,0 +1,49 @@
+uuid: c2a0a469-256c-4ac9-a59b-3292c02e07f9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.docs
+    - field.field.block_content.docs.field_certificates
+  module:
+    - paragraphs
+id: block_content.docs.default
+targetEntityType: block_content
+bundle: docs
+mode: default
+content:
+  field_certificates:
+    type: paragraphs
+    weight: 26
+    settings:
+      title: Параграф
+      title_plural: Параграфы
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: certificate
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

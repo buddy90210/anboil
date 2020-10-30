@@ -59,6 +59,11 @@ function anb_page_attachments_alter(array &$attachments) {
   }
 
   if ($node !== null) {
+    // About.
+    if ($node->id() === '5') {
+      $attachments['#attached']['library'][] = 'anb/about';
+    }
+
     // Contacts library.
     if ($node->id() === '9') {
       $attachments['#attached']['library'][] = 'anb/contacts';
@@ -123,6 +128,10 @@ function anb_preprocess_page(&$variables) {
     if ($node->bundle() === 'service') {
       $layout_attributes->addClass('main-layout--background');
     }
+
+    if ($node->id('5')) {
+      $layout_attributes->addClass('main-layout--about');
+    }
   }
 
   $variables['layout_attributes'] = $layout_attributes;
@@ -180,6 +189,10 @@ function anb_preprocess_block(&$variables) {
     if ($block->bundle() === 'equipment') {
       $variables['attributes']['class'][] = 'equipment-slider';
     }
+
+    if ($block->bundle() === 'docs') {
+      $variables['attributes']['class'] = 'certificates_block';
+    }
   }
 
   // Services list.
@@ -215,6 +228,13 @@ function anb_preprocess_field(&$variables) {
   // Jobs description field.
   if ($field_name === 'field_job_description') {
     $variables['attributes']['class'][] = 'body';
+  }
+
+  // Certificate photo.
+  if ($field_name === 'field_certificate_photo') {
+    $media = $variables['element']['#items'][0]->entity;
+    $uri = $media->field_media_image->entity->uri->value;
+    $variables['uri'] = $uri;
   }
 }
 
