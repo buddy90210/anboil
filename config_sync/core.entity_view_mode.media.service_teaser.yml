@@ -1,0 +1,10 @@
+uuid: de95e297-5d93-4cda-bb97-c0b7a5437295
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.service_teaser
+label: 'Service Teaser'
+targetEntityType: media
+cache: true

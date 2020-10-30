@@ -4,6 +4,7 @@
   box-shadow: 0 4px 20px rgba(188, 188, 188, 0.25);
   border-radius: 3px;
   margin-bottom: 20px;
+  margin-top: 3rem;
 }
 
 .service__top {
@@ -93,4 +94,93 @@
 .bottom-description {
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
+}
+
+.services-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.service-teaser {
+  position: relative;
+  width: 32%;
+  margin: 0 2% 2% 0;
+  padding: 3.25rem 3.25rem 150px;
+  border-radius: 3px;
+  background-color: var(--base-color);
+  color: #fff;
+}
+
+.service-teaser:nth-child(3n) {
+  margin-right: 0;
+}
+
+.service-teaser__title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.service-teaser__title:hover {
+  color: #fff;
+}
+
+.service-teaser__description {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.service-teaser__photo {
+  margin-right: -3.25rem;
+  margin-top: 2rem;
+}
+
+.service-photo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.service-teaser__button {
+  position: absolute;
+  bottom: 3.25rem;
+  left: 3.25rem;
+  width: calc(100% - 6.5rem);
+}
+
+.services-full {
+  padding-bottom: 10rem;
+  background-color: var(--base-color);
+}
+
+.services-full .service-teaser {
+  width: 33.333333333%;
+  margin: 0;
+  border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.services-full .service-teaser:first-child {
+  border-left: 1px solid rgba(255, 255, 255, .3);
+}
+
+.calcforms {
+  margin-top: -10rem;
+}
+
+.services-page {
+  margin-top: var(--spacer);
+}
+
+.services-page .body ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.services-page .body ul li {
+  display: block;
+  width: 48%;
 }

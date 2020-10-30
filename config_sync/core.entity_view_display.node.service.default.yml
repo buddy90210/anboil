@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.service.field_calc_description
     - field.field.node.service.field_calc_form
     - field.field.node.service.field_page_title
+    - field.field.node.service.field_service_photo
+    - field.field.node.service.field_teaser_description
     - node.type.service
   module:
     - text
@@ -36,6 +38,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_service_photo:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_teaser_description:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
 hidden:
   field_calc_form: true

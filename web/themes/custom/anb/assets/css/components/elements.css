@@ -155,6 +155,15 @@ input.button--flat {
   transition: .2s ease;
 }
 
+.button--white {
+  border: 2px solid #fff;
+}
+
+.button--white:hover {
+  background-color: #fff;
+  color: var(--base-color);
+}
+
 /* ------------------------- Breadcrumbs ------------------------- */
 .breadcrumbs {
   background-color: var(--base-color-light);

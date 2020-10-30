@@ -15,7 +15,7 @@ third_party_settings:
 id: category_products
 theme: anb
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: 'views_block:products-category'
 settings:

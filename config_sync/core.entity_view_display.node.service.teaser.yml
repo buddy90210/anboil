@@ -8,30 +8,36 @@ dependencies:
     - field.field.node.service.field_calc_description
     - field.field.node.service.field_calc_form
     - field.field.node.service.field_page_title
+    - field.field.node.service.field_service_photo
+    - field.field.node.service.field_teaser_description
     - node.type.service
   module:
-    - text
     - user
 id: node.service.teaser
 targetEntityType: node
 bundle: service
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
+  field_service_photo:
+    type: entity_reference_entity_view
+    weight: 1
     region: content
-  links:
-    weight: 100
+    label: hidden
+    settings:
+      view_mode: service_teaser
+      link: false
+    third_party_settings: {  }
+  field_teaser_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  body: true
   field_calc_description: true
   field_calc_form: true
   field_page_title: true
   langcode: true
+  links: true

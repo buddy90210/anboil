@@ -1,0 +1,15 @@
+uuid: 6de6b755-75e8-494a-9884-79da1592deb7
+langcode: ru
+status: true
+dependencies: {  }
+name: service_teaser
+label: service_teaser
+effects:
+  f0c07c8a-af45-4144-a098-fccec61c6c43:
+    uuid: f0c07c8a-af45-4144-a098-fccec61c6c43
+    id: image_scale
+    weight: 1
+    data:
+      width: 365
+      height: 230
+      upscale: false

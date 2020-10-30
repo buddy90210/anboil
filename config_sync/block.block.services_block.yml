@@ -1,27 +1,31 @@
-uuid: 83f05b10-ee2a-4656-a0bc-ca03d229f67e
+uuid: 9c5a0ea5-9f53-496d-adb1-7c28082b24d2
 langcode: ru
 status: true
 dependencies:
+  config:
+    - views.view.services
   module:
     - anb_base
-    - anb_services
     - system
+    - views
   theme:
     - anb
 third_party_settings:
   anb_base:
     has_container: 1
-id: calcforms
+id: services_block
 theme: anb
-region: content
-weight: -10
+region: top_content
+weight: 0
 provider: null
-plugin: services_calculators_block
+plugin: 'views_block:services-list'
 settings:
-  id: services_calculators_block
-  label: 'Calcular forms block'
-  provider: anb_services
+  id: 'views_block:services-list'
+  label: ''
+  provider: views
   label_display: '0'
+  views_label: ''
+  items_per_page: none
 visibility:
   request_path:
     id: request_path
