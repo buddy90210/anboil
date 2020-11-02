@@ -1,0 +1,16 @@
+{% set class = "post" %}
+<article class="{{ class }} news-item">
+  <figure class="{{ class }}__photo">
+    {{ content.field_news_photo.0 }}
+  </figure>
+
+  <div class="{{ class }}__inner">
+    <time class="{{ class }}__published">
+      {{ node.created.value|date('d.m.Y') }}&nbsp;г.
+    </time>
+    <p class="{{ class }}__title">{{ label }}</p>
+    <span class="{{ class }}__button button button--flat">Подробнее</span>
+  </div>
+
+  <a href="{{ url }}" class="block-link"></a>
+</article>

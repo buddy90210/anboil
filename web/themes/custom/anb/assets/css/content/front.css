@@ -140,7 +140,11 @@
   margin-top: 0;
 }
 
-.products-front__heading {
+.products-front__heading,
+.services-front__heading,
+.news-front h2,
+.clients-front__heading,
+.front-text h2 {
   font-weight: bold;
   font-size: 2.375rem;
   margin-bottom: 2rem;
@@ -177,6 +181,72 @@
 }
 
 .services-front {
-  margin-top: var(--spacer);
+  padding: var(--spacer) 0;
+  background: url(../../img/services-front.jpg) no-repeat center;
+  background-size: cover;
 }
 
+.news-front h2,
+.clients-front__heading {
+  text-align: center;
+}
+
+.news-front h2 span,
+.clients-front__heading span{
+  color: var(--base-color);
+}
+
+.news-front-items {
+  margin: 0 -10px;
+}
+
+.news-item {
+  position: relative;
+  margin: 0 10px;
+}
+
+.news-item .post__photo img {
+  border-radius: 3px;
+  filter: grayscale(100);
+  transition: .2s ease;
+}
+
+.news-item:hover .post__photo img {
+  filter: grayscale(0);
+}
+
+.news-item .post__published {
+  display: block;
+  margin-top: 1rem;
+  color: var(--color-gray);
+}
+
+.news-item .post__title {
+  margin-top: .5rem;
+  padding-right: 2rem;
+  font-weight: 500;
+  font-size: 1.0625rem;
+  transition: .2s ease;
+}
+
+.news-item:hover .post__title {
+  color: var(--base-color);
+}
+
+.news-item .post__button {
+  display: none;
+}
+
+.clients-front {
+  padding: var(--spacer) 0;
+  background-color: var(--base-color-light);
+}
+
+.front-text {
+  margin: var(--spacer) 0;
+}
+
+.front-text h2 u {
+  text-decoration: none;
+  color: var(--base-color);
+}

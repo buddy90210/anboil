@@ -55,13 +55,14 @@ function anb_page_attachments_alter(array &$attachments) {
   $node = $route->getParameter('node');
 
   // Blog library.
-  if ($current_route === 'view.blog.all') {
+  if ($current_route === 'view.blog.all' || $current_route === 'view.news.all') {
     $attachments['#attached']['library'][] = 'anb/blog';
   }
 
   // Front.
   if ($is_front) {
     $attachments['#attached']['library'][] = 'anb/front';
+    $attachments['#attached']['library'][] = 'anb/clients_partners';
   }
 
   if ($node !== null) {

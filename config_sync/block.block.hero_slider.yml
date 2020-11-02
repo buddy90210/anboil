@@ -16,7 +16,7 @@ third_party_settings:
 id: hero_slider
 theme: anb
 region: content
-weight: 0
+weight: 1
 provider: null
 plugin: 'block_content:278d72a8-ff6f-4ff0-bc6f-86a57fa1719a'
 settings:

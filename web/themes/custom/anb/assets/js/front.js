@@ -10,6 +10,13 @@
         slidesToScroll: 1,
         dots: true,
       });
+
+        $('.news-front-items', context).slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+      });
     }
   };
 })(jQuery, Drupal);

@@ -16,14 +16,14 @@ third_party_settings:
 id: services_front
 theme: anb
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: 'views_block:services-list'
 settings:
   id: 'views_block:services-list'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
 visibility:

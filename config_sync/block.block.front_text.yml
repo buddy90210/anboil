@@ -1,4 +1,4 @@
-uuid: 3304ce56-09bb-4e6e-9287-4d93907a1006
+uuid: 0dc18747-babc-46b3-8992-d35674c6d4c2
 langcode: ru
 status: true
 dependencies:
@@ -10,12 +10,10 @@ dependencies:
 third_party_settings:
   anb_base:
     has_container: 1
-_core:
-  default_config_hash: 6UlRo7CSAnBkH-AbN3DZxGtTX5KLtgPOoVak8Jw0AGo
-id: page_content
+id: front_text
 theme: anb
-region: content
-weight: -14
+region: bottom_content
+weight: -11
 provider: null
 plugin: system_main_block
 settings:
@@ -27,4 +25,4 @@ visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: true
+    negate: false

@@ -1,5 +1,6 @@
 /* ------------------------- Blog ------------------------- */
-.blog-all-items {
+.blog-all-items,
+.news-all-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

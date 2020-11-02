@@ -1,0 +1,13 @@
+{% do attributes.removeAttribute('id') %}
+{% spaceless %}
+  <div{{ attributes.addClass(block_class) }}>
+    <div class="{{ block_class }}__container container">
+      {{ title_prefix }}
+      {{ title_suffix }}
+      {% block content %}
+        {{ content }}
+        {{ drupal_entity('contact_form', 'questionform', null, null, false) }}
+      {% endblock %}
+    </div>
+  </div>
+{% endspaceless %}
