@@ -88,11 +88,6 @@
                 "type:drupal-custom-theme"
             ]
         },
-        "enable-patching": true,
-        "patches": {
-            "drupal/token": {
-                "token_element_children produce notice on integer keys" : "https://www.drupal.org/files/issues/2020-06-23/3154183-2.patch"
-            }
-        }
+        "enable-patching": true
     }
 }
