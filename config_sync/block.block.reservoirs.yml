@@ -16,7 +16,7 @@ third_party_settings:
 id: reservoirs
 theme: anb
 region: bottom_content
-weight: -15
+weight: -16
 provider: null
 plugin: 'block_content:55689c22-00b1-4f8c-b938-b7c8cc6a0239'
 settings:

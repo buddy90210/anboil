@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.photo_block
     - field.field.block_content.photo_block.body
     - field.field.block_content.photo_block.field_photo_block_image
+    - field.field.block_content.photo_block.field_photo_block_video
   module:
     - media_library
     - text
@@ -27,6 +28,13 @@ content:
   field_photo_block_image:
     type: media_library_widget
     weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_photo_block_video:
+    type: media_library_widget
+    weight: 26
     settings:
       media_types: {  }
     third_party_settings: {  }

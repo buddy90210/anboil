@@ -1,0 +1,15 @@
+uuid: 2785136e-c195-4187-8aa0-76a5fd8b8adb
+langcode: ru
+status: true
+dependencies: {  }
+name: article_top
+label: article_top
+effects:
+  23c5ad56-061b-4d11-9dca-698e4d4c5cee:
+    uuid: 23c5ad56-061b-4d11-9dca-698e4d4c5cee
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 530
+      height: 365
+      anchor: center-center

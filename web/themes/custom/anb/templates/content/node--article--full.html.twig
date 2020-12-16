@@ -1,0 +1,21 @@
+{%
+  set classes = [
+  'node-' ~ node.bundle(),
+  'node-' ~ node.bundle() ~ '--' ~ view_mode,
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <section class="article-top">
+    {{ content.field_article_photo }}
+
+    <div class="article-top__text">
+      <time class="article-published">{{ node.created.value|date('d.m.Y') }}&nbsp;г.</time>
+      <h1>{{ label }}</h1>
+      {{ content.field_smalldesc }}
+    </div>
+  </section>
+  {{ content.body }}
+  {{ content.previous_next }}
+</article>

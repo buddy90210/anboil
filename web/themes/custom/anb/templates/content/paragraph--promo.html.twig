@@ -1,9 +1,9 @@
 {% set class = "promo" %}
 <article class="{{ class }}">
-  <i class="{{ class }}__icon"></i>
-
   <figure class="{{ class }}__photo">
+    <i class="{{ class }}__icon"></i>
     {{ content.field_promo_photo.0 }}
+    <svg width="420" height="69" viewBox="0 0 420 69" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M420 68.9189H0L420 0L420 68.9189Z" fill="white"/></svg>
   </figure>
 
   <div class="{{ class }}__inner">
@@ -19,6 +19,8 @@
       {{ content.field_promo_description.0 }}
     </p>
 
-    <button class="{{ class }}__button button button--flat modal-trigger" data-modal="promoform">Получить скидку</button>
+    <div class="button-wrap">
+      <button class="{{ class }}__button button modal-trigger" data-modal="promoform">Получить скидку</button>
+    </div>
   </div>
 </article>

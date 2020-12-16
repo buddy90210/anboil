@@ -1,0 +1,29 @@
+uuid: c14d1e9f-34d0-4db5-a7dc-61eaa43a8d65
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.photo_block
+    - field.storage.block_content.field_photo_block_video
+    - media.type.remote_video
+id: block_content.photo_block.field_photo_block_video
+field_name: field_photo_block_video
+entity_type: block_content
+bundle: photo_block
+label: Видео
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

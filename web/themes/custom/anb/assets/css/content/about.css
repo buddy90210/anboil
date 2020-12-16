@@ -1,3 +1,7 @@
+.about-1 {
+  padding-top: 2rem;
+}
+
 .photo-block__container {
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +20,15 @@
   width: 56%;
 }
 
+.photo-block-video {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.photo-block-video .media-oembed-content {
+  height: 720px;
+}
+
 .photo-block__container .body h1 {
   margin-bottom: 1rem;
 }
@@ -26,12 +39,10 @@
 
 .certificates_block {
   margin: var(--spacer) 0;
-  background-color: var(--base-color-light);
-  padding: var(--spacer) 0;
 }
 
 .certificates__heading {
-  font-weight: 600;
+  font-family: var(--font-extra);
   font-size: 1.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
@@ -46,7 +57,7 @@
   background-color: #fff;
   box-shadow: 0 4px 30px rgba(117, 117, 117, 0.15);
   padding: 1rem;
-  border-radius: 3px;
+  height: auto;
 }
 
 .certificate-title {

@@ -71,7 +71,7 @@ function contact_forms_extra_form_alter(&$form, FormStateInterface &$form_state,
     $form['field_agreement']['#attributes']['class'][] = 'link';
 
     $url = Url::fromRoute('entity.node.canonical', ['node' => 10])->toString();
-    $form['field_agreement']['widget']['value']['#title'] = 'Даю согласие на <a target="_blank" href="'.$url.'">обработку персональных денных</a>';
+    $form['field_agreement']['widget']['value']['#title'] = 'Даю согласие на <a target="_blank" href="'.$url.'">обработку <br/>персональных денных</a>';
 
     // Move to actions.
     $form['actions']['field_agreement'] = $form['field_agreement'];

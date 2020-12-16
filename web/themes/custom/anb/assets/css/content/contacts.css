@@ -9,20 +9,11 @@
   width: 49%;
 }
 
-.map {
-  background-color: #fff;
-  filter: drop-shadow(0px 4px 40px rgba(223, 203, 182, 0.3));
-  border: 1px solid var(--border-color-light);
-  border-radius: 3px;
-  padding: 1rem;
-}
-
 .map-title,
 .contacts-block-title {
-  letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 1.0625rem;
-  font-weight: 600;
+  font-family: var(--font-extra);
+  font-size: 1.3125rem;
   margin-bottom: 1rem;
 }
 

@@ -1,0 +1,21 @@
+uuid: fc680aca-3409-4f07-8113-40c163bcc023
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smalldesc
+    - node.type.article
+  module:
+    - text
+id: node.article.field_smalldesc
+field_name: field_smalldesc
+entity_type: node
+bundle: article
+label: 'Вводный текст'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

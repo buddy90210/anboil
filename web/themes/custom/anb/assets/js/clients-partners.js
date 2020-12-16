@@ -4,6 +4,8 @@
 
       'use strict';
 
+      $('.bottom-content').addClass('no-margin');
+
       $('.logo-blocks__items', context).slick({
         infinite: true,
         slidesToShow: 4,

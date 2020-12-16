@@ -42,6 +42,12 @@ function anb_theme($existing, $type, $theme, $path) {
       ],
       'path' => $path.'/templates/block'
     ],
+    'social_widgets' => [
+      'variables' => [
+        'data' => NULL,
+      ],
+      'path' => $path.'/templates/block'
+    ],
   ];
 }
 
@@ -66,6 +72,11 @@ function anb_page_attachments_alter(array &$attachments) {
   }
 
   if ($node !== null) {
+    // Article node.
+    if ($node->bundle() === 'article') {
+      $attachments['#attached']['library'][] = 'anb/blog';
+    }
+
     // About.
     if ($node->id() === '5') {
       $attachments['#attached']['library'][] = 'anb/about';
@@ -122,50 +133,41 @@ function anb_preprocess_page(&$variables) {
   $layout_attributes = new Attribute();
   $layout_attributes->addClass('main-layout');
 
-  // Specific background pages.
-  $node_id = \Drupal::routeMatch()->getRawParameters()->get('node');
-  $background_nids = [6, 7, 8, 14];
-
-  if (in_array($node_id, $background_nids)) {
-    $layout_attributes->addClass('main-layout--background');
-  }
-
-  if (!is_null($node_id)) {
-    $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
-    if ($node->bundle() === 'service') {
-      $layout_attributes->addClass('main-layout--background');
-    }
-  }
-
   $variables['layout_attributes'] = $layout_attributes;
 
   // Header.
-  $page['header_bottom']['actions'] = [
+  $page['header_top']['actions'] = [
     '#theme' => 'header_actions',
   ];
 
   $contacts_config = \Drupal::config('system.site')->getRawData();
-  $page['header_bottom']['contacts'] = [
+  $page['header_top']['contacts'] = [
     '#theme' => 'header_contacts',
     '#phone' => $contacts_config['phone'],
   ];
 
   // Footer.
-  $page['footer']['top'] = [
-    '#type' => 'container',
-    '#attributes' => [
-      'class' => ['footer-top', 'container'],
-    ],
-  ];
-  $page['footer']['top']['menu'] = $page['footer']['footer_menu'];
-  unset($page['footer']['footer_menu']);
-
   $contacts = [
     'phone' => $contacts_config['phone'],
     'email' => $contacts_config['email'],
     'address' => $contacts_config['address'],
     'telegram' => $contacts_config['telegram'],
   ];
+
+  $page['footer']['footer_top'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['footer-top']
+    ],
+  ];
+  $page['footer']['footer_top']['menu'] = $page['footer']['footer_menu'];
+  unset($page['footer']['footer_menu']);
+
+  $page['footer']['footer_top']['widgets'] = [
+    '#theme' => 'social_widgets',
+    '#data' => $contacts,
+  ];
+
   $page['footer']['top']['contacts'] = [
     '#theme' => 'footer_contacts',
     '#contacts' => $contacts,
@@ -238,6 +240,10 @@ function anb_preprocess_field(&$variables) {
     $media = $variables['element']['#items'][0]->entity;
     $uri = $media->field_media_image->entity->uri->value;
     $variables['uri'] = $uri;
+  }
+
+  if ($field_name === 'field_smalldesc') {
+    $variables['attributes']['class'][] = 'body';
   }
 }
 

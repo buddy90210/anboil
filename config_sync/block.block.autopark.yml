@@ -16,7 +16,7 @@ third_party_settings:
 id: autopark
 theme: anb
 region: bottom_content
-weight: -16
+weight: -17
 provider: null
 plugin: 'block_content:e73cf57e-a044-4d67-8bde-03c33cabc55b'
 settings:

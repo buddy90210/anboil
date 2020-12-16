@@ -1,0 +1,30 @@
+{% set field_name = field_name|replace({'field-':''}) %}
+{% set field_item_name = field_name|replace({'field_':''}) ~ '__item' %}
+{%
+  set title_classes = [
+  field_name ~ '__label',
+  'label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+<div{{ attributes.addClass(field_name) }}>
+  {% if label_hidden == false %}
+    <p{{ title_attributes.addClass(title_classes) }}>{{ label }}</p>
+  {% endif %}
+
+  {% if multiple %}
+    <div class="{{ field_name }}__items">
+      {% for item in items %}
+        <div{{ item.attributes.addClass(field_item_name) }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+
+  {% else %}
+    {% if label_hidden %}
+      {{ items[0].content }}
+    {% else %}
+      <div class="{{ field_item_name }}">{{ items[0].content }}</div>
+    {% endif %}
+  {% endif %}
+  <svg width="420" height="69" viewBox="0 0 420 69" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M420 68.9189H0L420 0L420 68.9189Z" fill="white"/></svg>
+</div>

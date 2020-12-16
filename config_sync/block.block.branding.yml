@@ -10,8 +10,8 @@ _core:
   default_config_hash: rdG4ZePW6MgGNhYYKHvBDxFLwMLKJ3LjLvQNLqBl8vg
 id: branding
 theme: anb
-region: header_bottom
-weight: -3
+region: header_top
+weight: -17
 provider: null
 plugin: system_branding_block
 settings:

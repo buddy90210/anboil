@@ -1,0 +1,19 @@
+uuid: ba076abe-ed87-4a43-b9f2-83ceb08a7f4d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_smalldesc
+field_name: field_smalldesc
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

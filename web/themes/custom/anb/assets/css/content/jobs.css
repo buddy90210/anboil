@@ -6,9 +6,7 @@
 .job {
   margin-bottom: 3.25rem;
   padding: 3.75rem;
-  background-color: #fff;
-  box-shadow: 0 4px 20px rgba(188, 188, 188, 0.25);
-  border-radius: 3px;
+  background-color: var(--gray-1);
 }
 
 .job:last-child {
@@ -17,7 +15,7 @@
 
 .job-title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-extra);
   margin-bottom: 1.5rem;
 }
 
@@ -41,4 +39,9 @@
 
 .job-description {
   margin-bottom: 2.5rem;
+}
+
+.job-description h3 {
+  font-family: var(--base-font);
+  font-size: 1.125rem;
 }

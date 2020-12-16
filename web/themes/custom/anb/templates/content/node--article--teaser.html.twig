@@ -2,14 +2,19 @@
 <article class="{{ class }}">
   <figure class="{{ class }}__photo">
     {{ content.field_article_photo.0 }}
+    <svg width="420" height="69" viewBox="0 0 420 69" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M420 68.9189H0L420 0L420 68.9189Z" fill="white"/></svg>
   </figure>
 
   <div class="{{ class }}__inner">
     <time class="{{ class }}__published">
       {{ node.created.value|date('d.m.Y') }}&nbsp;г.
     </time>
+
     <p class="{{ class }}__title">{{ label }}</p>
-    <span class="{{ class }}__button button button--flat">Подробнее</span>
+
+    <div class="button-wrap">
+      <span class="{{ class }}__button button">Подробнее</span>
+    </div>
   </div>
 
   <a href="{{ url }}" class="block-link"></a>

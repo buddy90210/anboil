@@ -4,6 +4,8 @@
     attach: function (context, settings) {
       'use strict';
 
+      $('.bottom-content').addClass('no-margin');
+
       $('.certificates__items', context).slick({
         infinite: true,
         slidesToShow: 4,

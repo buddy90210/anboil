@@ -1,0 +1,10 @@
+uuid: 0a6b71b8-bb67-4ead-b6ee-811dee644688
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_top
+label: 'Article Top'
+targetEntityType: media
+cache: true

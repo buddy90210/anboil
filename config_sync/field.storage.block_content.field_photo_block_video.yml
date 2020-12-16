@@ -1,0 +1,20 @@
+uuid: d9742d8a-90d3-4c14-9fbf-185a1c110ef5
+langcode: ru
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+id: block_content.field_photo_block_video
+field_name: field_photo_block_video
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

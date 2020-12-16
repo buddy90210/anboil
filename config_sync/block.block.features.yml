@@ -21,9 +21,9 @@ provider: null
 plugin: 'block_content:df5a9f2a-e0c6-42cd-b856-ee78d06f7621'
 settings:
   id: 'block_content:df5a9f2a-e0c6-42cd-b856-ee78d06f7621'
-  label: Преимущества
+  label: 'Почему выбирают нас?'
   provider: block_content
-  label_display: '0'
+  label_display: visible
   status: true
   info: ''
   view_mode: full

@@ -5,15 +5,19 @@ html, body, main, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, b
 /* ------------------------- Variables ------------------------- */
 :root {
   /* Base color */
-  --base-color: #EF0A0F;
+  --base-color: #EE0A0E;
   --base-color-hover: #D00005;
-  --base-color-light: #FFF6F6;
+  --base-color-light: #E2E2E2;
+  --background-dark: #0E0E0E;
+
+  --gray-1: #F8F8F8;
 
   /* Layout */
   --spacer: 5rem;
 
   /* Fonts */
-  --base-font: 'Montserrat', sans-serif;
+  --base-font: 'HelveticaNeueCyr', sans-serif;
+  --font-extra: 'BebasNeue', sans-serif;
   --base-font-color: #272727;
 
   /* Borders */
@@ -21,8 +25,8 @@ html, body, main, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, b
   --border-color-light: #F6E8E8;
 
   /* Buttons */
-  --button-height: 65px;
-  --button-padding: 0 3.125rem;
+  --button-height: 50px;
+  --button-padding: 0 1rem;
 
   /* Colors */
   --color-gray-base: #A99696;
@@ -62,7 +66,7 @@ body {
   overflow: hidden;
 }
 
-.bottom-content {
+.bottom-content:not(.no-margin) {
   margin-top: var(--spacer);
 }
 
@@ -72,6 +76,52 @@ body {
 
 .bottom-content ~ .footer {
   margin-top: 0;
+}
+
+/* ------------------------- Typography ------------------------- */
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../../fonts/subset-BebasNeueBold.woff2') format('woff2'),
+  url('../../fonts/subset-BebasNeueBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../fonts/subset-HelveticaNeueCyr-Light.woff2') format('woff2'),
+  url('../../fonts/subset-HelveticaNeueCyr-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../fonts/subset-HelveticaNeueCyr-Roman.woff2') format('woff2'),
+  url('../../fonts/subset-HelveticaNeueCyr-Roman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../fonts/subset-HelveticaNeueCyr-Medium.woff2') format('woff2'),
+  url('../../fonts/subset-HelveticaNeueCyr-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../fonts/subset-HelveticaNeueCyr-Bold.woff2') format('woff2'),
+  url('../../fonts/subset-HelveticaNeueCyr-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* ------------------------- Hidden elements ------------------------- */

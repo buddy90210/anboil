@@ -27,6 +27,21 @@
   Drupal.behaviors.base = {
     attach: function (context, settings) {
       /**
+       * Custom buttons.
+       */
+      let formSubmit = $('.form-submit');
+      formSubmit.each(function () {
+        if ($(this).parents('.submit-wrap').length === 0) {
+          $(this).wrap('<div class="submit-wrap"></div>');
+          $('<span class="button button--fake">' + $(this).attr('value') + '</span>').insertBefore($(this));
+        }
+      })
+      let fakeButton = $('.button--fake');
+      fakeButton.click(function () {
+        $(this).siblings('input[type="submit"]').click();
+      });
+
+      /**
        * Equipment slider.
        */
       $('.equipment__items', context).slick({

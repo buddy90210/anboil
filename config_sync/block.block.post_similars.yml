@@ -1,0 +1,37 @@
+uuid: 22e75adc-0f3f-4e59-9801-150e33f0b782
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - anb_base
+    - node
+    - views
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: post_similars
+theme: anb
+region: bottom_content
+weight: -15
+provider: null
+plugin: 'views_block:blog-others'
+settings:
+  id: 'views_block:blog-others'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

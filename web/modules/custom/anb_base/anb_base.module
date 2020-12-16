@@ -5,8 +5,54 @@
  */
 
 use Drupal\block\Entity\Block;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\node\Entity\NodeType;
+
+/**
+ * Implements hook_theme().
+ */
+function anb_base_theme($existing, $type, $theme, $path) {
+  $file = 'anb_base.theme.inc';
+
+  return [
+    'anb_base_previous_next' => [
+      'variables' => [
+        'entity' => NULL,
+      ],
+      'file' => $file,
+    ],
+  ];
+};
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function anb_base_entity_extra_field_info() {
+  $extra = [];
+  foreach (NodeType::loadMultiple() as $bundle) {
+    $extra['node'][$bundle->id()]['display']['previous_next'] = [
+      'label' => t("Buttons to previous and next entity"),
+      'weight' => 100,
+      'visible' => FALSE,
+    ];
+  }
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function anb_base_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('previous_next')) {
+    $build['previous_next'] = [
+      '#theme' => 'anb_base_previous_next',
+      '#entity' => $entity,
+    ];
+  }
+}
 
 /**
  * Implements hook_preprocess_HOOK().

@@ -1,6 +1,7 @@
 /* ------------------------- Blog ------------------------- */
 .blog-all-items,
-.news-all-items {
+.news-all-items,
+.blog-others-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -11,14 +12,33 @@
   display: flex;
   flex-direction: column;
   width: 32%;
-  margin: 0 2% 2% 0;
-  border: 1px solid var(--border-color);
-  border-radius: 3px;
-  overflow: hidden;
+  margin: 0 2% 3rem 0;
+  border: 1px solid var(--background-dark);
 }
 
 .post:nth-child(3n) {
   margin-right: 0;
+}
+
+.post__photo {
+  position: relative;
+  top: -1px;
+  left: -1px;
+  z-index: 2;
+  width: calc(100% + 2px);
+}
+
+.post__photo svg {
+  position: absolute;
+  left: 1px;
+  bottom: -1px;
+  width: calc(100% - 1.2px);
+  height: 69px;
+}
+
+.post__photo img {
+  display: block;
+  width: 100%;
 }
 
 .post__inner {
@@ -52,14 +72,6 @@
   transition: .2s ease;
 }
 
-.post__button {
-  position: absolute;
-  bottom: 1.75rem;
-  left: 2.625rem;
-  width: calc(100% - 5.25rem);
-  transition: .2s ease;
-}
-
 .post:hover .post__title {
   color: var(--base-color);
 }
@@ -67,4 +79,65 @@
 .post:hover .post__button {
   background-color: var(--base-color);
   color: #fff;
+}
+
+.post .button-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 1.75rem;
+  left: 2.625rem;
+  width: calc(100% - 5.25rem);
+  transition: .2s ease;
+}
+
+.post .button-wrap .button {
+  width: auto;
+  margin: 0;
+}
+
+.post-similars__heading {
+  font-family: var(--font-extra);
+  font-size: 1.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.article-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.article-photo {
+  width: 41%;
+}
+
+.article-top__text {
+  width: 55%;
+}
+
+.article-published {
+  position: relative;
+  display: block;
+  font-weight: 300;
+  padding-left: 35px;
+  font-size: 0.875rem;
+  color: var(--color-gray-base);
+  margin-bottom: .5rem;
+}
+
+.article-published:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--sprite) 0 -160px;
+}
+
+.article-top__text h1 {
+  margin-bottom: 1rem;
 }

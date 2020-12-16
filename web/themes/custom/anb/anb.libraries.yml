@@ -49,7 +49,6 @@ clients_partners:
   js:
     assets/js/clients-partners.js: {weight: -1}
 
-
 about:
   css:
     theme:
@@ -76,4 +75,4 @@ promotions:
     theme:
       assets/css/content/promotions.css: {}
   js:
-    assets/js/promotions.js: {}
+    assets/js/promotions.js: {weight: -1}

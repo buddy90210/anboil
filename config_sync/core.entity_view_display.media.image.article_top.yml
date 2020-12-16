@@ -1,0 +1,33 @@
+uuid: 8deacb66-88f5-4e28-8024-9e29e65a3f0d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.article_top
+    - field.field.media.image.field_media_image
+    - image.style.article_top
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.article_top
+targetEntityType: media
+bundle: image
+mode: article_top
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: article_top
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

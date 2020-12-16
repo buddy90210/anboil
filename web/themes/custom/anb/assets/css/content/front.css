@@ -27,10 +27,6 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
-.is-front .header {
-  background: transparent;
-}
-
 .hero-slider {
   position: relative;
   padding: var(--spacer) 0 200px;

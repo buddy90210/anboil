@@ -10,8 +10,8 @@ dependencies:
     - anb
 id: header_account
 theme: anb
-region: header_top
-weight: 0
+region: header_bottom
+weight: -15
 provider: null
 plugin: 'system_menu_block:account'
 settings:
