@@ -1,4 +1,4 @@
-uuid: 0dc18747-babc-46b3-8992-d35674c6d4c2
+uuid: 227c78ca-c61a-4a1c-8b84-9b0947129661
 langcode: ru
 status: true
 dependencies:
@@ -10,19 +10,19 @@ dependencies:
 third_party_settings:
   anb_base:
     has_container: 1
-id: front_text
+id: bottom_description
 theme: anb
 region: bottom_content
-weight: -10
+weight: -17
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: 'Text (bottom)'
   provider: system
   label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /catalog
     negate: false

@@ -339,15 +339,32 @@ input[type="checkbox"]:checked {
 .questionblock input[type="text"],
 .questionblock input[type="tel"],
 .questionblock input[type="email"],
-.questionblock textarea {
+.questionblock textarea,
+.service__form input[type="text"],
+.service__form input[type="tel"],
+.service__form input[type="email"],
+.service__form textarea{
   background-color: transparent;
   border-color: #fff;
   color: #fff;
+}
+.service__form input::placeholder {
+  color: #fff;
+}
+
+.service__form .agreement-field label {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 1.7;
 }
 
 .questionblock input.error::placeholder,
 .questionblock textarea.error::placeholder {
   color: var(--base-color-hover);
+}
+
+.service__form input.error {
+  border-color: var(--base-color);
 }
 
 .questionblock input:focus,
@@ -387,81 +404,136 @@ input[type="checkbox"]:checked {
   box-shadow: none;
 }
 
+.service__form .form-actions {
+  width: 100%;
+}
+
+.service__form .submit-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 /* ------------------------- Calculator forms ------------------------- */
 .calculator-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 1.375rem;
+}
+
+.calculator-form input,
+.calculator-form .button {
+  height: 45px;
 }
 
 .value-form-field {
   padding-left: 57px;
-  background: var(--sprite) 17px -411px;
+  background: var(--sprite) 7px -420px;
 }
 
 .time-form-field {
   padding-left: 57px;
-  background: var(--sprite) 21px -138px;
+  background: var(--sprite) 7px -479px;
 }
 
 .point-form-field {
   padding-left: 57px;
-  background: var(--sprite) 24px -258px;
+  background: var(--sprite) 7px -536px;
 }
 
-.calculator-form .form-item,
-.calculator-form .form-submit {
-  width: 32%;
+.calculator-form .form-item {
+  width: 36%;
   margin: 0;
 }
 
-.calculator-form .form-submit[disabled] {
-  background-color: #fff;
+.calculator-form .submit-wrap {
+  display: flex;
+  width: 22%;
+}
+
+.calculator-form .submit-wrap .button--fake {
+  display: none;
 }
 
 .calculator-form .form-submit[disabled]:hover {
   color: var(--base-color);
 }
 
-.calculators {
-  padding: 3.875rem 5rem;
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 0 4px 20px rgba(188, 188, 188, 0.25);
+.calcforms .calculators {
+  padding: 3.875rem 7rem;
+  color: #fff;
+}
+
+.calculators .calculator-form {
+  position: relative;
+  padding: 0;
 }
 
 .calculators__heading {
   position: relative;
   padding-left: 75px;
-  font-weight: 700;
-  font-size: 1.75rem;
+  font-weight: 600;
+  font-family: var(--font-extra);
+  font-size: 1.5625rem;
   margin-bottom: 2rem;
 }
 
 .calculators__heading:before {
   content: '';
   position: absolute;
-  top: 12px;
+  top: 7px;
   left: 0;
   width: 50px;
   height: 50px;
   background: var(--sprite) 0 -339px;
 }
 
+.calculators__heading i {
+  display: block;
+  font-style: normal;
+  color: var(--base-color);
+}
+
 .calculators__heading .tab {
-  color: var(--color-gray);
-  opacity: .5;
-  border-bottom: 1px solid var(--color-gray);
+  color: #fff;
+  border-bottom: 1px solid transparent;
   transition: .2s ease;
 }
 
 .calculators__heading .tab.is-active {
-  color: var(--base-color);
-  border-color: var(--base-color);
-  opacity: 1;
+  color: #fff;
+  border-color: #fff;
+}
+
+.calcforms .calculators__form input[type="number"],
+.calcforms .calculators__form input[type="text"] {
+  border-color: #fff;
+  color: #fff;
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+
+.calcforms .calculators__form input::placeholder {
+  color: #fff;
+}
+
+.calcforms .point-form-field {
+  background: var(--sprite) 7px -722px;
+}
+
+.calcforms .value-form-field {
+  background: var(--sprite) 7px -606px;
+}
+
+.calcforms .time-form-field {
+  background: var(--sprite) 7px -666px;
 }
 
 .calculators .service__actions {
-  margin: 5rem -5rem -5rem;
-  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
+
+.calculators .service__results {
+  padding-left: 0;
+  background: transparent;
 }

@@ -66,7 +66,7 @@ function anb_services_preprocess_page(&$variables) {
       if ($node->body->isEmpty() === false) {
         $variables['page']['bottom_content']['service_description'] = [
           '#type' => 'markup',
-          '#markup' => '<section class="bottom-description container body">' . $node->body->value . '</section>',
+          '#markup' => '<section class="bottom-description body"><div class="container">' . $node->body->value . '</div></section>',
         ];
       }
     }

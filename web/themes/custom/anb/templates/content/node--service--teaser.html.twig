@@ -1,11 +1,14 @@
 {% set class = "service-teaser" %}
-<article class="{{ class }}">
-  <a href="{{ url }}" class="{{ class }}__title">{{ label }}</a>
+<article class="{{ class }} tabcontent" data-tab="service-{{ node.id() }}">
+  <div class="{{ class }}-content">
   {% if node.field_teaser_description.isEmpty() == false %}
   <p class="{{ class }}__description">{{ content.field_teaser_description.0 }}</p>
   {% endif %}
+
+  <a href="{{ url }}" class="button {{ class }}__button">Подробнее</a>
+  </div>
+
   {% if node.field_service_photo.isEmpty() == false %}
     <figure class="{{ class }}__photo">{{ content.field_service_photo }}</figure>
   {% endif %}
-  <a href="{{ url }}" class="button button--white {{ class }}__button">Подробнее</a>
 </article>

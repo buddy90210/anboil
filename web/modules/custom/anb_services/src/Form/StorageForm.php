@@ -97,13 +97,13 @@ class StorageForm extends FormBase {
 
     $form['results']['calculated_price'] = [
       '#type' => 'markup',
-      '#markup' => '<div class="row"><p class="title">Приблизительная <br/>стоимость</p><p class="value">' . $calculated_price . '&nbsp;₽</p></div>'
+      '#markup' => '<div class="row"><p class="title">Приблизительная <br/>стоимость</p><p class="value">' . $calculated_price . '&nbsp;<i>₽</i></p></div>'
     ];
 
     if ($time > 30) {
       $form['results']['extra_price'] = [
         '#type' => 'markup',
-        '#markup' => '<div class="row"><p class="title">Стоимость при хранении <br/>более 30 дней (за тонну)</p><p class="value">' . $storage_price_extra . '&nbsp;₽</p></div>'
+        '#markup' => '<div class="row"><p class="title">Стоимость при хранении <br/>более 30 дней (за тонну)</p><p class="value">' . $storage_price_extra . '&nbsp;<i>₽</i></p></div>'
       ];
     }
 

@@ -1,9 +1,6 @@
 /* ------------------------- Services ------------------------- */
 .service {
   background-color: #fff;
-  box-shadow: 0 4px 20px rgba(188, 188, 188, 0.25);
-  border-radius: 3px;
-  margin-bottom: 20px;
   margin-top: 3rem;
 }
 
@@ -12,6 +9,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2.5rem 5rem;
+  align-items: center;
+  background-color: #F1F1F1;
 }
 
 .service__top h1 {
@@ -27,7 +26,7 @@
 .service__top h1:before {
   content: '';
   position: absolute;
-  top: 12px;
+  top: -3px;
   left: 0;
   width: 50px;
   height: 50px;
@@ -42,9 +41,9 @@
 }
 
 .service__calculator {
+  position: relative;
   padding: 2.5rem 5rem;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--base-color-light);
 }
 
 .service__actions {
@@ -60,16 +59,23 @@
 }
 
 .service__form {
+  position: relative;
   width: 34%;
   padding: 2.5rem;
-  border-left: 1px solid var(--border-color);
-  background-color: var(--base-color-light);
+  background-color: var(--color-gray);
+  color: #fff;
 }
 
 .service-heading {
+  font-family: var(--font-extra);
+  font-size: 2.125rem;
+  margin-bottom: 1rem;
+}
+
+.service__results__title {
+  font-family: var(--base-font);
   font-weight: 600;
   font-size: 1.25rem;
-  margin-bottom: 1rem;
 }
 
 .service__results__data .row:not(:last-child) {
@@ -77,8 +83,8 @@
 }
 
 .service__results__data .title {
-  color: var(--color-gray-base);
-  font-weight: 500;
+  font-weight: 300;
+  color: var(--color-gray);
   font-size: 11px;
   line-height: 1.8;
   letter-spacing: 0.05em;
@@ -86,87 +92,87 @@
 }
 
 .service__results__data .value {
+  font-family: var(--font-extra);
   font-weight: 600;
-  font-size: 2.6875rem;
+  font-size: 3rem;
   color: var(--base-color);
 }
 
+.service__results__data .value i {
+  font-style: normal;
+  font-size: .7em;
+}
+
 .bottom-description {
-  padding-top: var(--spacer);
-  padding-bottom: var(--spacer);
-}
-
-.services-list-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.service-teaser {
-  position: relative;
-  width: 32%;
-  margin: 0 2% 2% 0;
-  padding: 3.25rem 3.25rem 150px;
-  border-radius: 3px;
-  background-color: var(--base-color);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: url(../../img/bottom.jpg) no-repeat center;
+  background-size: cover;
   color: #fff;
-}
-
-.service-teaser:nth-child(3n) {
-  margin-right: 0;
-}
-
-.service-teaser__title {
-  display: block;
-  font-weight: 600;
-  font-size: 1.625rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.service-teaser__title:hover {
-  color: #fff;
-}
-
-.service-teaser__description {
-  font-size: 1.0625rem;
-  line-height: 1.7;
-}
-
-.service-teaser__photo {
-  margin-right: -3.25rem;
-  margin-top: 2rem;
-}
-
-.service-photo {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.service-teaser__button {
-  position: absolute;
-  bottom: 3.25rem;
-  left: 3.25rem;
-  width: calc(100% - 6.5rem);
 }
 
 .services-full {
-  padding-bottom: 10rem;
+  padding-bottom: var(--spacer);
+  background: url(../../img/services.jpg) no-repeat bottom left;
+}
+
+.services-tabs-items {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabs-custom .tab {
+  font-family: var(--font-extra);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+  border: 1px solid var(--base-color);
+  margin: 0 -1px 0 0;
+  transition: .2s ease;
+}
+
+.tabs-custom .tab::selection {
+  background-color: transparent;
+}
+
+.tabs-custom .tab:hover {
+  color: var(--base-color);
+}
+
+.tabs-custom .tab.is-active {
   background-color: var(--base-color);
+  color: #fff;
 }
 
-.services-full .service-teaser {
-  width: 33.333333333%;
-  margin: 0;
-  border-right: 1px solid rgba(255, 255, 255, .3);
+.service-teaser.is-visible {
+  display: flex;
 }
 
-.services-full .service-teaser:first-child {
-  border-left: 1px solid rgba(255, 255, 255, .3);
+.service-teaser-content {
+  width: calc(100% - 750px);
+  padding-top: 4rem;
+  padding-right: 2rem;
+}
+
+.service-teaser__description {
+  max-width: 420px;
+}
+
+.service-teaser__button {
+  margin-top: 7rem;
+}
+
+.service-teaser__photo {
+  width: 750px;
+  margin-top: -3.125rem;
 }
 
 .calcforms {
-  margin-top: -10rem;
+  background: url(../../img/calcs.jpg) no-repeat center;
+  background-size: cover;
 }
 
 .services-page {

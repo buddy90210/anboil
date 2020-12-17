@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.product.field_density
     - field.field.node.product.field_full_price
     - field.field.node.product.field_item_price
-    - field.field.node.product.field_photo
     - field.field.node.product.field_sign
     - node.type.product
   module:
@@ -58,15 +57,6 @@ content:
     third_party_settings: {  }
     type: number_decimal
     region: content
-  field_photo:
-    type: entity_reference_entity_view
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
   field_sign:
     weight: 104
     label: above
@@ -82,3 +72,4 @@ content:
     region: content
 hidden:
   langcode: true
+  previous_next: true

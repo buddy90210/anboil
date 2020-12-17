@@ -133,6 +133,24 @@ function anb_preprocess_page(&$variables) {
   $layout_attributes = new Attribute();
   $layout_attributes->addClass('main-layout');
 
+  // Production pages.
+  $route_match = \Drupal::routeMatch();
+  $node = $route_match->getParameter('node');
+  $term = $route_match->getParameter('taxonomy_term');
+
+  if (!is_null($node)) {
+    if ($node->id() === '16') {
+      $layout_attributes->addClass('production-page');
+    }
+  }
+
+  if (!is_null($term)) {
+    if ($term->bundle() === 'catalog') {
+      $layout_attributes->addClass('production-page');
+      $layout_attributes->addClass('production-page--term');
+    }
+  }
+
   $variables['layout_attributes'] = $layout_attributes;
 
   // Header.

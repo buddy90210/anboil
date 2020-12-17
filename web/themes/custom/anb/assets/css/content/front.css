@@ -6,27 +6,6 @@
   z-index: 1;
 }
 
-.front-wrap__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.front-wrap__video:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
-}
-
 .hero-slider {
   position: relative;
   padding: var(--spacer) 0 200px;

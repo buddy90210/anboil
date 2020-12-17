@@ -1,6 +1,6 @@
 uuid: e2beedae-0d51-4331-867f-688e848b7562
 langcode: ru
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.media.product_teaser

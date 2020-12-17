@@ -4,6 +4,9 @@
     attach: function (context, settings) {
       'use strict';
 
+      let categoryDescription = $('.category__description');
+      $('.bottom-content__content').prepend(categoryDescription);
+
       let filters = $('.filters');
       let tab = filters.find('.tabs input');
 

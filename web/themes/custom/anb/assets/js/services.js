@@ -4,6 +4,23 @@
     attach: function (context, settings) {
       'use strict';
 
+      if ($('.service').length> 0 ) {
+        $('.bottom-content').addClass('no-margin');
+      }
+
+      $('.calculator-form .form-submit').each(function () {
+        if ($(this).siblings('.button-service-submit').length === 0) {
+          $('<span class="button button-service-submit">Рассчитать</span>').insertAfter($(this));
+        }
+      });
+
+      $('.button-service-submit').click(function () {
+        let submit = $(this).siblings('.form-submit');
+        if (submit.hasClass('form-disabled') === false) {
+          submit.click();
+        }
+      })
+
       let results_items = $('.results-items');
 
       results_items.each(function () {

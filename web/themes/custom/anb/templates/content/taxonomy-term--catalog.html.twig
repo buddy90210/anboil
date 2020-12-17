@@ -17,22 +17,24 @@
 
       <div class="{{ class }}__meta__item {{ class }}__meta__item--contacts">
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.09375 10.3086H4.08693C4.42594 5.6875 8.2939 2.03125 13 2.03125C16.724 2.03125 20.0937 4.37684 21.3853 7.868C21.5798 8.39404 22.164 8.66272 22.6902 8.46818C23.2162 8.27353 23.485 7.68935 23.2904 7.16325C22.5206 5.08244 21.1531 3.30185 19.3358 2.01393C17.4767 0.696414 15.2858 0 13 0C10.0702 0 7.31565 1.14095 5.24393 3.21268C3.19922 5.25738 2.06197 7.96727 2.03262 10.8543C0.818848 11.5577 0 12.8702 0 14.3711V17.8242C0 20.0643 1.82244 21.8867 4.0625 21.8867H6.09375C6.65468 21.8867 7.10938 21.432 7.10938 20.8711V11.3242C7.10938 10.7633 6.65468 10.3086 6.09375 10.3086ZM5.07812 19.8555H4.0625C2.94247 19.8555 2.03125 18.9443 2.03125 17.8242V14.3711C2.03125 13.2511 2.94247 12.3398 4.0625 12.3398H5.07812V19.8555Z" fill="#EF0A0F"/><path d="M21.9375 10.3086H19.9062C19.3453 10.3086 18.8906 10.7633 18.8906 11.3242V21.9375C18.8906 22.4975 18.435 22.9531 17.875 22.9531H14.7773V22.9853C14.4309 22.3606 13.765 21.9375 13 21.9375C11.8782 21.9375 10.9688 22.8469 10.9688 23.9688C10.9688 25.0906 11.8782 26 13 26C13.765 26 14.4309 25.5769 14.7773 24.9522V24.9844H17.875C19.555 24.9844 20.9219 23.6175 20.9219 21.9375V21.8867H21.9375C24.1776 21.8867 26 20.0643 26 17.8242V14.3711C26 12.131 24.1776 10.3086 21.9375 10.3086ZM23.9688 17.8242C23.9688 18.9443 23.0575 19.8555 21.9375 19.8555H20.9219V12.3398H21.9375C23.0575 12.3398 23.9688 13.2511 23.9688 14.3711V17.8242Z" fill="#EF0A0F"/></svg>
-        <p class="{{ class }}__phone">
-          <a href="tel:{{ content.contacts.phone|replace({'(' : '', '-' : '', ')' : '', ' ' : ''}) }}">{{ content.contacts.phone }}</a>
-        </p>
+        <div class="{{ category }}-contacts">
+          <p class="{{ class }}__phone">
+            <a href="tel:{{ content.contacts.phone|replace({'(' : '', '-' : '', ')' : '', ' ' : ''}) }}">{{ content.contacts.phone }}</a>
+          </p>
 
-        <p class="{{ class }}__email">
-          <a href="mailto:{{ content.contacts.email }}">{{ content.contacts.email }}</a>
-        </p>
+          <p class="{{ class }}__email">
+            <a href="mailto:{{ content.contacts.email }}">{{ content.contacts.email }}</a>
+          </p>
+        </div>
       </div>
 
       <ul class="{{ class }}__meta__item {{ class }}__meta__item--actions">
         <li class="{{ class }}__action">
-          <span class="{{ class }}__button button button--flat modal-trigger" data-modal="deliveryterms">Уточнить условия доставки</span>
+          <span class="{{ class }}__button button button--flat modal-trigger" data-modal="deliveryterms"><span>Уточнить условия</span></span>
         </li>
 
         <li class="{{ class }}__action">
-          <span class="{{ class }}__button button modal-trigger" data-modal="deliverycalculate">Рассчитать доставку</span>
+          <a href="/services/dostavka-gsm" class="{{ class }}__button button">Рассчитать доставку</a>
         </li>
       </ul>
     </div>
@@ -61,8 +63,10 @@
     </div>
   {% endif %}
 
-    <div class="{{ class }}__description body">
+    <div class="{{ class }}__description bottom-description body">
+      <div class="container">
       {{ content.description }}
+      </div>
     </div>
   </div>
 </article>
