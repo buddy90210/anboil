@@ -30,7 +30,9 @@ function contact_forms_extra_form_alter(&$form, FormStateInterface &$form_state,
       'field_phone',
       'field_email',
       'field_company',
-      'message'
+      'message',
+      'field_volume',
+      'field_city',
     ];
     foreach ($text_fields as $text_field) {
       if (!isset($form[$text_field])) {
@@ -54,6 +56,11 @@ function contact_forms_extra_form_alter(&$form, FormStateInterface &$form_state,
   if (isset($form['field_attachment'])) {
     unset($form['field_attachment']['widget'][0]['#description']);
     $form['field_attachment']['#attributes']['class'][] = 'filefield';
+  }
+
+  // Delivery field.
+  if (isset($form['field_delivery'])) {
+    unset($form['field_delivery']['widget']['#title']);
   }
 
   // Sent from page field.
@@ -89,6 +96,13 @@ function contact_forms_extra_form_alter(&$form, FormStateInterface &$form_state,
   // Question form.
   if ($form_id === 'contact_message_questionform_form') {
     $form['message']['widget'][0]['value']['#attributes']['placeholder'] = 'Ваш вопрос';
+  }
+
+  // Add to cart contact form.
+  if ($form_id === 'contact_message_orderform_form') {
+    if (isset($form['message'])) {
+      $form['message']['#attributes']['class'][] = 'visually-hidden';
+    }
   }
 }
 

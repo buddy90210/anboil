@@ -16,7 +16,7 @@ third_party_settings:
 id: features
 theme: anb
 region: content
-weight: -7
+weight: -10
 provider: null
 plugin: 'block_content:df5a9f2a-e0c6-42cd-b856-ee78d06f7621'
 settings:

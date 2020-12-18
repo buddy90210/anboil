@@ -1,6 +1,6 @@
 uuid: a4aba974-ac9b-4965-ad50-c755204c1e1d
 langcode: ru
-status: true
+status: false
 dependencies:
   module:
     - anb_base
@@ -10,11 +10,11 @@ dependencies:
     - anb
 third_party_settings:
   anb_base:
-    has_container: 1
+    has_container: 0
 id: calcforms_front
 theme: anb
 region: content
-weight: -15
+weight: -3
 provider: null
 plugin: services_calculators_block
 settings:

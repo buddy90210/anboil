@@ -1,0 +1,33 @@
+uuid: bf994c62-047c-4282-8808-076e779a6054
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.news_teaser
+    - field.field.media.image.field_media_image
+    - image.style.news_teaser
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.news_teaser
+targetEntityType: media
+bundle: image
+mode: news_teaser
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: news_teaser
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

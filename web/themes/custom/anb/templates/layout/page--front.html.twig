@@ -1,13 +1,32 @@
-<div class="front-wrap">
-  <header class="header">
-    {{ page.header_top }}
-    {{ page.header_bottom }}
-  </header>
-
-  {{ drupal_entity('block', 'hero_slider', check_access=false) }}
-</div>
+<header class="header">
+  {{ page.header_top }}
+  {{ page.header_bottom }}
+</header>
 
 <main{{ layout_attributes }}>
+  <section class="front-hero">
+    <div class="front-hero__slide is-active" data-tab="text" style="background-image: url(/themes/custom/anb/assets/img/hero-1.jpg)">
+      <div class="container">
+        {{ drupal_entity('block', 'fscreen', check_access=false) }}
+      </div>
+    </div>
+
+    <div class="front-hero__slide" data-tab="calculators" style="background-image: url(/themes/custom/anb/assets/img/hero-2.jpg)">
+      <div class="container front-calc-container">
+        {{ drupal_entity('block', 'calcforms_front', check_access=false) }}
+        <div class="front-calc-results"></div>
+      </div>
+    </div>
+
+    <div class="front-hero__tabs">
+      <div class="container">
+        <ul class="front-hero__tabs__list">
+          <li class="front-hero__tab is-active" data-tab="text">Приемка, хранение, перевалка и доставка</li>
+          <li class="front-hero__tab" data-tab="calculators">Калькулятор</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   {{ page.top_content }}
 
   <div class="main-layout__content">

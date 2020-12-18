@@ -97,6 +97,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: .2s ease;
+  color: #fff;
 }
 
 .header-actions__link:hover {

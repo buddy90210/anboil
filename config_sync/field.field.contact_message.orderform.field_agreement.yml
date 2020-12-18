@@ -1,0 +1,23 @@
+uuid: 5fe86fa2-8305-4533-aaf5-009a3745c595
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.orderform
+    - field.storage.contact_message.field_agreement
+id: contact_message.orderform.field_agreement
+field_name: field_agreement
+entity_type: contact_message
+bundle: orderform
+label: 'Согласие на обработку персональных данных'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Согласие на обработку персональных данных'
+  off_label: 'Согласие на обработку персональных данных'
+field_type: boolean

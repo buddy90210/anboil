@@ -1,0 +1,21 @@
+uuid: d230d470-eb3f-45a1-af84-0110b164738a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Отправить
+    show_preview: false
+    disabled_form_message: 'Эта контактная форма отключена.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: orderform
+label: 'Заявка на продукцию'
+recipients:
+  - test@test.ru
+reply: ''
+weight: 0
+message: 'Ваша заявка получена!'
+redirect: ''

@@ -1,0 +1,19 @@
+uuid: 8663a2c2-4a11-4430-974b-9dd22f5d679c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.consultform
+    - field.storage.contact_message.field_phone
+id: contact_message.consultform.field_phone
+field_name: field_phone
+entity_type: contact_message
+bundle: consultform
+label: 'Номер телефона'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

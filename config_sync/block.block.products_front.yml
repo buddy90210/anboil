@@ -16,14 +16,14 @@ third_party_settings:
 id: products_front
 theme: anb
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: 'views_block:products-front'
 settings:
   id: 'views_block:products-front'
   label: Продукция
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: Продукция
   items_per_page: none
 visibility:

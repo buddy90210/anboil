@@ -1,0 +1,36 @@
+uuid: 8763a6ee-04d5-4f3d-ad95-5e4dcd62f272
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.callbackform
+    - field.field.contact_message.callbackform.field_agreement
+    - field.field.contact_message.callbackform.field_phone
+id: contact_message.callbackform.default
+targetEntityType: contact_message
+bundle: callbackform
+mode: default
+content:
+  field_agreement:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_phone:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  copy: true
+  langcode: true
+  mail: true
+  message: true
+  name: true
+  preview: true
+  subject: true

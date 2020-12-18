@@ -1,15 +1,18 @@
-{% set class = "post" %}
-<article class="{{ class }} news-item">
+{% set class = "news-item" %}
+<article class="{{ class }}">
   <figure class="{{ class }}__photo">
     {{ content.field_news_photo.0 }}
   </figure>
 
   <div class="{{ class }}__inner">
+    <svg width="308" height="75" viewBox="0 0 308 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 74L307 2V74" stroke="#EE0A0E" stroke-width="2"/>
+    </svg>
+
     <time class="{{ class }}__published">
       {{ node.created.value|date('d.m.Y') }}&nbsp;г.
     </time>
     <p class="{{ class }}__title">{{ label }}</p>
-    <span class="{{ class }}__button button button--flat">Подробнее</span>
   </div>
 
   <a href="{{ url }}" class="block-link"></a>

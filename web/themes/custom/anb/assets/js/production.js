@@ -13,6 +13,19 @@
       // Filters form auto-submit.
       tab.change(function () {
         filters.find('.form-actions .button').once().click();
+      });
+
+      // Consult trigger.
+      let productionConsultTrigger = $('.category__button[data-modal="consultmodal"]', context);
+      productionConsultTrigger.click(function () {
+        $('#consultmodal textarea[name="message[0][value]"]').val('Здравствуйте! Меня интересует ' + $('h1').text().trim() + '.');
+      })
+
+      // Add to cart button.
+      let addToCart = $('.modal-trigger[data-modal="orderform"]', context);
+      addToCart.click(function () {
+        let product = $(this).parents('.product');
+        $('#orderform textarea[name="message[0][value]"]').val(product.find('.product__title').text().trim());
       })
 
       // Results count.

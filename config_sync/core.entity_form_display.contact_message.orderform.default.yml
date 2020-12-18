@@ -1,0 +1,85 @@
+uuid: 10c0c9ed-8a57-4add-b22f-681c79b0bed4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.orderform
+    - field.field.contact_message.orderform.field_agreement
+    - field.field.contact_message.orderform.field_city
+    - field.field.contact_message.orderform.field_company
+    - field.field.contact_message.orderform.field_delivery
+    - field.field.contact_message.orderform.field_phone
+    - field.field.contact_message.orderform.field_volume
+id: contact_message.orderform.default
+targetEntityType: contact_message
+bundle: orderform
+mode: default
+content:
+  field_agreement:
+    weight: 8
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_city:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_delivery:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_phone:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_volume:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  mail:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 4
+    settings:
+      rows: 12
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  copy: true
+  langcode: true
+  preview: true
+  subject: true

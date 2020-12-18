@@ -1,0 +1,19 @@
+{% do attributes.removeAttribute('id') %}
+{% spaceless %}
+  <div{{ attributes.addClass(block_class) }}>
+    {% if has_container %}
+    <div class="{{ block_class }}__content container">
+      {% endif %}
+      {{ title_prefix }}
+      {% if label %}
+        <p{{ title_attributes.addClass(block_class ~ '__heading heading') }}>{{ label }}</p>
+      {% endif %}
+      {{ title_suffix }}
+      {% block content %}
+      <iframe frameborder="0" vspace="0" hspace="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allowtransparency="true" src="//maps.google.com/maps?q=г. Краснодар, ул. Талалихина 65/2&amp;output=embed" scrolling="no"></iframe>
+      {% if has_container %}
+    </div>
+    {% endif %}
+    {% endblock %}
+  </div>
+{% endspaceless %}

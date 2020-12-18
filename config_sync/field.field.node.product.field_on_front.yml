@@ -1,0 +1,23 @@
+uuid: 87321275-c819-44f2-be3b-fa7e2695fbe1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_on_front
+    - node.type.product
+id: node.product.field_on_front
+field_name: field_on_front
+entity_type: node
+bundle: product
+label: 'Показывать на главной'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Показывать на главной'
+  off_label: 'Показывать на главной'
+field_type: boolean

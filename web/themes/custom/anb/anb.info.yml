@@ -21,3 +21,4 @@ regions:
 
 libraries-override:
   system/base: false
+  views/views.module: false

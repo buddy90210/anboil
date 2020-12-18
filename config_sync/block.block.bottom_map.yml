@@ -1,9 +1,9 @@
-uuid: 86641284-5572-4686-865c-f44333d4d452
+uuid: d826a243-e921-4099-a6c9-19ba6cc5e9df
 langcode: ru
-status: false
+status: true
 dependencies:
   content:
-    - 'block_content:hero_slider:278d72a8-ff6f-4ff0-bc6f-86a57fa1719a'
+    - 'block_content:basic:7fbdaef5-2c0d-4ba9-a797-ad355172f164'
   module:
     - anb_base
     - block_content
@@ -12,16 +12,16 @@ dependencies:
     - anb
 third_party_settings:
   anb_base:
-    has_container: 1
-id: hero_slider
+    has_container: 0
+id: bottom_map
 theme: anb
-region: content
-weight: 1
+region: bottom_content
+weight: 0
 provider: null
-plugin: 'block_content:278d72a8-ff6f-4ff0-bc6f-86a57fa1719a'
+plugin: 'block_content:7fbdaef5-2c0d-4ba9-a797-ad355172f164'
 settings:
-  id: 'block_content:278d72a8-ff6f-4ff0-bc6f-86a57fa1719a'
-  label: 'Первый экран'
+  id: 'block_content:7fbdaef5-2c0d-4ba9-a797-ad355172f164'
+  label: Карта
   provider: block_content
   label_display: '0'
   status: true

@@ -1,0 +1,19 @@
+uuid: 42a99003-c6de-4594-9806-6fff2e4a713c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.orderform
+    - field.storage.contact_message.field_phone
+id: contact_message.orderform.field_phone
+field_name: field_phone
+entity_type: contact_message
+bundle: orderform
+label: 'Номер телефона'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

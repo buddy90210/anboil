@@ -4,6 +4,13 @@
 
       'use strict';
 
+      let promoTrigger = $('.modal-trigger[data-modal="discountform"]');
+      promoTrigger.click(function () {
+        let promo = $(this).parents('.promos__item');
+        $('#discountform textarea[name="message[0][value]"]').val(promo.find('.promo__title').text().trim());
+      })
+
+
       $('.promos__items', context).slick({
         infinite: true,
         slidesToShow: 3,

@@ -1,0 +1,17 @@
+{% do attributes.removeAttribute('id') %}
+{% spaceless %}
+  <div{{ attributes.addClass(block_class) }}>
+    {% if has_container %}
+    <div class="{{ block_class }}__content container">
+      {% endif %}
+      {{ title_prefix }}
+      {{ title_suffix }}
+      {% block content %}
+      <h2>Продукты</h2>
+      {{ content }}
+      {% if has_container %}
+    </div>
+    {% endif %}
+    {% endblock %}
+  </div>
+{% endspaceless %}

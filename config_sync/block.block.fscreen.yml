@@ -1,0 +1,29 @@
+uuid: 4ad9d7d1-7f62-4746-982b-85b0af2c5dfb
+langcode: ru
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:0707839c-0495-4958-9873-1f845b906cbf'
+  module:
+    - anb_base
+    - block_content
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 0
+id: fscreen
+theme: anb
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:0707839c-0495-4958-9873-1f845b906cbf'
+settings:
+  id: 'block_content:0707839c-0495-4958-9873-1f845b906cbf'
+  label: 'Первый экран'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

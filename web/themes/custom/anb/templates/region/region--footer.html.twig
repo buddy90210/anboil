@@ -13,9 +13,27 @@
 <div class="modals">
   <div class="modal-overlay"></div>
 
+  <div class="modal-form" id="consultmodal">
+    <span class="modal-form__close close-icon">×</span>
+    <p class="modal-form__heading">Получить консультацию</p>
+    {{ drupal_entity('contact_form', 'consultform', null, null, false) }}
+  </div>
+
   <div class="modal-form" id="callbackform">
     <span class="modal-form__close close-icon">×</span>
     <p class="modal-form__heading">Заказать звонок</p>
     {{ drupal_entity('contact_form', 'callbackform', null, null, false) }}
+  </div>
+
+  <div class="modal-form" id="orderform">
+    <span class="modal-form__close close-icon">×</span>
+    <p class="modal-form__heading">Заявка на покупку топлива</p>
+    {{ drupal_entity('contact_form', 'orderform', null, null, false) }}
+  </div>
+
+  <div class="modal-form" id="discountform">
+    <span class="modal-form__close close-icon">×</span>
+    <p class="modal-form__heading">Получить скидку</p>
+    {{ drupal_entity('contact_form', 'discountform', null, null, false) }}
   </div>
 </div>

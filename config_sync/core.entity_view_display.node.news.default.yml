@@ -29,3 +29,4 @@ content:
 hidden:
   field_news_photo: true
   langcode: true
+  previous_next: true

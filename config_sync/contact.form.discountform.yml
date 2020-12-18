@@ -1,0 +1,21 @@
+uuid: 94f8c2ea-81e2-4d8d-8366-2e56ad4af0bd
+langcode: ru
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Отправить
+    show_preview: false
+    disabled_form_message: 'Эта контактная форма отключена.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: discountform
+label: 'Получить скидку'
+recipients:
+  - test@test.ru
+reply: ''
+weight: 0
+message: 'Ваша заявка получена!'
+redirect: ''

@@ -1,0 +1,23 @@
+uuid: 44a176ae-8ab3-4126-a4af-2946c01d77c1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.orderform
+    - field.storage.contact_message.field_delivery
+  module:
+    - options
+id: contact_message.orderform.field_delivery
+field_name: field_delivery
+entity_type: contact_message
+bundle: orderform
+label: 'Способ доставки'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Доставка
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -9,7 +9,7 @@ h3 {
 
 h1 {
   font-weight: 700;
-  font-size: 2.375rem;
+  font-size: 2.125rem;
   margin-bottom: 2.2rem;
 }
 
@@ -410,13 +410,12 @@ input.button--flat {
 
 .tabcontent {
   display: none;
-  animation: fadeIn .3s;
+  animation: fadeIn .6s;
 }
 
 .tabcontent.is-visible {
   display: block;
 }
-
 
 /* ------------------------- Pager ------------------------- */
 .pager {

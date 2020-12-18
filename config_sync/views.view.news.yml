@@ -208,6 +208,7 @@ display:
       defaults:
         use_ajax: false
         header: false
+        footer: false
       header:
         area_text_custom:
           id: area_text_custom
@@ -221,6 +222,18 @@ display:
           content: '<h2><span>Новости</span> компании</h2>'
           plugin_id: text_custom
       display_description: ''
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<div class="button-wrap"><a href="/news" class="button">Другие новости</a></div>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.product.field_density
     - field.field.node.product.field_full_price
     - field.field.node.product.field_item_price
+    - field.field.node.product.field_on_front
     - field.field.node.product.field_sign
     - node.type.product
   module:
@@ -17,7 +18,7 @@ bundle: product
 mode: default
 content:
   field_category:
-    weight: 106
+    weight: 5
     label: above
     settings:
       link: true
@@ -25,7 +26,7 @@ content:
     type: entity_reference_label
     region: content
   field_density:
-    weight: 103
+    weight: 3
     label: above
     settings:
       thousand_separator: ''
@@ -36,7 +37,7 @@ content:
     type: number_decimal
     region: content
   field_full_price:
-    weight: 102
+    weight: 2
     label: above
     settings:
       thousand_separator: ''
@@ -47,7 +48,7 @@ content:
     type: number_decimal
     region: content
   field_item_price:
-    weight: 101
+    weight: 1
     label: above
     settings:
       thousand_separator: ''
@@ -57,8 +58,18 @@ content:
     third_party_settings: {  }
     type: number_decimal
     region: content
+  field_on_front:
+    type: boolean
+    weight: 6
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
   field_sign:
-    weight: 104
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -66,10 +77,10 @@ content:
     type: string
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
   previous_next: true

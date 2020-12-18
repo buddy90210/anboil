@@ -32,7 +32,8 @@
 
 input,
 textarea,
-.filefield label {
+.filefield label,
+ select {
   display: block;
   width: 100%;
   font-family: var(--base-font);
@@ -53,15 +54,18 @@ textarea {
   line-height: 1.4;
 }
 
-input::placeholder {
+input::placeholder,
+ select::placeholder {
   color: var(--color-gray);
 }
 
-input:hover {
+input:hover,
+ select:hover {
   border-color: var(--base-color);
 }
 
-input:focus {
+input:focus,
+ select:focus {
   border-color: var(--base-color);
   box-shadow: 0 0 0 4px var(--base-color-light);
 }
@@ -92,14 +96,15 @@ input[type="radio"] {
   top: 0;
   left: 0;
   padding: 0;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   border-radius: 50%;
+  border: 1px solid var(--border-color);
   transition: none;
 }
 
 input[type="radio"]:checked {
-  background: var(--sprite) no-repeat 4px -313px var(--base-color);
+  background: #fff var(--sprite) 5px -201px;
   border-color: var(--base-color);
 }
 
@@ -110,7 +115,7 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   padding: 0;
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--border-color);
 }
 
 input[type="checkbox"]:checked {
@@ -177,8 +182,7 @@ input[type="checkbox"]:checked {
   height: auto;
   padding: 2rem 3rem;
   background-color: #fff;
-  box-shadow: 0px 2px 20px rgba(209, 208, 208, 0.25);
-  border-radius: 3px;
+  box-shadow: 0 2px 20px rgba(209, 208, 208, 0.25);
   z-index: 101;
 }
 
@@ -210,7 +214,26 @@ input[type="checkbox"]:checked {
 
 .modal-form .form-actions {
   width: 100%;
-  margin-top: 1rem;
+}
+
+#orderform.modal-form .form-actions {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.modal-form .agreement-field label {
+  font-size: 0.875rem;
+}
+
+.modal-form .agreement-field input {
+  width: 21px;
+  height: 21px;
+  border: 1px solid var(--base-color);
+}
+
+.modal-form .submit-wrap {
+  display: flex;
+  justify-content: center;
 }
 
 .close-icon {
@@ -412,6 +435,7 @@ input[type="checkbox"]:checked {
   display: flex;
   justify-content: center;
 }
+
 
 /* ------------------------- Calculator forms ------------------------- */
 .calculator-form {

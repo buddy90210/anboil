@@ -1,0 +1,23 @@
+{% set class = "product-promo" %}
+<div class="{{ class }}">
+  <p class="{{ class }}__title">
+    {{ label.0 }}
+  </p>
+
+  <p class="{{ class }}__sign">{{ content.field_sign.0 }}</p>
+
+  <p class="{{ class }}__density inline-field">
+    <span class="label">Плотность</span>
+    <span class="value">{{ content.field_density.0 }}</span>
+  </p>
+
+  <p class="{{ class }}__item-price inline-field">
+    <span class="label">Цена за литр</span>
+    <span class="value">{{ content.field_item_price.0 }}</span>
+  </p>
+
+  <p class="{{ class }}__full-price inline-field">
+    <span class="label">Цена за тонну</span>
+    <span class="value"><i>{{ content.field_full_price.0['#markup']|replace({'.00': ''}) }}</i></span>
+  </p>
+</div>

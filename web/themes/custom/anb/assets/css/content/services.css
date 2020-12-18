@@ -111,7 +111,8 @@
   color: #fff;
 }
 
-.services-full {
+.services-full,
+.services-front {
   padding-bottom: var(--spacer);
   background: url(../../img/services.jpg) no-repeat bottom left;
 }

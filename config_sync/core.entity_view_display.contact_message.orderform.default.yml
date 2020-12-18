@@ -1,0 +1,101 @@
+uuid: 3fec644f-e63c-414b-95b6-a75461d4b2fe
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.orderform
+    - field.field.contact_message.orderform.field_agreement
+    - field.field.contact_message.orderform.field_city
+    - field.field.contact_message.orderform.field_company
+    - field.field.contact_message.orderform.field_delivery
+    - field.field.contact_message.orderform.field_phone
+    - field.field.contact_message.orderform.field_volume
+  module:
+    - options
+id: contact_message.orderform.default
+targetEntityType: contact_message
+bundle: orderform
+mode: default
+content:
+  field_agreement:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_city:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_company:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_delivery:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_phone:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_volume:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  mail:
+    weight: -2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    weight: -3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  subject:
+    weight: -1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 523c14c4-f287-44dc-94e1-2394c7e78f66
+langcode: ru
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Отправить
+    show_preview: false
+    disabled_form_message: 'Эта контактная форма отключена.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: consultform
+label: 'Получить консультацию'
+recipients:
+  - test@test.ru
+reply: ''
+weight: 0
+message: 'Ваша заявка получена!'
+redirect: ''
