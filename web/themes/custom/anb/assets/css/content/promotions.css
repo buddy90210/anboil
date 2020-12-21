@@ -31,6 +31,7 @@
 
 .promo__photo img {
   display: block;
+  width: 100%;
 }
 
 .promo__icon {
@@ -107,4 +108,29 @@
   margin-top: 1rem;
   font-size: 0.9375rem;
   line-height: 1.7;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 1320px) {
+  .promo__photo svg {
+    left: 0;
+    width: calc(100% - 1px);
+    height: 70px;
+    bottom: -11px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .promo__photo svg {
+    display: none;
+  }
+  .promo__icon {
+    bottom: -2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .promos__item {
+    margin: 0;
+  }
 }

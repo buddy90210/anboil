@@ -29,7 +29,7 @@ class StorageForm extends FormBase {
       '#required' => TRUE,
       '#attributes' => [
         'placeholder' => t('Объём (тонн)'),
-        'class' => ['value-form-field']
+        'class' => ['value-form-field', 'calc-result-field']
       ],
     ];
 
@@ -38,7 +38,7 @@ class StorageForm extends FormBase {
       '#required' => TRUE,
       '#attributes' => [
         'placeholder' => t('Срок (дней)'),
-        'class' => ['time-form-field'],
+        'class' => ['time-form-field', 'calc-result-field'],
       ],
     ];
 

@@ -5,9 +5,16 @@
     <p class="{{ class }}__sign">{{ content.field_sign.0 }}</p>
   </div>
 
-  <p class="{{ class }}__density">{{ content.field_density.0 }}</p>
-  <p class="{{ class }}__item-price">{{ content.field_item_price.0 }}</p>
+  <p class="{{ class }}__density">
+    <span class="label visually-hidden">Плотность</span>
+    {{ content.field_density.0 }}
+  </p>
+  <p class="{{ class }}__item-price">
+    <span class="label visually-hidden">Цена за литр</span>
+    {{ content.field_item_price.0 }}
+  </p>
   <p class="{{ class }}__full-price">
+    <span class="label visually-hidden">Цена за тонну</span>
     <span>{{ content.field_full_price.0['#markup']|replace({'.00': ''}) }}</span>
   </p>
 

@@ -149,6 +149,7 @@
 }
 
 .service-teaser.is-visible {
+  position: relative;
   display: flex;
 }
 
@@ -190,4 +191,84 @@
 .services-page .body ul li {
   display: block;
   width: 48%;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 1160px) {
+  .service-teaser__photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: .2;
+  }
+  .service-teaser-content {
+    width: 100%;
+    padding-right: 0;
+  }
+  .services-full {
+    overflow: hidden;
+  }
+  .service__top {
+    padding: 3rem;
+  }
+  .service__top h1 {
+    width: 100%;
+  }
+  .service .calc-description {
+    width: 100%;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .service__calculator {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .service__results {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .service__form {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .services-page .body ul li {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .service .service__results {
+    background: transparent;
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .service-teaser__photo {
+    display: none;
+  }
+  .tabs-custom .tab {
+    width: 100%;
+    margin: 0 0 -1px 0;
+  }
+  .service-teaser-content {
+    padding-top: 2rem;
+  }
+  .service-teaser__button {
+    margin-top: 2rem;
+  }
+  .service__top {
+    padding: 2rem;
+  }
+  .service__top h1 {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .service__top h1:before {
+    display: none;
+  }
+  .service .calc-description {
+    margin-top: 1rem;
+  }
 }

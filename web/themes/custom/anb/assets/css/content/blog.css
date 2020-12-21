@@ -114,6 +114,10 @@
   width: 41%;
 }
 
+.article-photo img {
+  width: 100%;
+}
+
 .article-top__text {
   width: 55%;
 }
@@ -140,4 +144,141 @@
 
 .article-top__text h1 {
   margin-bottom: 1rem;
+}
+
+.news-front-items {
+  margin: 0 -10px;
+}
+
+.news-item {
+  display: flex;
+  position: relative;
+  margin: 0 10px;
+  height: auto;
+  border: 2px solid var(--base-color);
+  border-top: none;
+  transition: .2s ease;
+  background-color: #fff;
+}
+
+.news-item__photo {
+  margin: 0 -2px;
+}
+
+.news-item__photo img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.news-item__inner {
+  position: relative;
+  padding: 1rem;
+  height: auto;
+}
+
+.news-item:hover {
+  background-color: var(--base-color);
+}
+
+.news-item__inner svg {
+  position: absolute;
+  top: -74px;
+  left: -1px;
+  width: calc(100% + 3px);
+}
+
+.news-item__inner svg path {
+  fill: #fff;
+  transition: .2s ease;
+}
+
+.news-item:hover .news-item__inner svg path {
+  fill: var(--base-color);
+}
+
+.news-item__title {
+  margin-top: .5rem;
+  transition: .2s ease;
+}
+
+.news-item__published {
+  transition: .2s ease;
+}
+
+.news-item:hover .news-item__title,
+.news-item:hover .news-item__published {
+  color: #fff;
+}
+
+.news-all-items .news-item {
+  display: block;
+  width: 24%;
+  margin: 0 1.3% 1.3% 0;
+  border-top: 2px solid var(--base-color);
+}
+
+.news-all-items .news-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.news-all-items .news-item__inner svg {
+  display: none;
+}
+
+.news-all-items .news-item__photo {
+  margin: 0;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 1320px) {
+  .news-item {
+    border-top: 2px solid var(--base-color);
+  }
+  .news-item__inner svg {
+    display: none;
+  }
+  .news-item__photo {
+    margin: 0;
+  }
+  .post__photo svg {
+    bottom: -5px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .post__photo svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .news-all-items .news-item,
+  .news-all-items .news-item:nth-child(4n) {
+    width: 32%;
+    margin: 0 2% 2% 0;
+  }
+  .news-all-items .news-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .post__inner {
+    padding: 1.5rem 1.5rem 100px;
+  }
+  .post__title {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .news-all-items .news-item,
+  .post {
+    width: 100% !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  .article-photo {
+    width: 100%;
+  }
+  .article-top__text {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }

@@ -293,7 +293,7 @@ input.button--flat {
 .slick-arrow {
   position: absolute;
   top: 50%;
-  left: -100px;
+  left: -60px;
   margin-top: -30px;
   display: inline-flex;
   justify-content: center;
@@ -320,7 +320,7 @@ input.button--flat {
 
 .slick-next {
   left: auto;
-  right: -100px;
+  right: -60px;
 }
 
 .slick-prev {
@@ -585,6 +585,7 @@ div[data-drupal-messages] {
 }
 
 .features .body img {
+  width: 100%;
   display: block;
 }
 
@@ -730,6 +731,7 @@ div[data-drupal-messages] {
 
 .equipment-photo img {
   display: block;
+  width: 100%;
 }
 
 .equipment-title {
@@ -820,4 +822,87 @@ div[data-drupal-messages] {
 
 .previous-next__link--next svg {
   margin: -1px 0 0 1rem;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 1320px) {
+  .slick-arrow {
+    left: 15px;
+  }
+  .slick-next {
+    left: auto;
+    right: 15px;
+  }
+  .slick-slider {
+    padding: 0 80px;
+  }
+  .equipment-photo svg {
+    left: 0;
+    width: calc(100% - 1px);
+    height: 70px;
+    bottom: -11px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .equipment-photo svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .features .body ul li {
+    width: 48%;
+    margin-bottom: 2rem;
+  }
+  .features .item:before {
+    height: 60px;
+    top: -60px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  h1, h2, .features__heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  .slick-slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .breadcrumbs ol {
+    font-size: 0.875rem;
+  }
+  .features .body ul li {
+    width: 100%;
+  }
+  .characteristics__item {
+    flex-direction: column;
+    border: none;
+  }
+  .characteristics__item .title {
+    padding: 0;
+  }
+  .characteristics__item > div:before {
+    display: none;
+  }
+  .characteristics__item .value {
+    margin-top: 3px;
+  }
+  .tabs .form-item {
+    width: 100%;
+  }
+  .tabs:before, .tabs:after {
+    display: none;
+  }
+  .previous-next {
+    flex-direction: column;
+    align-items: center;
+  }
+  .previous-next__link {
+    margin: 5px 0;
+  }
 }

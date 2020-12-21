@@ -1,0 +1,19 @@
+uuid: 40983797-27aa-438d-934d-16c33c540e6c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.jobform
+    - field.storage.contact_message.field_phone
+id: contact_message.jobform.field_phone
+field_name: field_phone
+entity_type: contact_message
+bundle: jobform
+label: 'Номер телефона'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

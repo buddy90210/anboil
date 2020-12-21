@@ -32,9 +32,15 @@
             $('.service__results__data').html($(this).html());
           }
 
-          $(this).html('');
+          // Get user input values.
+          let form = $(this).parents('form');
+          let userInput = '';
+          form.find('.calc-result-field').each(function () {
+            userInput += $(this).attr('placeholder') + ': ' + $(this).val() + '\n';
+          })
+          $('.service__form textarea[name="message[0][value]"]').val(userInput);
 
-          $('input[name="field_sent_from[0][value]"]').val($(this).text());
+          $(this).html('');
         };
       })
 

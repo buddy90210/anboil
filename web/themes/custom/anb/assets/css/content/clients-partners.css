@@ -26,3 +26,10 @@
 .logo-blocks .slick-arrow {
   top: 40%;
 }
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 720px) {
+  .logo-image {
+    height: 80px;
+  }
+}

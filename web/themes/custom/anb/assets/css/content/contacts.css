@@ -44,3 +44,15 @@
 .contacts-block-info p:last-child {
   margin-bottom: 0;
 }
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 720px) {
+  .maps__item,
+  .contacts-blocks__item {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .contacts-blocks {
+    margin-top: 2rem;
+  }
+}

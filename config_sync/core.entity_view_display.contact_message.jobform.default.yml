@@ -1,0 +1,64 @@
+uuid: 32e64c4c-9c4f-48ee-b7c5-1062a00df8d0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.jobform
+    - field.field.contact_message.jobform.field_agreement
+    - field.field.contact_message.jobform.field_phone
+id: contact_message.jobform.default
+targetEntityType: contact_message
+bundle: jobform
+mode: default
+content:
+  field_agreement:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_phone:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  mail:
+    weight: -2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    weight: -3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  subject:
+    weight: -1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  langcode: true

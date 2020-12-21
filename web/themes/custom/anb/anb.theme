@@ -69,6 +69,7 @@ function anb_page_attachments_alter(array &$attachments) {
   if ($is_front) {
     $attachments['#attached']['library'][] = 'anb/front';
     $attachments['#attached']['library'][] = 'anb/clients_partners';
+    $attachments['#attached']['library'][] = 'anb/blog';
   }
 
   if ($node !== null) {

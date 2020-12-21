@@ -125,3 +125,39 @@
 .footer-copyright a:hover {
   color: var(--base-color);
 }
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 1160px) {
+  .footer-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .footer-contacts .footer-column {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer-contacts {
+    margin-top: 2rem;
+  }
+  .footer-copyright {
+    margin-top: 2rem;
+  }
+  .footer-contacts__wrap {
+    width: 100%;
+  }
+  .footer-contacts__address {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .footer-copyright {
+    flex-direction: column;
+  }
+  .footer-copyright__policy {
+    margin-top: .5rem;
+  }
+}

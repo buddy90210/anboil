@@ -26,7 +26,7 @@ class DeliveryForm extends \Drupal\Core\Form\FormBase {
     $form['point_from'] = [
       '#type' => 'textfield',
       '#attributes' => [
-        'class' => ['point-form-field'],
+        'class' => ['point-form-field', 'calc-result-field'],
         'placeholder' => 'Откуда',
       ],
       '#required' => TRUE,
@@ -35,7 +35,7 @@ class DeliveryForm extends \Drupal\Core\Form\FormBase {
     $form['point_to'] = [
       '#type' => 'textfield',
       '#attributes' => [
-        'class' => ['point-form-field'],
+        'class' => ['point-form-field', 'calc-result-field'],
         'placeholder' => 'Куда',
       ],
       '#required' => TRUE,

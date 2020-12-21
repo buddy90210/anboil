@@ -1,0 +1,23 @@
+uuid: 0207a619-2bdd-485b-ad2d-b02d28a29e6b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.jobform
+    - field.storage.contact_message.field_agreement
+id: contact_message.jobform.field_agreement
+field_name: field_agreement
+entity_type: contact_message
+bundle: jobform
+label: 'Согласие на обработку персональных данных'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Согласие на обработку персональных данных'
+  off_label: 'Согласие на обработку персональных данных'
+field_type: boolean

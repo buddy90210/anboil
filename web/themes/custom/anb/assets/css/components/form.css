@@ -371,8 +371,13 @@ input[type="checkbox"]:checked {
   border-color: #fff;
   color: #fff;
 }
+
 .service__form input::placeholder {
   color: #fff;
+}
+
+.service__form .field--name-message {
+  display: none;
 }
 
 .service__form .agreement-field label {
@@ -560,4 +565,71 @@ input[type="checkbox"]:checked {
 .calculators .service__results {
   padding-left: 0;
   background: transparent;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 1320px) {
+  .questionblock .body em {
+    font-size: 2.5rem;
+  }
+  .questionblock .body p:last-child {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .calcforms .calculators {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .calculator-form .form-item {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .calculator-form .submit-wrap {
+    width: 100%;
+  }
+  .calculator-form input, .calculator-form .button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .questionblock .body {
+    width: 100%;
+    margin-top: 0;
+  }
+  .questionblock .body em {
+    font-size: 2rem;
+  }
+  .questionblock .body p:last-child {
+    margin-top: -.5rem;
+    font-size: 1rem;
+  }
+  .questionblock .body p:last-child br {
+    display: none;
+  }
+  .questionblock form {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .questionblock form > .form-item, .questionblock form > .form-wrapper {
+    width: 100%;
+  }
+  .questionblock .form-wrapper.form-actions {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .questionblock .form-wrapper.form-actions .submit-wrap {
+    margin-top: 1rem;
+  }
+  .modal-form {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
 }

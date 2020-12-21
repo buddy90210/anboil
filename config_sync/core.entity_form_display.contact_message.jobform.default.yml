@@ -1,44 +1,43 @@
-uuid: 9b2ba0c4-071b-4df3-af50-a94f78c67428
+uuid: 2d877af3-a889-43da-9ae5-a588f73af3ac
 langcode: ru
 status: true
 dependencies:
   config:
-    - contact.form.calcrequest
-    - field.field.contact_message.calcrequest.field_agreement
-    - field.field.contact_message.calcrequest.field_phone
-    - field.field.contact_message.calcrequest.field_sent_from
-id: contact_message.calcrequest.default
+    - contact.form.jobform
+    - field.field.contact_message.jobform.field_agreement
+    - field.field.contact_message.jobform.field_phone
+id: contact_message.jobform.default
 targetEntityType: contact_message
-bundle: calcrequest
+bundle: jobform
 mode: default
 content:
   field_agreement:
-    type: boolean_checkbox
-    weight: 3
-    region: content
+    weight: 5
     settings:
       display_label: true
     third_party_settings: {  }
-  field_phone:
-    type: string_textfield
-    weight: 1
+    type: boolean_checkbox
     region: content
+  field_phone:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   mail:
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   message:
     type: string_textarea
     weight: 4
-    region: content
     settings:
-      rows: 5
+      rows: 12
       placeholder: ''
+    region: content
     third_party_settings: {  }
   name:
     weight: 0
@@ -47,7 +46,6 @@ content:
     third_party_settings: {  }
 hidden:
   copy: true
-  field_sent_from: true
   langcode: true
   preview: true
   subject: true
