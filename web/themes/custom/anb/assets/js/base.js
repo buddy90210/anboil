@@ -78,6 +78,15 @@
       phone_fields.attr('type','tel').mask('+7 (999) 999-99-99');
 
       /**
+       * Modal forms.
+       */
+      $ = jQuery;
+      function show_form(form_id){show_modals();$(form_id).addClass('is-visible');};
+      function show_modals(){$('.modals').addClass('is-visible');};
+      $('.modal-overlay, .modal-form__close').click(function(){$('.modals, .modal-form').removeClass('is-visible');});
+      $('.modal-trigger').click(function(){show_form('#' + $(this).attr('data-modal'));});
+
+      /**
        * Tabs.
        */
       $ = jQuery;$('.tab').click(function(){tabId = $(this).attr('data-tab');$(this).parents('.tabsgroup').find('.tab').removeClass('is-active');$(this).addClass('is-active');$(this).parents('.tabsgroup').find('.tabcontent').removeClass('is-visible');$(this).parents('.tabsgroup').find('.tabcontent[data-tab="' + tabId +'"]').addClass('is-visible');});$('.tabsgroup').each(function(){if ($(this).find('.tab.is-active').length === 0) {$(this).find('.tab').first().click();}});var url = document.location.href;var hash = url.substring(url.indexOf("#")+1);$('.tab[data-tab="' + hash + '"]').click();
