@@ -1,6 +1,6 @@
 uuid: da136120-eeae-4033-9068-769be81bdf35
 name: 'Ангелинская Нефтебаза'
-mail: test@test.ru
+mail: info@anboil.ru
 slogan: ''
 page:
   403: /node/2
@@ -14,6 +14,6 @@ _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
 mail_notification: ''
 phone: '8 (800) 285-65-32'
-email: info@aneft.ru
-address: 'г. Красондар, ул. Талалихина 65/2'
+email: info@anboil.ru
+address: 'г. Краснодар, ул. Талалихина 65/2'
 telegram: anb

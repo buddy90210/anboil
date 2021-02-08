@@ -471,8 +471,40 @@ input[type="checkbox"]:checked {
 }
 
 .calculator-form .form-item {
+  position: relative;
   width: 36%;
   margin: 0;
+}
+
+.city-tips {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  z-index: 9;
+  color: var(--base-font-color);
+}
+
+.city-tips.is-empty {
+  padding: 15px;
+}
+
+.city-tip {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.city-tip:last-child {
+  border: none;
+}
+
+.city-tip:hover {
+  background-color: var(--base-color-light);
 }
 
 .calculator-form .submit-wrap {

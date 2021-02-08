@@ -1,0 +1,4 @@
+services:
+  anb_avtodispetcher.manager:
+    class: Drupal\anb_avtodispetcher\AvtodispetcherManager
+    arguments: [ '@http_client' ]

@@ -1,6 +1,7 @@
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  anb_avtodispetcher: 0
   anb_base: 0
   anb_catalog: 0
   anb_services: 0

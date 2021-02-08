@@ -3,12 +3,37 @@
 
 namespace Drupal\anb_services\Form;
 
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\AppendCommand;
+use Drupal\Core\Ajax\InsertCommand;
+use Drupal\Core\Ajax\InvokeCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Delivery form calculator.
  */
-class DeliveryForm extends \Drupal\Core\Form\FormBase {
+class DeliveryForm extends FormBase {
+
+  /**
+   * The current user.
+   *
+   * @var \Drupal\anb_avtodispetcher\AvtodispetcherManager
+   */
+  protected $manager;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    $instance = parent::create($container);
+    $instance->manager = $container->get('anb_avtodispetcher.manager');
+
+    return $instance;
+  }
 
   /**
    * @inheritDoc
@@ -30,6 +55,11 @@ class DeliveryForm extends \Drupal\Core\Form\FormBase {
         'placeholder' => 'Откуда',
       ],
       '#required' => TRUE,
+      '#suffix' => '<ul class="city-tips city-tips--from"></ul>',
+      '#ajax' => [
+        'callback' => '::getCityTips',
+        'event' => 'input',
+      ],
     ];
 
     $form['point_to'] = [
@@ -39,6 +69,11 @@ class DeliveryForm extends \Drupal\Core\Form\FormBase {
         'placeholder' => 'Куда',
       ],
       '#required' => TRUE,
+      '#suffix' => '<ul class="city-tips city-tips--to"></ul>',
+      '#ajax' => [
+        'callback' => '::getCityTips',
+        'event' => 'input',
+      ],
     ];
 
     $form['results'] = [
@@ -78,6 +113,60 @@ class DeliveryForm extends \Drupal\Core\Form\FormBase {
   }
 
   /**
+   * Get city tips for autocomplete form field.
+   */
+  public function getCityTips(&$form, $form_state) {
+    $ajax_response = new AjaxResponse();
+    $ajax_response->addCommand(new ReplaceCommand('.city-tips', ''));
+
+    // Get triggering element value.
+    $element = $form_state->getTriggeringElement()['#name'];
+    $city = $form_state->getValue($element);
+
+    // Get tips from API.
+    $tips = $this->manager->getCityTips($city);
+    $selector = 'input[data-drupal-selector="edit-' . Html::cleanCssIdentifier($element) . '"]';
+    $parent_selector = '.form-item-' . Html::cleanCssIdentifier($element);
+
+    $ajax_response->addCommand(new InvokeCommand($selector, 'addClass', ['has-value']));
+    $ajax_response->addCommand(new AppendCommand($parent_selector, $this->renderCityTips($tips)));
+
+    return $ajax_response;
+  }
+
+  /**
+   * Returns city tips markup.
+   * @param array $tips
+   */
+  protected function renderCityTips($tips) {
+    $output = [
+      '#type' => 'container',
+      '#attributes' => ['class' => ['city-tips']],
+    ];
+
+    if (is_null($tips)) {
+      $output['#attributes']['class'][] = 'is-empty';
+
+      $output['empty'] = [
+        '#type' => 'html_tag',
+        '#tag' => 'p',
+        '#value' => 'Не найдено',
+      ];
+    }
+
+    foreach ($tips as $key => $tip) {
+      $output[$key] = [
+        '#type' => 'html_tag',
+        '#tag' => 'p',
+        '#value' => $tip,
+        '#attributes' => ['class' => ['city-tip']],
+      ];
+    }
+
+    return $output;
+  }
+
+  /**
    * Ajax callback for form submit.
    */
   public function ajaxSubmitForm(&$form, $form_state) {
@@ -85,16 +174,36 @@ class DeliveryForm extends \Drupal\Core\Form\FormBase {
     $point_from = $form_state->getValue('point_from');
     $point_to = $form_state->getValue('point_to');
 
+    $empty_message = [
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#value' => 'Не найдена информация по указанным городам',
+      '#attributes' => ['class' => ['not-found']],
+    ];
+
+    if (strlen($point_from) < 3 || strlen($point_to) < 3) {
+      $form['results']['empty'] = $empty_message;
+      return $form['results'];
+    }
+
+    // Get route info from api.
+    $route_info = $this->manager->getRoute($point_from, $point_to);
+
+    if (is_null($route_info)) {
+      $form['results']['empty'] = $empty_message;
+      return $form['results'];
+    }
+
     $form['results']['#attributes']['class'][] = 'has-values';
 
-    $form['results']['calculated_price'] = [
+    $form['results']['route_time'] = [
       '#type' => 'markup',
-      '#markup' => '<div class="row"><p class="title">Откуда</p><p class="value">' . $point_from . '</p></div>'
+      '#markup' => '<div class="row"><p class="title">Время <br/>на доставку (в часах)</p><p class="value">' . $route_info['time'] . '</p></div>'
     ];
 
     $form['results']['extra_price'] = [
       '#type' => 'markup',
-      '#markup' => '<div class="row"><p class="title">Куда</p><p class="value">' . $point_to . '</p></div>'
+      '#markup' => '<div class="row"><p class="title">Приблизительная <br/>стоимость</p><p class="value">' . $route_info['price'] . '&nbsp;<i>₽</i></p></div>'
     ];
 
     return $form['results'];

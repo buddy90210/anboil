@@ -4,7 +4,7 @@
     attach: function (context, settings) {
       'use strict';
 
-      if ($('.service').length> 0 ) {
+      if ($('.service').length > 0 ) {
         $('.bottom-content').addClass('no-margin');
       }
 
@@ -47,6 +47,15 @@
       $('.calculators .tab').click(function () {
         $('.service__actions').addClass('visually-hidden');
         $('.service__results__data').html('');
+      })
+
+      // City tips.
+      let cityTip = $('.city-tip');
+      cityTip.once().click(function () {
+        let input = $(this).parents('.form-item').find('input');
+        input.val($(this).text().trim());
+
+        $('.city-tips').remove();
       })
     }
   };

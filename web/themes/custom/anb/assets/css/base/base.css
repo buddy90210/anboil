@@ -71,6 +71,10 @@ body {
   overflow: hidden;
 }
 
+.main-layout.no-overflow {
+  overflow: visible;
+}
+
 .bottom-content:not(.no-margin) {
   margin-top: var(--spacer);
 }

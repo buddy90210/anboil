@@ -143,6 +143,10 @@ function anb_preprocess_page(&$variables) {
     if ($node->id() === '16') {
       $layout_attributes->addClass('production-page');
     }
+
+    if ($node->bundle() === 'service') {
+      $layout_attributes->addClass('no-overflow');
+    }
   }
 
   if (!is_null($term)) {
