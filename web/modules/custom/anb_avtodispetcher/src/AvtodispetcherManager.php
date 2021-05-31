@@ -112,7 +112,7 @@ class AvtodispetcherManager {
     $route_distance = $results->kilometers;
     $route_time = $results->minutes / 60;
 
-    $fuel_consumption = 8;
+    $fuel_consumption = 100;
     $fuel_price = 90;
 
     $route_fuel_consumption = $fuel_consumption / 100 * $route_distance;

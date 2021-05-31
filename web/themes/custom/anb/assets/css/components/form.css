@@ -598,6 +598,19 @@ input[type="checkbox"]:checked {
   padding-left: 0;
   background: transparent;
 }
+/* calculators addon */
+.delivery-disclamer{
+	width: 100%;
+	margin-top: 5px;
+	color: var(--color-gray);
+}
+.deliveryresult-disclamer p{
+	color: var(--color-gray);
+	margin-bottom: 1rem;
+}
+.deliveryresult-disclamer a{
+	color: var(--base-font-color);
+}
 
 /* ------------------------- @Media ------------------------- */
 @media screen and (max-width: 1320px) {

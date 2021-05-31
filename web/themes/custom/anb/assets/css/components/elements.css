@@ -61,6 +61,10 @@ a.is-active {
   font-size: 0;
 }
 
+a.blackphone{
+	color: var(--background-dark);
+}
+
 /* ------------------------- Text field ------------------------- */
 .body {
   font-size: 0.9375rem;

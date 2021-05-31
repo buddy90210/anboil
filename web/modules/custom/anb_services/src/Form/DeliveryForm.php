@@ -108,6 +108,11 @@ class DeliveryForm extends FormBase {
         ],
       ],
     ];
+    
+    $form['disclamer'] = [
+      '#type' => 'markup',
+      '#markup' => '<p class="delivery-disclamer">* Минимальное расстояние для расчета от 70 км. До 70 км. рассчитывается индивидуально.</p>'
+    ];
 
     return $form;
   }
@@ -196,14 +201,19 @@ class DeliveryForm extends FormBase {
 
     $form['results']['#attributes']['class'][] = 'has-values';
 
-    $form['results']['route_time'] = [
+    /*$form['results']['route_time'] = [
       '#type' => 'markup',
       '#markup' => '<div class="row"><p class="title">Время <br/>на доставку (в часах)</p><p class="value">' . $route_info['time'] . '</p></div>'
-    ];
+    ];*/
 
     $form['results']['extra_price'] = [
       '#type' => 'markup',
       '#markup' => '<div class="row"><p class="title">Приблизительная <br/>стоимость</p><p class="value">' . $route_info['price'] . '&nbsp;<i>₽</i></p></div>'
+    ];
+    
+    $form['results']['result_disclamer'] = [
+      '#type' => 'markup',
+      '#markup' => '<div class="deliveryresult-disclamer"><p>Сроки и условия доставки нефтепродуктов рассчитываются индивидуально.</p><p>Номер телефона отдела логистики: <a href="tel:89282410202">+7 928 241-02-02</a></p></div>'
     ];
 
     return $form['results'];
