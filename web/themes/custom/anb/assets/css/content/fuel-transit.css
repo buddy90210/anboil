@@ -1,0 +1,147 @@
+/* ------------------------- Fuel transit ------------------------- */
+.fuel-transit {
+  position: relative;
+}
+
+.fuel-transit.is-loading {
+  padding: 2rem 0;
+}
+
+.transit {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  animation: fadeIn .4s ease;
+  transition: .2s ease;
+}
+
+.transit:hover,
+.transit.is-expanded {
+  border-color: var(--base-color);
+}
+
+.transit.is-expanded {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+.transit__col {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-right: 1rem;
+}
+
+.transit__col .label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  margin-bottom: .3rem;
+  font-weight: 400;
+}
+
+.fuel-transit__doc {
+  width: 12%;
+  font-weight: 600;
+}
+
+.fuel-transit__date {
+  width: 12%;
+}
+
+.fuel-transit__car {
+  width: 12%;
+}
+
+.fuel-transit__place {
+  width: 19%;
+}
+
+.fuel-transit__type {
+  width: 10%;
+}
+
+.fuel-transit__quantity {
+  width: 10%;
+}
+
+.fuel-transit__price,
+.fuel-transit__sum {
+  width: 8%;
+}
+
+.fuel-transit__more {
+  width: 9%;
+  color: var(--color-gray);
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.fuel-transit__more:hover,
+.transit.is-expanded .fuel-transit__more {
+  color: var(--base-color);
+}
+
+.fuel-transit__more svg {
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
+  transition: .2s ease;
+}
+
+.transit.is-expanded .fuel-transit__more svg {
+  transform: rotate(180deg);
+}
+
+.fuel-transit__more svg path {
+  transition: .2s ease;
+}
+
+.fuel-transit__more:hover svg path,
+.transit.is-expanded .fuel-transit__more svg path {
+  stroke: var(--base-color);
+}
+
+.fuel-transit__map {
+  display: none;
+  width: 100%;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  padding-right: 0;
+}
+
+.fuel-transit__map .label {
+  margin-bottom: 1rem;
+}
+
+.transit.is-expanded .fuel-transit__map {
+  display: block;
+  animation: fadeIn .3s ease;
+}
+
+.fuel-transit__map iframe {
+  width: 100%;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 1160px) {
+  .transit__col {
+    width: 25%;
+    margin-bottom: 1rem;
+  }
+  .transit__col {
+    margin: 1rem 0;
+  }
+  .fuel-transit__map {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .transit__col {
+    width: 100%;
+    margin-bottom: .25rem;
+  }
+}

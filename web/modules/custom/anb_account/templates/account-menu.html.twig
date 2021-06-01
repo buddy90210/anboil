@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present fueld residues account page.
+ *
+ * Available variables:
+ * - links: Array of menu links.
+ */
+#}
+{% set class = "account-menu" %}
+<nav class="{{ class }}">
+  <div class="{{ class }}__container container">
+    <ul class="{{ class }}__items">
+    {% for link in links %}
+      <li class="{{ class }}__item">
+        <a href="{{ url(link.route) }}" class="{{ class }}__link{{ link.is_active ? ' is-active' }}">{{ link.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,12 @@
+toolbar:
+  css:
+    base:
+      assets/css/anb_account.toolbar.css: {}
+
+fuel-residues:
+  js:
+    assets/js/fuel-residues.js: {}
+
+fuel-transit:
+  js:
+    assets/js/fuel-transit.js: {}

@@ -1,0 +1,84 @@
+/* ------------------------- Account ------------------------- */
+.account-menu {
+  border-bottom: 1px solid var(--base-color);
+  margin-bottom: 2.5rem;
+}
+
+.account-menu__items {
+  display: flex;
+  align-items: center;
+}
+
+.account-menu__item {
+  display: block;
+  margin: 0 -1px -1px 0;
+}
+
+.account-menu__link {
+  display: block;
+  padding: 0.625rem 1.5rem;
+  font-family: var(--font-extra);
+  font-size: 1.5rem;
+  border: 1px solid var(--base-color);
+}
+
+.account-menu__link.is-active {
+  background-color: var(--base-color);
+  color: #fff;
+}
+
+.js-form-type-password-confirm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.js-form-type-password-confirm .form-item {
+  width: 49%;
+  margin-bottom: 0;
+}
+
+.js-form-type-password-confirm .description {
+  width: 100%;
+}
+
+.password-strength__meter,
+.password-suggestions {
+  display: none;
+}
+
+.password-strength,
+.js-password-confirm-message {
+  margin-top: .5rem;
+  font-size: 0.825rem;
+  color: var(--color-gray);
+}
+
+.user-form .form-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-form .form-actions .submit-wrap {
+  margin-right: 1rem;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 720px) {
+  .account-menu {
+    border-bottom: none;
+  }
+  .account-menu__items {
+    flex-wrap: wrap;
+  }
+  .account-menu__item {
+    width: 100%;
+  }
+  .account-menu__link {
+    font-size: 1.125rem;
+  }
+  .js-form-type-password-confirm .form-item {
+    width: 100%;
+    margin-bottom: .5rem;
+  }
+}

@@ -1,8 +1,9 @@
-uuid: 4e2af3aa-2b2e-426f-a73d-99c2a98b37d9
+uuid: c0da92e7-8f4c-4f61-b691-0b714ca0b100
 langcode: ru
 status: true
 dependencies:
   module:
+    - anb_account
     - anb_base
     - system
     - user
@@ -10,32 +11,27 @@ dependencies:
     - anb
 third_party_settings:
   anb_base:
-    has_container: 1
-_core:
-  default_config_hash: QGjPb4o7TUNVbw6YGPbrBOrruW4MYBzzD-gem_jOJZ8
-id: local_tasks
+    has_container: 0
+id: account_menu_block
 theme: anb
 region: top_content
-weight: -7
+weight: 0
 provider: null
-plugin: local_tasks_block
+plugin: account_menu_block
 settings:
-  id: local_tasks_block
-  label: Вкладки
-  provider: core
+  id: account_menu_block
+  label: 'Меню личного кабинета'
+  provider: anb_account
   label_display: '0'
-  primary: true
-  secondary: true
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
-    negate: true
+    pages: "/user/settings\r\n/user/fuel-residues\r\n/user/fuel-transit"
+    negate: false
   user_role:
     id: user_role
     roles:
-      anonymous: anonymous
-      administrator: administrator
+      authenticated: authenticated
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'

@@ -1,6 +1,7 @@
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  anb_account: 0
   anb_avtodispetcher: 0
   anb_base: 0
   anb_catalog: 0
@@ -43,6 +44,9 @@ module:
   path_alias: 0
   quick_node_clone: 0
   redirect: 0
+  rest: 0
+  restui: 0
+  serialization: 0
   shortcut: 0
   simple_sitemap: 0
   system: 0

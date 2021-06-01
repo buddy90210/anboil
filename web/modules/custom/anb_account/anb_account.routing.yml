@@ -1,0 +1,39 @@
+anb_account.admin:
+  path: '/admin/anb-account'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Personal account'
+  requirements:
+    _permission: 'administer site configuration'
+
+anb_account.settings_form:
+  path: '/admin/anb-account/contacts'
+  defaults:
+    _form: '\Drupal\anb_account\Form\Admin\AccountSettingsForm'
+    _title: 'Personal account settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+anb_account.fuel_transit:
+  path: '/user/fuel-transit'
+  defaults:
+    _controller: '\Drupal\anb_account\Controller\AccountController::fuelTransit'
+    _title: 'Топливо в пути'
+  requirements:
+    _role: 'authenticated'
+
+anb_account.fuel_residues:
+  path: '/user/fuel-residues'
+  defaults:
+    _controller: '\Drupal\anb_account\Controller\AccountController::fuelResidues'
+    _title: 'Остатки топлива на хранении'
+  requirements:
+    _role: 'authenticated'
+
+anb_account.account_settings:
+  path: '/user/settings'
+  defaults:
+    _controller: '\Drupal\anb_account\Controller\AccountController::accountSettings'
+    _title: 'Настройки'
+  requirements:
+    _role: 'authenticated'

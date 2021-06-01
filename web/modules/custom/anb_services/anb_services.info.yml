@@ -1,6 +1,5 @@
 name: ANB Services
 type: module
 description: Custom services forms.
-package: custom
-core: 8.x
+package: Custom
 core_version_requirement: ^8 || ^9

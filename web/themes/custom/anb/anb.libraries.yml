@@ -76,3 +76,18 @@ promotions:
       assets/css/content/promotions.css: {}
   js:
     assets/js/promotions.js: {weight: -1}
+
+account:
+  css:
+    theme:
+      assets/css/content/account.css: {}
+
+fuel-residues:
+  css:
+    theme:
+      assets/css/content/fuel-residues.css: {}
+
+fuel-transit:
+  css:
+    theme:
+      assets/css/content/fuel-transit.css: {}

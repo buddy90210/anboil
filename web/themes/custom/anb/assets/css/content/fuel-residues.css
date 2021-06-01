@@ -1,0 +1,42 @@
+/* ------------------------- Fuel residues ------------------------- */
+.fuel-residues {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.fuel-residues.is-loading {
+  padding: 2rem 0;
+}
+
+.residue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+  border: 1px solid var(--base-color);
+  padding: 2rem;
+  animation: fadeIn .4s ease;
+}
+
+.residue__title,
+.residue__value {
+  font-size: 0.875rem;
+  color: var(--color-gray);
+}
+
+.residue__title .value,
+.residue__value .value {
+  display: block;
+  font-size: 1.25rem;
+  font-family: var(--font-extra);
+  color: var(--base-font-color);
+}
+
+/* ------------------------- @Media ------------------------- */
+@media screen and (max-width: 720px) {
+  .fuel-residues {
+    grid-template-columns: 1fr;
+  }
+}

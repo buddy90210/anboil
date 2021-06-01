@@ -1,0 +1,12 @@
+anb_account.admin:
+  title: 'Personal account'
+  parent: system.admin
+  route_name: anb_account.admin
+  weight: 100
+
+anb_account.settings_form:
+  title: 'Personal account settings'
+  description: 'Form with account settings'
+  parent: anb_account.admin
+  route_name: anb_account.settings_form
+  weight: -100

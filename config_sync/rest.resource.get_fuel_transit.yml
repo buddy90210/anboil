@@ -1,0 +1,18 @@
+uuid: 4c97c044-618a-4e1a-9771-79a792c3cf75
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_account
+    - serialization
+    - user
+id: get_fuel_transit
+plugin_id: get_fuel_transit
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

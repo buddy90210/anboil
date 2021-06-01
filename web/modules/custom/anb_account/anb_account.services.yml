@@ -1,0 +1,8 @@
+services:
+  anb_account.route_subscriber:
+    class: Drupal\anb_account\Routing\AccountRouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  anb_account.manager:
+    class: Drupal\anb_account\AccountManager
+    arguments: ['@current_user', '@entity_type.manager', '@config.factory']

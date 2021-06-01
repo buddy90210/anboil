@@ -14,6 +14,8 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'post comments'
+  - 'restful get get_fuel_residues'
+  - 'restful get get_fuel_transit'
   - 'search content'
   - 'skip comment approval'
   - 'view media'

@@ -1,0 +1,20 @@
+uuid: f70e5309-5bf0-4ef3-91be-25524bbdb090
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_inn
+  module:
+    - user
+id: user.user.field_inn
+field_name: field_inn
+entity_type: user
+bundle: user
+label: ИНН
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

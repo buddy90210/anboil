@@ -1,0 +1,5 @@
+name: ANB Account
+type: module
+description: Provides custom account functionality.
+package: Custom
+core_version_requirement: ^8 || ^9

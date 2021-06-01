@@ -1,0 +1,18 @@
+uuid: 9c6593bb-7a10-4821-9df9-4f4ca00977bd
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_account
+    - serialization
+    - user
+id: get_fuel_residues
+plugin_id: get_fuel_residues
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
