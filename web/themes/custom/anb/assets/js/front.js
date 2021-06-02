@@ -1,5 +1,30 @@
 (function ($, Drupal) {
 
+  function isElementInViewport (el) {
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+      el = el[0];
+    }
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+  }
+
+  $(window).scroll(function () {
+    let mapBlock = $('.bottom-map');
+    let mapPlaceholder = mapBlock.find('.map-placeholder');
+    let mapSrc = mapBlock.find('.map-placeholder').attr('data-src');
+
+    if (isElementInViewport(mapBlock) && mapBlock.hasClass('map-loaded') === false) {
+      mapBlock
+        .html('<iframe frameborder="0" vspace="0" hspace="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allowtransparency="true" src="' + mapSrc + '" scrolling="no"></iframe>')
+        .addClass('map-loaded');
+    }
+  })
+
   Drupal.behaviors.front = {
     attach: function (context, settings) {
       'use strict';
