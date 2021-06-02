@@ -22,3 +22,6 @@ regions:
 libraries-override:
   system/base: false
   views/views.module: false
+  filter/caption: false
+  media/filter.caption: false
+  paragraphs/drupal.paragraphs.unpublished: false
