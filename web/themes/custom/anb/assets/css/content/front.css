@@ -158,7 +158,7 @@
 
 .front-text {
   padding: calc(var(--spacer) * 1.5) 0;
-  background: url(../../img/front-text.webp) no-repeat center;
+  background: url(../../img/front-text.jpg) no-repeat center;
   background-size: cover;
   color: #fff;
 }
@@ -218,7 +218,7 @@
 
 .products-front {
   padding: var(--spacer) 0;
-  background: url(../../img/front-products.webp) no-repeat center;
+  background: url(../../img/front-products.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -347,7 +347,7 @@
 .news-front {
   margin-top: var(--spacer);
   padding-bottom: var(--spacer);
-  background: url(../../img/front-news.webp) no-repeat bottom right;
+  background: url(../../img/front-news.jpg) no-repeat bottom right;
 }
 
 .bottom-map iframe {

@@ -308,7 +308,7 @@ input[type="checkbox"]:checked {
 }
 
 .is-front .questionblock {
-  background-image: url(../../img/questionfront.webp);
+  background-image: url(../../img/questionfront.jpg);
 }
 
 .questionblock__container {
