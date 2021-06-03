@@ -114,7 +114,7 @@
 .services-full,
 .services-front {
   padding-bottom: var(--spacer);
-  background: url(../../img/services.webp) no-repeat bottom left;
+  background: url(../../img/services.jpg) no-repeat bottom left;
 }
 
 .services-tabs-items {
