@@ -1,6 +1,6 @@
 uuid: c9ee9f3b-85c9-419f-89db-9a8ca2288fd8
 langcode: ru
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:docs:668bfa85-de0a-4408-9641-03c4aabe4227'
@@ -16,7 +16,7 @@ third_party_settings:
 id: certificates
 theme: anb
 region: content
-weight: -8
+weight: -3
 provider: null
 plugin: 'block_content:668bfa85-de0a-4408-9641-03c4aabe4227'
 settings:

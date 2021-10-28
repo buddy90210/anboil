@@ -91,3 +91,16 @@ fuel-transit:
   css:
     theme:
       assets/css/content/fuel-transit.css: {}
+
+fuel-story:
+  css:
+    theme:
+      assets/css/content/fuel-story.css: {}
+
+ar:
+  version: 1.x
+  js:
+    https://aim29.ru/cust_js/anboil.js: {type: external}
+  css:
+    theme:
+      https://aim29.ru/cust_js/anboil.css: {type: external}

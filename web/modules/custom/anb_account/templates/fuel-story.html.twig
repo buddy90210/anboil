@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present fuel story account page.
+ */
+#}
+{% set class = "fuel-story" %}
+
+<div class="{{ class }}__form">
+  <form action="/api/v1/get-fuel-story?format=json">
+
+    <div class="fuelstory-dates">
+
+      <div class="fuel-story_from">
+        <label for="fuel-from">Дата начала</label>
+        <input type="date" class="datepicker" name="fuel-from" id="fuel-from" required />
+      </div>
+
+      <div class="fuel-story_to">
+        <label for="fuel-to">Дата окончания</label>
+        <input type="date" class="datepicker" name="fuel-to" id="fuel-to" required />
+      </div>
+
+    </div>
+
+
+    <div class="fuel-story_submit">
+      <input type="submit" value="Получить" />
+    </div>
+
+    <!-- <div class="submit-wrap">
+      <span class="button button--fake">Сохранить</span>
+      <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Сохранить" class="button button--primary js-form-submit form-submit">
+    </div> -->
+
+  </form>
+</div>
+
+<div class="{{ class }}"> <!-- is-loading -->
+  <span class="loading-placeholder">
+    <span class="ajax-progress-throbber"></span>
+  </span>
+  <div class="{{ class }}__result">
+
+  </div>
+
+</div>
+
+

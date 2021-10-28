@@ -15,7 +15,7 @@ third_party_settings:
 id: fscreen
 theme: anb
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: 'block_content:0707839c-0495-4958-9873-1f845b906cbf'
 settings:

@@ -1,0 +1,34 @@
+uuid: 9f18e58d-8330-4c58-a1b0-3aa01957540c
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:02c0fe61-b58d-406a-b6ed-5944b7e81a35'
+  module:
+    - anb_base
+    - block_content
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: 3dmodelneftebazy
+theme: anb
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:02c0fe61-b58d-406a-b6ed-5944b7e81a35'
+settings:
+  id: 'block_content:02c0fe61-b58d-406a-b6ed-5944b7e81a35'
+  label: '3D-модель нефтебазы'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/5
+    negate: false

@@ -1,0 +1,15 @@
+.form-item-calctype{
+  display: none!important;
+}
+h1 .calctoggler{
+  cursor: pointer;
+}
+h1 .calctoggler.active{
+  border-bottom: 1px solid black;
+}
+body[data-calc="pereval"] .service .service__calculator .form-item-time{
+  display: none!important;
+}
+body[data-calc="pereval"] .service .service__calculator .form-item-value{
+  width: 76%
+}

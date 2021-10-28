@@ -46,6 +46,11 @@ class AccountMenuBlock extends BlockBase implements ContainerFactoryPluginInterf
         'is_active' => FALSE,
       ],
       [
+        'route' => 'anb_account.fuel_story',
+        'title' => 'История отгрузок',
+        'is_active' => FALSE,
+      ],
+      [
         'route' => 'anb_account.fuel_residues',
         'title' => 'Остаток топлива на хранении',
         'is_active' => FALSE,

@@ -142,6 +142,8 @@ input[type="checkbox"]:checked {
   top: 4px;
 }
 
+.form-item-calctype{display: none!important}
+
 /* ------------------------- Modal forms ------------------------- */
 .modals {
   display: none;
@@ -612,6 +614,9 @@ input[type="checkbox"]:checked {
 	color: var(--base-font-color);
 }
 
+/**/
+.service .lower{font-size: 0.7em}
+
 /* ------------------------- User forms ------------------------- */
 .user-pass .submit-wrap {
   margin-top: 1rem;
@@ -636,7 +641,8 @@ input[type="checkbox"]:checked {
 }
 
 @media screen and (max-width: 960px) {
-  .calculator-form .form-item {
+  .calculator-form .form-item,
+  body[data-calc="pereval"] .service .service__calculator .form-item-value{
     width: 100%;
     margin: 0 0 1rem 0;
   }

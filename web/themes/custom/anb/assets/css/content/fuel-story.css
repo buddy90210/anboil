@@ -1,0 +1,137 @@
+/* ------------------------- Fuel story ------------------------- */
+.fuel-story_submit input[type="submit"]{
+  margin: 20px auto 0;
+  border: 1px solid red;
+}
+.fuel-story__result{
+  margin-top: 20px;
+}
+.fuel-story{
+  position: relative;
+  min-height: 2em;
+}
+.fuel-story .loading-placeholder{
+  display: none;
+}
+.fuel-story.is-loading{
+  padding: 0;
+}
+.fuel-story.is-loading .loading-placeholder{
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+.fuel-story.is-loading .fuel-story__result{
+  opacity: 0.5;
+}
+
+
+.fuel-story {
+  position: relative;
+}
+
+.transit {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  animation: fadeIn .4s ease;
+  transition: .2s ease;
+}
+
+.transit:hover,
+.transit.is-expanded {
+  border-color: var(--base-color);
+}
+
+.transit.is-expanded {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+.transit__col {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-right: 1rem;
+}
+
+.transit__col .label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  margin-bottom: .3rem;
+  font-weight: 400;
+}
+
+.fuel-story__doc {
+  width: 12%;
+  font-weight: 600;
+}
+
+.fuel-story__date {
+  width: 12%;
+}
+
+.fuel-story__car {
+  width: 12%;
+}
+
+.fuel-story__place {
+  width: 28%;
+}
+
+.fuel-story__type {
+  width: 10%;
+}
+
+.fuel-story__quantity {
+  width: 10%;
+}
+
+.fuel-story__price,
+.fuel-story__sum {
+  width: 8%;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media (min-width: 500px){
+  .fuelstory-dates{
+    display: flex;
+    justify-content: space-between;
+  }
+  .fuelstory-dates > *{
+    width: 49%;
+  }
+}
+@media (min-width: 800px){
+  .fuel-story__form > form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .fuel-story__form > form > *{
+    flex-grow: 1;
+  }
+  .fuel-story_submit{
+    margin-left: 1%;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .transit__col {
+    width: 25%;
+    margin-bottom: 1rem;
+  }
+  .transit__col {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .transit__col {
+    width: 100%;
+    margin-bottom: .25rem;
+  }
+}

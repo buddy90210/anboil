@@ -10,3 +10,7 @@ fuel-residues:
 fuel-transit:
   js:
     assets/js/fuel-transit.js: {}
+
+fuel-story:
+  js:
+    assets/js/fuel-story.js: {}

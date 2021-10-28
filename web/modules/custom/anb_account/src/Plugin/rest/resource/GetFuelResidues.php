@@ -87,7 +87,7 @@ class GetFuelResidues extends ResourceBase {
     $api_token = $api_config['api_token'];
 
     // Send API request.
-    $request_url = $api_url . '/tank_farm_anb_copy/hs/exchange_/fuel_storage?inn=' . $account_identifier . '&token=' . $api_token;
+    $request_url = $api_url . '/tank_farm_anb/hs/exchange_/fuel_storage?inn=' . $account_identifier . '&token=' . $api_token;
     $request = $this->httpClient->request('GET', $request_url);
 
     if ($request->getStatusCode() !== 200) {

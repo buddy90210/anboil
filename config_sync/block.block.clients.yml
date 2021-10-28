@@ -16,7 +16,7 @@ third_party_settings:
 id: clients
 theme: anb
 region: content
-weight: -13
+weight: -14
 provider: null
 plugin: 'block_content:f68ddfe9-9156-4a77-94eb-4b68f063d6b2'
 settings:

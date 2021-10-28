@@ -13,7 +13,7 @@ default_langcode: ru
 _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
 mail_notification: ''
-phone: '8 (800) 285-65-32'
+phone: '+7 (800) 777-24-87'
 email: info@anboil.ru
-address: 'ст. Старонижестеблиевская, ул. Батарейная 24'
+address: 'г. Москва, вн.тер.г. муниципальный округ Басманный, ул Бауманская, д. 9, этаж 3, помещ./ком. 3/33'
 telegram: anb

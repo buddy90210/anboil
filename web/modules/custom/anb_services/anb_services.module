@@ -72,3 +72,21 @@ function anb_services_preprocess_page(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function anb_services_page_attachments_alter(array &$attachments) {
+  // Add our js and css to services-node
+  $route = \Drupal::routeMatch();
+  $current_route = $route->getRouteName();
+  $node = $route->getParameter('node');
+
+  if ($node && $node->bundle() === 'service') {
+    $service_form_id = $node->field_calc_form->value;
+
+    if ($service_form_id === 'services_storage_form') {
+      $attachments['#attached']['library'][] = 'anb_services/transshipment';
+    }
+  }
+}

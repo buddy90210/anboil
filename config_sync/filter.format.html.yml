@@ -1,0 +1,35 @@
+uuid: 90ecd922-df62-4e61-b2c5-9690a5a8ab48
+langcode: ru
+status: true
+dependencies:
+  module:
+    - editor
+    - media
+name: HTML
+format: html
+weight: -9
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types:
+        image: image
+        remote_video: remote_video
+        video: video

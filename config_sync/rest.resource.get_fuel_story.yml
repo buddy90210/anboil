@@ -1,0 +1,18 @@
+uuid: 03b8a696-436f-42f2-8492-a1a0f7d24c95
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_account
+    - serialization
+    - user
+id: get_fuel_story
+plugin_id: get_fuel_story
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

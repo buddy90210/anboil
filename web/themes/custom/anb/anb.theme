@@ -112,11 +112,17 @@ function anb_page_attachments_alter(array &$attachments) {
     if ($node->bundle() === 'service' || $node->id() === '4' || $is_front) {
       $attachments['#attached']['library'][] = 'anb/services';
     }
+
+    // /about & /ar
+    if ($node->id() === '5' || $node->id() === '33') {
+      $attachments['#attached']['library'][] = 'anb/ar';
+    }
   }
 
   // Account pages.
   $account_routes = [
     'anb_account.fuel_transit',
+    'anb_account.fuel_story',
     'anb_account.fuel_residues',
     'anb_account.account_settings',
   ];
@@ -124,6 +130,7 @@ function anb_page_attachments_alter(array &$attachments) {
   if (in_array($current_route, $account_routes)) {
     $attachments['#attached']['library'][] = 'anb/account';
   }
+  
 }
 
 /**
@@ -346,4 +353,11 @@ function anb_preprocess_fuel_residues(&$variables) {
  */
 function anb_preprocess_fuel_transit(&$variables) {
   $variables['#attached']['library'][] = 'anb/fuel-transit';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function anb_preprocess_fuel_story(&$variables) {
+  $variables['#attached']['library'][] = 'anb/fuel-story';
 }

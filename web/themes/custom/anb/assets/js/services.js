@@ -16,7 +16,7 @@
 
       $('.button-service-submit').click(function () {
         let submit = $(this).siblings('.form-submit');
-        if (submit.hasClass('form-disabled') === false) {
+        if ( (submit.hasClass('form-disabled') === false) || (submit.hasClass('programmatically-filled-field')) ) {
           submit.click();
         }
       })

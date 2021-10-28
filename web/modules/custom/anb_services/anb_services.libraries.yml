@@ -1,0 +1,6 @@
+transshipment:
+  css:
+    theme:
+      assets/css/transshipment/transshipment.css: {}
+  js:
+    assets/js/transshipment/transshipment.js: {}

@@ -23,6 +23,9 @@ function anb_account_theme($existing, $type, $theme, $path) {
     'fuel_transit' => [
       'variables' => [],
     ],
+    'fuel_story' => [
+      'variables' => [],
+    ],
   ];
 }
 
@@ -34,6 +37,7 @@ function anb_account_preprocess_page_title(&$variables) {
 
   $account_routes = [
     'anb_account.fuel_transit',
+    'anb_account.fuel_story',
     'anb_account.fuel_residues',
     'anb_account.account_settings',
   ];

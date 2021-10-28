@@ -14,7 +14,7 @@ third_party_settings:
 id: questionform
 label: 'Задать вопрос'
 recipients:
-  - test@test.ru
+  - info@anboil.ru
 reply: ''
 weight: 0
 message: 'Ваша заявка получена!'

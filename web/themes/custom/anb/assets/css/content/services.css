@@ -103,6 +103,10 @@
   font-size: .7em;
 }
 
+.service__results__data .extra .value{
+  font-size: 2rem;
+}
+
 .bottom-description {
   padding-top: 3rem;
   padding-bottom: 3rem;

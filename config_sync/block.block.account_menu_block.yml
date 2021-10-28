@@ -26,7 +26,7 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/user/settings\r\n/user/fuel-residues\r\n/user/fuel-transit"
+    pages: "/user/settings\r\n/user/fuel-residues\r\n/user/fuel-transit\r\n/user/fuel-story"
     negate: false
   user_role:
     id: user_role

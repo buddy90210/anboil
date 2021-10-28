@@ -37,7 +37,17 @@
           <a href="/services/dostavka-gsm" class="{{ class }}__button button">Рассчитать доставку</a>
         </li>
       </ul>
+    </ul>
+    
+    <div class="category__iframe_evr">
+      <iframe src="https://spimex.com/press_centre/informers/data.php?type=eti&code=reg,prm,dtl,dtm,dtz,trd,mzt&region=evr&litre=n&title=y&wcode=y&border=y" width="182" height="369" align="left" scrolling="no" frameborder="0">
+      </iframe>
     </div>
+    
+
+    </div>
+    
+
 
     <div class="{{ class }}__products">
       {{ drupal_entity('block', 'category_products', check_access=false) }}

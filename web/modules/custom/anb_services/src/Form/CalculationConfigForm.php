@@ -39,14 +39,32 @@ class CalculationConfigForm extends ConfigFormBase {
 
     $form['storage_price_default'] = [
       '#type' => 'textfield',
-      '#title' => 'Стоимость хранения ГСМ (руб.)',
+      '#title' => 'Стоимость хранения ГСМ (руб./тонна)',
       '#default_value' => $config->get('storage_price_default'),
     ];
 
     $form['storage_price_extra'] = [
       '#type' => 'textfield',
-      '#title' => 'Стоимость хранения ГСМ более месяца (руб.)',
-      '#default_value' => $config->get('storage_price_extra'),
+      '#title' => 'Доп. коэффициент за 31-60 дни',
+      '#default_value' => 25,
+    ];
+
+    $form['storage_price_extra_90'] = [
+      '#type' => 'textfield',
+      '#title' => 'Доп. коэффициент за 61-90 дни',
+      '#default_value' => 5,
+    ];
+
+    $form['storage_price_overlimits_message'] = [
+      '#type' => 'textfield',
+      '#title' => 'Сообщение, если срок > 90',
+      '#default_value' => 'Оговаривается отдельно',
+    ];
+
+    $form['storage_price_transshipment'] = [
+      '#type' => 'textfield',
+      '#title' => 'Стоимость перевалки, за единицу объёма (руб./тонна)',
+      '#default_value' => 450,
     ];
 
     return parent::buildForm($form, $form_state);
@@ -60,6 +78,9 @@ class CalculationConfigForm extends ConfigFormBase {
 
     $config->set('storage_price_default', $form_state->getValue('storage_price_default'))
     ->set('storage_price_extra', $form_state->getValue('storage_price_extra'))
+    ->set('storage_price_extra_90', $form_state->getValue('storage_price_extra_90'))
+    ->set('storage_price_overlimits_message', $form_state->getValue('storage_price_overlimits_message'))
+    ->set('storage_price_transshipment', $form_state->getValue('storage_price_transshipment'))
     ->save();
 
     parent::submitForm($form, $form_state);

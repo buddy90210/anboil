@@ -1,0 +1,14 @@
+uuid: 2d3af887-524f-4fdf-b93a-5946c2be5b7d
+langcode: ru
+status: true
+dependencies: {  }
+id: moderator
+label: Модератор
+weight: 3
+is_admin: null
+permissions:
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'administer account settings'
+  - 'administer users'
+  - 'view the administration theme'

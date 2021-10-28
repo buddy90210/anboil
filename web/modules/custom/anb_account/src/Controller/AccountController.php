@@ -45,6 +45,20 @@ class AccountController extends ControllerBase {
   }
 
   /**
+   * Provides fuel story page.
+   */
+  public function fuelStory() {
+    return [
+      '#theme' => 'fuel_story',
+      '#attached' => [
+        'library' => [
+          'anb_account/fuel-story'
+        ],
+      ],
+    ];
+  }
+
+  /**
    * Provides account settings page.
    */
   public function accountSettings() {

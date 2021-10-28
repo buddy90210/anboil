@@ -22,6 +22,14 @@ anb_account.fuel_transit:
   requirements:
     _role: 'authenticated'
 
+anb_account.fuel_story:
+  path: '/user/fuel-story'
+  defaults:
+    _controller: '\Drupal\anb_account\Controller\AccountController::fuelStory'
+    _title: 'История отгрузок'
+  requirements:
+    _role: 'authenticated'
+
 anb_account.fuel_residues:
   path: '/user/fuel-residues'
   defaults:

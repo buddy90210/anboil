@@ -1,2 +1,5 @@
 storage_price_default: '650'
-storage_price_extra: '30'
+storage_price_extra: '25'
+storage_price_extra_90: '5'
+storage_price_overlimits_message: 'Оговаривается отдельно'
+storage_price_transshipment: '450'

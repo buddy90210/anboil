@@ -1,0 +1,34 @@
+uuid: b243fc33-70b5-428e-9941-6e66f79425bc
+langcode: ru
+status: false
+dependencies:
+  content:
+    - 'block_content:photo_block:8a6dabd1-1714-4b5d-a994-ffcb51d07465'
+  module:
+    - anb_base
+    - block_content
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 1
+id: 3dmodel
+theme: anb
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:8a6dabd1-1714-4b5d-a994-ffcb51d07465'
+settings:
+  id: 'block_content:8a6dabd1-1714-4b5d-a994-ffcb51d07465'
+  label: 3D-МОДЕЛЬ
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/5
+    negate: false
