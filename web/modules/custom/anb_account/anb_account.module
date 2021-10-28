@@ -60,5 +60,7 @@ function anb_account_preprocess_toolbar(&$variables) {
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function anb_account_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  UserFormHelper::alterForm($form, $form_state);
+  if ($form['#id'] === 'user-form') {
+    UserFormHelper::alterForm($form, $form_state);
+  }
 }
