@@ -80,6 +80,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+input[disabled="disabled"] {
+  background-color: var(--base-color-light);
+}
+
 input.error,
 textarea.error {
   border: 1px solid var(--base-color);

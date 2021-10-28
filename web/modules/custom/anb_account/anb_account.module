@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\anb_account\Utility\UserFormHelper;
 
 /**
  * Implements hook_theme().
@@ -52,4 +54,11 @@ function anb_account_preprocess_page_title(&$variables) {
  */
 function anb_account_preprocess_toolbar(&$variables) {
   $variables['#attached']['library'][] = 'anb_account/toolbar';
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function anb_account_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  UserFormHelper::alterForm($form, $form_state);
 }
