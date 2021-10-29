@@ -108,7 +108,7 @@ class DeliveryForm extends FormBase {
         ],
       ],
     ];
-    
+
     $form['disclamer'] = [
       '#type' => 'markup',
       '#markup' => '<p class="delivery-disclamer">* Минимальное расстояние для расчета от 70 км. До 70 км. рассчитывается индивидуально.</p>'
@@ -130,6 +130,11 @@ class DeliveryForm extends FormBase {
 
     // Get tips from API.
     $tips = $this->manager->getCityTips($city);
+
+    if (empty($tips)) {
+      return $ajax_response;
+    }
+
     $selector = 'input[data-drupal-selector="edit-' . Html::cleanCssIdentifier($element) . '"]';
     $parent_selector = '.form-item-' . Html::cleanCssIdentifier($element);
 
@@ -141,6 +146,7 @@ class DeliveryForm extends FormBase {
 
   /**
    * Returns city tips markup.
+   *
    * @param array $tips
    */
   protected function renderCityTips($tips) {
@@ -210,7 +216,7 @@ class DeliveryForm extends FormBase {
       '#type' => 'markup',
       '#markup' => '<div class="row"><p class="title">Приблизительная <br/>стоимость</p><p class="value">' . $route_info['price'] . '&nbsp;<i>₽</i></p></div>'
     ];
-    
+
     $form['results']['result_disclamer'] = [
       '#type' => 'markup',
       '#markup' => '<div class="deliveryresult-disclamer"><p>Сроки и условия доставки нефтепродуктов рассчитываются индивидуально.</p><p>Номер телефона отдела логистики: <a href="tel:89282410202">+7 928 241-02-02</a></p></div>'

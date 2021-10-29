@@ -102,7 +102,7 @@ class GetFuelTransit extends ResourceBase {
     }
 
     foreach ($results as $result) {
-      $response[] = json_decode(json_encode($result), true);
+      $response[] = json_decode(json_encode($result), TRUE);
     }
 
     return new ModifiedResourceResponse($response, 200);
