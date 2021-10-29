@@ -9,6 +9,5 @@ is_admin: null
 permissions:
   - 'access site in maintenance mode'
   - 'access toolbar'
-  - 'administer account settings'
   - 'administer users'
   - 'view the administration theme'

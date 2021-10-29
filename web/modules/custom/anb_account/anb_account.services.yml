@@ -6,3 +6,9 @@ services:
   anb_account.manager:
     class: Drupal\anb_account\AccountManager
     arguments: ['@current_user', '@entity_type.manager', '@config.factory']
+
+  anb_account.moderation_event_subscriber:
+    class: Drupal\anb_account\EventSubscriber\ModerationEventSubscriber
+    arguments: ['@user.data']
+    tags:
+      - { name: event_subscriber }

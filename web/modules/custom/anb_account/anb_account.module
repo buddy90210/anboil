@@ -5,9 +5,14 @@
  * Primary module hooks for ANB Account module.
  */
 
+use Drupal\anb_account\Event\ModerationEvent;
+use Drupal\anb_account\Event\ModerationEvents;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\anb_account\Utility\UserFormHelper;
+use Drupal\Core\Access\AccessResult;
 
 /**
  * Implements hook_theme().
@@ -61,6 +66,76 @@ function anb_account_preprocess_toolbar(&$variables) {
  */
 function anb_account_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form['#id'] === 'user-form') {
-    UserFormHelper::alterForm($form, $form_state);
+    $user_form_helper = new UserFormHelper();
+    $user_form_helper->alterForm($form, $form_state);
   }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function anb_account_user_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  // Disallow moderators to interact with administrator accounts.
+  if (in_array('moderator', $account->getRoles())) {
+    if ($entity->hasPermission('administer site configuration')) {
+      return AccessResult::forbidden();
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function anb_account_user_insert(EntityInterface $entity) {
+  // Fire moderator created account event.
+  $current_user = \Drupal::currentUser();
+  if (!in_array('moderator', $current_user->getRoles())) {
+    return;
+  }
+
+  /** @var \Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher $dispatcher */
+  $dispatcher = \Drupal::service('event_dispatcher');
+  $event = new ModerationEvent($entity, $current_user->id());
+  $dispatcher->dispatch($event, ModerationEvents::MODERATOR_CREATED_ACCOUNT);
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function anb_account_entity_delete(EntityInterface $entity) {
+  // Fire moderator deleted account event.
+  $current_user = \Drupal::currentUser();
+  if (!in_array('moderator', $current_user->getRoles())) {
+    return;
+  }
+
+  /** @var \Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher $dispatcher */
+  $dispatcher = \Drupal::service('event_dispatcher');
+  $event = new ModerationEvent($entity, $current_user->id());
+  $dispatcher->dispatch($event, ModerationEvents::MODERATOR_CANCELED_ACCOUNT);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function anb_account_user_update(EntityInterface $entity) {
+  // Fire moderator activated/disabled account event.
+  $current_user = \Drupal::currentUser();
+  if (!in_array('moderator', $current_user->getRoles())) {
+    return;
+  }
+
+
+  $is_active = $entity->isActive();
+  $is_active_original = $entity->original->isActive();
+
+  if ($is_active === $is_active_original) {
+    return;
+  }
+
+  /** @var \Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher $dispatcher */
+  $dispatcher = \Drupal::service('event_dispatcher');
+  $event = new ModerationEvent($entity, $current_user->id());
+  $event_id = $is_active ? ModerationEvents::MODERATOR_ACTIVATED_ACCOUNT : ModerationEvents::MODERATOR_DISABLED_ACCOUNT;
+  $dispatcher->dispatch($event, $event_id);
 }
