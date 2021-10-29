@@ -1,5 +1,10 @@
 (function ($, Drupal) {
 
+  // Set default values for date range fields.
+  let date = new Date();
+  document.getElementById('fuel-from').valueAsDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), 1));
+  document.getElementById('fuel-to').valueAsDate = new Date(Date.UTC(date.getFullYear(), date.getMonth() + 1, 0));
+
   // обработчик сабмита
   $('.fuel-story__form form').submit(function(e){
     e.preventDefault();
@@ -45,9 +50,15 @@
       for (let g = 0; g < goods.length; g++) {
         let good = goods[g];
 
+        let dateCreated = new Date(item['ДокументДата'].replace(
+          /^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/,
+          '$4:$5:$6 $2/$3/$1'
+        ));
+        let dateCreatedFormatted = dateCreated.toLocaleString().replace(',', ' ');
+
         template += '<div class="transit">' +
           '<div class="transit__col fuel-story__doc"><span class="label">Номер документа</span></span>' + item['ДокументНомер'] + '</div>' +
-          '<div class="transit__col fuel-story__date"><span class="label">Дата документа</span></span>' + item['ДокументДата'] + '</div>' +
+          '<div class="transit__col fuel-story__date"><span class="label">Дата документа</span></span>' + dateCreatedFormatted + '</div>' +
           '<div class="transit__col fuel-story__car"><span class="label">Автомобиль</span></span>' + item['Автомобиль'] + '</div>' +
           '<div class="transit__col fuel-story__place"><span class="label">Место разгрузки</span></span>' + item['МестоРазгрузки'] + '</div>' +
           '<div class="transit__col fuel-story__type"><span class="label">Вид топлива</span></span>' + good['Номенклатура'] + '</div>' +

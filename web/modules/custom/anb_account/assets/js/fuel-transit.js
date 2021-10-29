@@ -34,8 +34,7 @@
           /^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/,
           '$4:$5:$6 $2/$3/$1'
         ));
-
-        let dateCreatedFormatted = dateCreated.toLocaleString().replace(',', ' ')
+        let dateCreatedFormatted = dateCreated.toLocaleString().replace(',', ' ');
 
         template += '<div class="transit">' +
           '<div class="transit__col fuel-transit__doc"><span class="label">Номер документа</span></span>' + item['ДокументНомер'] + '</div>' +
