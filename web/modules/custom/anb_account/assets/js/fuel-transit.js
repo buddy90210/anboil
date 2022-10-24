@@ -2,54 +2,23 @@
 
   let target = $('.fuel-transit');
 
-  // $.ajax({
-  //   url: '/api/v1/get-fuel-transit?format=json',
-  //   type: 'GET',
-  //   dataType: 'json',
-  //   success: response => {
-  //     target
-  //       .html(formatResults(response))
-  //       .removeClass('is-loading');
+  $.ajax({
+    url: '/api/v1/get-fuel-transit?format=json',
+    type: 'GET',
+    dataType: 'json',
+    success: response => {
+      target
+        .html(formatResults(response))
+        .removeClass('is-loading');
 
-  //     initTemplates();
-  //   },
-  //   error: response => {
-  //     target
-  //       .html('Отправления топлива не найдены')
-  //       .removeClass('is-loading');
-  //   },
-  // });
-
-  ////////////////////
-
-  let data = [
-    {
-        "ДокументНомер": "У-07112220 ",
-        "ДокументДата": "20220711200700",
-        "Автомобиль": "МАЗ-630 56216-0000011-31 Гос.№ О370АО 123",
-        "МестоРазгрузки": "Краснодарский край",
-        "Водитель": "Иванов И.И.",
-        "НомерТелефона": "8-913-913-9876",
-        "lat": "44.79",
-        "lon": "33.58",
-        "Товары": [
-            {
-                "Номенклатура": "1879. Дизельное топливо ЕВРО, летнее, сорта С, экологического класса К5 (ДТ-Л-К5)",
-                "Количество": 11.997,
-                "Цена": 61800,
-                "Сумма": 741414.6
-            }
-        ]
-    }
-]
-
-target
-         .html(formatResults(data))
-         .removeClass('is-loading');
-
-       initTemplates();
-
-  ////////////////////
+      initTemplates();
+    },
+    error: response => {
+      target
+        .html('Отправления топлива не найдены')
+        .removeClass('is-loading');
+    },
+  });
 
   function formatResults(items) {
     let template = '';
