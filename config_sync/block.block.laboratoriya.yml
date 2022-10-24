@@ -1,9 +1,9 @@
-uuid: 4392d3bf-db77-4b19-9d9d-accb51e399a7
+uuid: b1f024ee-1308-46e2-879c-1b0c24bcaea3
 langcode: ru
-status: true
+status: false
 dependencies:
   content:
-    - 'block_content:photo_block:9a652a06-7dd6-440b-a95f-05cfad756f60'
+    - 'block_content:photo_block:2fc8b163-40a8-4581-a74a-82fd4d1e9cd3'
   module:
     - anb_base
     - block_content
@@ -13,15 +13,15 @@ dependencies:
 third_party_settings:
   anb_base:
     has_container: 1
-id: about_3
+id: laboratoriya
 theme: anb
 region: content
-weight: -9
+weight: -6
 provider: null
-plugin: 'block_content:9a652a06-7dd6-440b-a95f-05cfad756f60'
+plugin: 'block_content:2fc8b163-40a8-4581-a74a-82fd4d1e9cd3'
 settings:
-  id: 'block_content:9a652a06-7dd6-440b-a95f-05cfad756f60'
-  label: 'О компании (3)'
+  id: 'block_content:2fc8b163-40a8-4581-a74a-82fd4d1e9cd3'
+  label: Лаборатория
   provider: block_content
   label_display: '0'
   status: true
@@ -30,5 +30,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node/5
+    pages: /documents
     negate: false

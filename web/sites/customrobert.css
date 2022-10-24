@@ -1,0 +1,28 @@
+.img_passport{
+    width: 100%;
+    transition: .5s;
+    cursor: pointer;
+}
+.img_passport:hover {
+    transform: scale(1.1);
+}
+
+.passport__conteiner{
+    display: grid; grid-template-columns: 1fr 1fr 1fr; 
+    gap: 40px 60px;
+}
+.passport__conteiner h3{
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .passport__conteiner{
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 40px 60px;
+  }
+  .img_passport:hover {
+    transform: scale(1);
+  }
+}

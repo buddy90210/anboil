@@ -1,0 +1,18 @@
+uuid: 5dc89284-75f6-4b82-bc8d-d9070c3c153a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - anb_account
+    - serialization
+    - user
+id: get_payment_history
+plugin_id: get_payment_history
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

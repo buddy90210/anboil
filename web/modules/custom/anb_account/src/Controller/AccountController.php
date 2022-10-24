@@ -59,6 +59,20 @@ class AccountController extends ControllerBase {
   }
 
   /**
+   * Provides payment history page.
+   */
+  public function paymentHistory() {
+    return [
+      '#theme' => 'payment_history',
+      '#attached' => [
+        'library' => [
+          'anb_account/payment-history'
+        ],
+      ],
+    ];
+  }
+
+  /**
    * Provides account settings page.
    */
   public function accountSettings() {

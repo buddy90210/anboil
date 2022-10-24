@@ -29,3 +29,11 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Ignore custom files and aliases directories
+
+/anboil.ru
+
+/www.anboil.ru
+
+/web/yandex_316779e4a700e776.html

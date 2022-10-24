@@ -15,7 +15,8 @@ id: orderform
 label: 'Заявка на продукцию'
 recipients:
   - info@anboil.ru
+  - are@anboil.ru
 reply: ''
 weight: 0
-message: 'Ваша заявка получена!'
+message: 'Ваша заявка получена! Мы свяжемся с вами, спасибо!'
 redirect: ''

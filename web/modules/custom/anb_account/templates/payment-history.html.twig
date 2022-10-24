@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present payment history account page.
+ */
+#}
+{% set class = "payment-history" %}
+
+<div class="{{ class }}__form">
+  <form action="/api/v1/get-payment-history?format=json">
+
+    <div class="paymenthistory-dates">
+      <div class="payment-history_from">
+        <label for="payment-from">Дата начала</label>
+        <input type="date" class="datepicker" name="payment-from" id="payment-from" required />
+      </div>
+
+      <div class="payment-history_to">
+        <label for="payment-to">Дата окончания</label>
+        <input type="date" class="datepicker" name="payment-to" id="payment-to" required />
+      </div>
+    </div>
+
+
+    <div class="payment-history_submit">
+      <input type="submit" value="Получить" />
+    </div>
+
+  </form>
+</div>
+
+<div class="{{ class }}"> <!-- is-loading -->
+  <span class="loading-placeholder">
+    <span class="ajax-progress-throbber"></span>
+  </span>
+  <div class="{{ class }}__result">
+
+  </div>
+
+</div>
+
+

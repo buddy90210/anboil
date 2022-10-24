@@ -1,0 +1,29 @@
+uuid: 2b27eecc-d02d-48ab-9089-2d2a95d2b27f
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:07371d20-fd60-42c8-bb28-a75455a5b2b8'
+  module:
+    - anb_base
+    - block_content
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 0
+id: yandeksmetrika
+theme: anb
+region: top_content
+weight: 0
+provider: null
+plugin: 'block_content:07371d20-fd60-42c8-bb28-a75455a5b2b8'
+settings:
+  id: 'block_content:07371d20-fd60-42c8-bb28-a75455a5b2b8'
+  label: 'Яндекс метрика'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

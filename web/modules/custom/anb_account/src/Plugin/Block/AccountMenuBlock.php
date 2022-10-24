@@ -56,6 +56,11 @@ class AccountMenuBlock extends BlockBase implements ContainerFactoryPluginInterf
         'is_active' => FALSE,
       ],
       [
+        'route' => 'anb_account.payment_history',
+        'title' => 'Взаиморасчеты',
+        'is_active' => FALSE,
+      ],
+      [
         'route' => 'anb_account.account_settings',
         'title' => 'Настройки',
         'is_active' => FALSE,

@@ -12,7 +12,7 @@ langcode: ru
 default_langcode: ru
 _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
-mail_notification: ''
+mail_notification: sales@anboil.ru
 phone: '+7 (800) 777-24-87'
 email: info@anboil.ru
 address: 'г. Москва, вн.тер.г. муниципальный округ Басманный, ул Бауманская, д. 9, этаж 3, помещ./ком. 3/33'

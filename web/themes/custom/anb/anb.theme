@@ -124,6 +124,7 @@ function anb_page_attachments_alter(array &$attachments) {
     'anb_account.fuel_transit',
     'anb_account.fuel_story',
     'anb_account.fuel_residues',
+    'anb_account.payment_history',
     'anb_account.account_settings',
   ];
 
@@ -360,4 +361,11 @@ function anb_preprocess_fuel_transit(&$variables) {
  */
 function anb_preprocess_fuel_story(&$variables) {
   $variables['#attached']['library'][] = 'anb/fuel-story';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function anb_preprocess_payment_history(&$variables) {
+  $variables['#attached']['library'][] = 'anb/payment-history';
 }

@@ -15,6 +15,7 @@ id: callbackform
 label: 'Заказать звонок'
 recipients:
   - info@anboil.ru
+  - are@anboil.ru
 reply: ''
 weight: 0
 message: 'Ваша заявка получена!'

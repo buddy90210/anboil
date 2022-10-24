@@ -1,20 +1,19 @@
-uuid: 9f06ee9f-eabc-4afb-95da-6e9066b1e0bd
+uuid: 72fdd8a8-480d-4c7e-80ca-5bbad478201e
 langcode: ru
 status: true
 dependencies:
   config:
-    - contact.form.calcrequest
-    - field.field.contact_message.calcrequest.field_agreement
-    - field.field.contact_message.calcrequest.field_phone
-    - field.field.contact_message.calcrequest.field_sent_from
-id: contact_message.calcrequest.default
+    - contact.form.callbackform
+    - field.field.contact_message.callbackform.field_agreement
+    - field.field.contact_message.callbackform.field_phone
+id: contact_message.callbackform.default
 targetEntityType: contact_message
-bundle: calcrequest
+bundle: callbackform
 mode: default
 content:
   field_phone:
     type: string
-    weight: 4
+    weight: 3
     region: content
     label: above
     settings:
@@ -29,7 +28,7 @@ content:
     type: basic_string
   message:
     type: basic_string
-    weight: 3
+    weight: 4
     label: above
     region: content
     settings: {  }
@@ -52,5 +51,4 @@ content:
     type: string
 hidden:
   field_agreement: true
-  field_sent_from: true
   langcode: true

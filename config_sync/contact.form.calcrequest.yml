@@ -14,8 +14,7 @@ third_party_settings:
 id: calcrequest
 label: 'Запросить точный расчёт'
 recipients:
-  - info@anboil.ru
-  - skillup23@yandex.ru
+  - are@anboil.ru
 reply: ''
 weight: 0
 message: 'Ваша заявка получена!'

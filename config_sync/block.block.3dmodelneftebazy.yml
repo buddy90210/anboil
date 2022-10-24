@@ -8,6 +8,7 @@ dependencies:
     - anb_base
     - block_content
     - system
+    - user
   theme:
     - anb
 third_party_settings:
@@ -16,7 +17,7 @@ third_party_settings:
 id: 3dmodelneftebazy
 theme: anb
 region: content
-weight: -9
+weight: -10
 provider: null
 plugin: 'block_content:02c0fe61-b58d-406a-b6ed-5944b7e81a35'
 settings:
@@ -32,3 +33,12 @@ visibility:
     id: request_path
     pages: /node/5
     negate: false
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      moderator: moderator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -17,6 +17,7 @@ id: feedback
 label: 'Обратная связь с сайтом'
 recipients:
   - info@anboil.ru
+  - are@anboil.ru
 reply: ''
 weight: 0
 message: 'Ваше сообщение отправлено.'

@@ -38,6 +38,14 @@ anb_account.fuel_residues:
   requirements:
     _role: 'authenticated'
 
+anb_account.payment_history:
+  path: '/user/payment-history'
+  defaults:
+    _controller: '\Drupal\anb_account\Controller\AccountController::paymentHistory'
+    _title: 'Взаиморасчеты'
+  requirements:
+    _role: 'authenticated'
+
 anb_account.account_settings:
   path: '/user/settings'
   defaults:

@@ -1,0 +1,111 @@
+/* ------------------------- Fuel story ------------------------- */
+.payment-history_submit input[type="submit"]{
+  margin: 20px auto 0;
+  border: 1px solid red;
+}
+.payment-history__result{
+  margin-top: 20px;
+  overflow-x: auto;
+}
+.payment-history{
+  position: relative;
+  min-height: 2em;
+}
+.payment-history .loading-placeholder{
+  display: none;
+}
+.payment-history.is-loading{
+  padding: 0;
+}
+.payment-history.is-loading .loading-placeholder{
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+.payment-history.is-loading .payment-history__result{
+  opacity: 0.5;
+}
+
+
+.payment-history {
+  position: relative;
+}
+
+.transit {
+  position: relative;
+  min-width: 1100px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  animation: fadeIn .4s ease;
+  transition: .2s ease;
+}
+
+.transit:hover,
+.transit.is-expanded {
+  border-color: var(--base-color);
+}
+
+.transit.is-expanded {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+.transit .table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+.transit .table-sub-header, .transit .table-sub-header-lighter, .transit .table-body {
+    display: grid;
+    grid-template-columns: 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.transit .table-col {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.2rem;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.transit .table-header .table-col, .transit .table-sub-header .table-col {
+    background: #e5e5e5;
+}
+
+.transit .table-sub-header-lighter .table-col{
+    background: #eee;
+}
+
+.transit .table-col .col-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  margin-right: .3rem;
+  font-weight: 400;
+}
+
+/* ------------------------- @Media ------------------------- */
+@media (min-width: 500px){
+  .paymenthistory-dates{
+    display: flex;
+    justify-content: space-between;
+  }
+  .paymenthistory-dates > *{
+    width: 49%;
+  }
+}
+@media (min-width: 800px){
+  .payment-history__form > form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .payment-history__form > form > *{
+    flex-grow: 1;
+  }
+  .payment-history_submit{
+    margin-left: 1%;
+  }
+}

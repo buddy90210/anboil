@@ -32,14 +32,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  message:
-    type: string_textarea
-    weight: 4
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   name:
     weight: 0
     region: content
@@ -49,5 +41,6 @@ hidden:
   copy: true
   field_sent_from: true
   langcode: true
+  message: true
   preview: true
   subject: true

@@ -15,6 +15,7 @@ id: jobform
 label: 'Отклик на вакансию'
 recipients:
   - info@anboil.ru
+  - are@anboil.ru
 reply: ''
 weight: 0
 message: 'Ваша заявка получена!'

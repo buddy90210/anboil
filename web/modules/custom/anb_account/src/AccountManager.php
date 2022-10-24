@@ -59,6 +59,17 @@ class AccountManager {
   }
 
   /**
+   * Get user name.
+   *
+   * @return string
+   */
+  public function getUserApiName() {
+    $account = $this->userStorage->load($this->currentUser->id());
+
+    return $account->getDisplayName();
+  }
+
+  /**
    * Get anb_account settings configuration.
    *
    * @return string

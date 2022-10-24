@@ -14,3 +14,7 @@ fuel-transit:
 fuel-story:
   js:
     assets/js/fuel-story.js: {}
+
+payment-history:
+  js:
+    assets/js/payment-history.js: {}

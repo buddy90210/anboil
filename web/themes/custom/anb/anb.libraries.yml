@@ -97,6 +97,11 @@ fuel-story:
     theme:
       assets/css/content/fuel-story.css: {}
 
+payment-history:
+  css:
+    theme:
+      assets/css/content/payment-history.css: {}
+
 ar:
   version: 1.x
   js:
