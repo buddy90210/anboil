@@ -16,7 +16,7 @@ third_party_settings:
 id: post_similars
 theme: anb
 region: bottom_content
-weight: -14
+weight: -18
 provider: null
 plugin: 'views_block:blog-others'
 settings:

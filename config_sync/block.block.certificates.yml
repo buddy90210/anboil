@@ -16,7 +16,7 @@ third_party_settings:
 id: certificates
 theme: anb
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: 'block_content:668bfa85-de0a-4408-9641-03c4aabe4227'
 settings:

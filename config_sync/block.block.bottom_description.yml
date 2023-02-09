@@ -13,7 +13,7 @@ third_party_settings:
 id: bottom_description
 theme: anb
 region: bottom_content
-weight: -17
+weight: -21
 provider: null
 plugin: system_main_block
 settings:

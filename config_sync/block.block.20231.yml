@@ -1,0 +1,56 @@
+uuid: bb023709-c439-4eec-9552-c3bd25434903
+langcode: ru
+status: false
+dependencies:
+  content:
+    - 'block_content:photo_block:d3ffaef3-0def-4025-a7a6-bd7e75702207'
+  module:
+    - anb_base
+    - block_content
+    - ctools
+    - node
+    - system
+  theme:
+    - anb
+third_party_settings:
+  anb_base:
+    has_container: 0
+id: '20231'
+theme: anb
+region: top_content
+weight: 0
+provider: null
+plugin: 'block_content:d3ffaef3-0def-4025-a7a6-bd7e75702207'
+settings:
+  id: 'block_content:d3ffaef3-0def-4025-a7a6-bd7e75702207'
+  label: 2023-1
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      news: news
+      page: page
+      product: product
+      service: service
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      news: news
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

@@ -16,7 +16,7 @@ third_party_settings:
 id: bottom_map
 theme: anb
 region: bottom_content
-weight: 0
+weight: -13
 provider: null
 plugin: 'block_content:7fbdaef5-2c0d-4ba9-a797-ad355172f164'
 settings:

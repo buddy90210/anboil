@@ -14,7 +14,6 @@ third_party_settings:
 id: questionform
 label: 'Задать вопрос'
 recipients:
-  - info@anboil.ru
   - are@anboil.ru
 reply: ''
 weight: 0

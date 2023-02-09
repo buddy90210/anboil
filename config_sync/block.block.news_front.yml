@@ -1,6 +1,6 @@
 uuid: bc420d22-7949-4a31-99d0-81f9a81b8047
 langcode: ru
-status: true
+status: false
 dependencies:
   config:
     - views.view.news
@@ -16,7 +16,7 @@ third_party_settings:
 id: news_front
 theme: anb
 region: bottom_content
-weight: -10
+weight: -14
 provider: null
 plugin: 'views_block:news-front'
 settings:

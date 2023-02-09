@@ -14,7 +14,7 @@ third_party_settings:
 id: calcforms_front
 theme: anb
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: services_calculators_block
 settings:

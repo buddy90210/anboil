@@ -16,7 +16,7 @@ third_party_settings:
 id: questionblock
 theme: anb
 region: bottom_content
-weight: -12
+weight: -17
 provider: null
 plugin: 'block_content:0e0874b2-89d8-4a17-a77e-485cf5eaa58a'
 settings:

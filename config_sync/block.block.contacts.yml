@@ -16,7 +16,7 @@ third_party_settings:
 id: contacts
 theme: anb
 region: content
-weight: -16
+weight: -17
 provider: null
 plugin: 'block_content:fdf65425-8027-4ec0-b767-3bb371deb67e'
 settings:

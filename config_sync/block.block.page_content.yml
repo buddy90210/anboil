@@ -15,7 +15,7 @@ _core:
 id: page_content
 theme: anb
 region: content
-weight: -19
+weight: -20
 provider: null
 plugin: system_main_block
 settings:
