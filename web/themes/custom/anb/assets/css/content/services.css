@@ -119,6 +119,8 @@
 .services-front {
   padding-bottom: var(--spacer);
   background: url(../../img/services.jpg) no-repeat bottom left;
+  /*background: url(https://anboil.ru/themes/custom/anb/assets/img/Render1222212.jpg) no-repeat bottom right;*/
+  /*background-size: cover;*/
 }
 
 .services-tabs-items {
@@ -255,6 +257,11 @@
   .tabs-custom .tab {
     width: 100%;
     margin: 0 0 -1px 0;
+  }
+  .services-full,
+  .services-front {
+    /*background: url(https://anboil.ru/themes/custom/anb/assets/img/Render1222212.jpg) no-repeat top right -40vw;*/
+    /*background-size: cover;*/
   }
   .service-teaser-content {
     padding-top: 2rem;

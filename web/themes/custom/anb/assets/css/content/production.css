@@ -1,9 +1,10 @@
 /* ------------------------- Production ------------------------- */
 .production-page .top-content,
 .production-page--term {
-  background: url(../../img/production.jpg);
+  background: url(../../img/front-products.jpg);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-size: 100%;
+  background-position: top;
 }
 
 .production-page--term .top-content {
@@ -244,8 +245,9 @@
 }
 
 .bottom-description {
-  background: url(../../img/bottom.jpg) no-repeat center;
+  background: url(../../img/front-text.jpg) no-repeat center;
   background-size: cover;
+  background-position: center 35%;
   color: #fff;
   padding: var(--spacer) 0;
 }
@@ -258,7 +260,7 @@
 }
 
 .category__preview {
-  width: 72%;
+  width: 52%;
   color: #fff;
 }
 
@@ -516,6 +518,9 @@
 @media screen and (max-width: 1160px) {
   .category__preview {
     width: 100%;
+  }
+  .category__iframe_evr{
+      display: none;
   }
   .production-page h1 {
     margin-bottom: 1rem;

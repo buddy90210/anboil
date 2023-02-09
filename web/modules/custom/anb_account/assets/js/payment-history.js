@@ -165,28 +165,28 @@
                     <span class="col-label">${userName} ИНН: ${userINN}</span>
                 </div>
                 <div class="table-col">
-                    ${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало : ''}
+                    ${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало.toFixed(2) : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.АвансНаНачало ? itemSums.АвансНаНачало : ''}
+                    ${itemSums.АвансНаНачало ? itemSums.АвансНаНачало.toFixed(2) : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.Продано ? itemSums.Продано : ''}
+                    ${itemSums.Продано ? itemSums.Продано.toFixed(2) : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.Оплачено ? itemSums.Оплачено : ''}
+                    ${itemSums.Оплачено ? itemSums.Оплачено.toFixed(2) : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса : ''}
+                    ${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса.toFixed(2) : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса : ''}
+                    ${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса.toFixed(2) : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец : ''}
+                    ${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец.toFixed(2) : ''}
                 </div>
                 <div class="table-col">
-                   ${itemSums.АвансНаКонец ? itemSums.АвансНаКонец : ''}
+                   ${itemSums.АвансНаКонец ? itemSums.АвансНаКонец.toFixed(2) : ''}
                 </div>
             </div>
         `;
@@ -199,28 +199,28 @@
                     <span class="col-label"><strong>Итого</strong></span>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало : ''}</strong>
+                    <strong>${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало.toFixed(2) : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.АвансНаНачало ? itemSums.АвансНаНачало : ''}</strong>
+                    <strong>${itemSums.АвансНаНачало ? itemSums.АвансНаНачало.toFixed(2) : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.Продано ? itemSums.Продано : ''}</strong>
+                    <strong>${itemSums.Продано ? itemSums.Продано.toFixed(2) : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.Оплачено ? itemSums.Оплачено : ''}</strong>
+                    <strong>${itemSums.Оплачено ? itemSums.Оплачено.toFixed(2) : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса : ''}</strong>
+                    <strong>${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса.toFixed(2) : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса : ''}</strong>
+                    <strong>${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса.toFixed(2) : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец : ''}</strong>
+                    <strong>${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец.toFixed(2) : ''}</strong>
                 </div>
                 <div class="table-col">
-                   <strong>${itemSums.АвансНаКонец ? itemSums.АвансНаКонец : ''}</strong>
+                   <strong>${itemSums.АвансНаКонец ? itemSums.АвансНаКонец.toFixed(2) : ''}</strong>
                 </div>
             </div>
         `;

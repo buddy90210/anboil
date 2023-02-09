@@ -242,6 +242,10 @@ input[type="checkbox"]:checked {
   justify-content: center;
 }
 
+.submit-wrap {
+    margin: .5rem;
+}
+
 .close-icon {
   position: absolute;
   top: 0;
@@ -309,12 +313,13 @@ input[type="checkbox"]:checked {
 /* ------------------------- Question form block ------------------------- */
 .questionblock {
   padding: var(--spacer) 0;
-  background: url(../../img/questionform.jpg) no-repeat center;
+  background: url(../../img/contact-form-back1.png) no-repeat center;
+  /*background: black;*/
   background-size: cover;
 }
 
 .is-front .questionblock {
-  background-image: url(../../img/questionfront.jpg);
+  /*background-image: url(../../img/questionfront.jpg);*/
 }
 
 .questionblock__container {

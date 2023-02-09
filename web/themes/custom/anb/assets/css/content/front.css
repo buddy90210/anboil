@@ -7,9 +7,9 @@
 .front-hero__slide {
   display: none;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom 0px right 0px;
   background-size: cover;
-  color: #fff;
+  color: black;
   animation: fadeIn .6s;
 }
 
@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 6.25rem;
-  height: 670px;
+  height: 770px;
 }
 
 .front-hero__slide h1 {
@@ -57,8 +57,8 @@
   max-width: 420px;
   margin-right: 1.25rem;
   padding-top: 5px;
-  border-top: 5px solid #fff;
-  color: #fff;
+  border-top: 5px solid black;
+  color: black;
   cursor: pointer;
   opacity: .5;
   transition: opacity .2s ease;
@@ -157,7 +157,7 @@
 }
 
 .front-text {
-  padding: calc(var(--spacer) * 1.5) 0;
+  padding: calc(var(--spacer) * 2.3) 0;
   background: url(../../img/front-text.jpg) no-repeat center;
   background-size: cover;
   color: #fff;
@@ -205,7 +205,7 @@
 }
 
 .services-front {
-  margin-top: var(--spacer);
+  padding-top: var(--spacer);
 }
 
 .services-front .services-front__heading {
@@ -294,6 +294,8 @@
   padding: 2rem 0.625rem .8rem;
   border: 2px solid var(--base-color);
   border-top: none;
+  display: block;
+  color: white;
 }
 
 .product-promo__sign {
@@ -331,7 +333,10 @@
 }
 
 .clients-front {
-  margin: var(--spacer) 0;
+  background: #fff;
+  /*background: #fff url(https://anboil.ru/themes/custom/anb/assets/img/Render1222212.jpg) no-repeat top right;*/
+  padding: var(--spacer) 0;
+  background-size: cover;
 }
 
 .clients-front h2,
@@ -417,7 +422,7 @@
   }
   .product-promo,
   .product-promo:nth-child(4n) {
-    width: 31%;
+    width: 100%;
     margin: 0 3.5% 3.5% 0;
   }
   .product-promo:nth-child(3n) {
@@ -431,10 +436,13 @@
   }
   .front-hero__tabs__list {
     flex-direction: column;
+    background: rgba(255, 255, 255, 0.5);
   }
   .front-hero__tab {
     width: 100%;
     margin: 0 0 .5rem 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
     text-align: center;
     border: none;
   }
@@ -457,6 +465,10 @@
     font-size: 2rem;
     margin-bottom: 2rem;
   }
+  .clients-front {
+    /*background: #fff url(https://anboil.ru/themes/custom/anb/assets/img/Render1222212.jpg) no-repeat top left -180vw;*/
+    /*background-size: cover;*/
+ }
   .product-promo {
     width: 100%;
     margin: 0 0 2rem 0 !important;
@@ -464,4 +476,21 @@
   .products-front .button-wrap {
     margin-top: 1rem;
   }
+  .products-front {
+    background: url(../../img/front-products-mob.jpg) no-repeat top;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .front-hero__slide {
+        background-position: top 0 right -90vw;
+    }
+    .front-hero__slide h1 {
+        font-size: 2.3rem;
+    }
+    .front-hero__slide .body .button {
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    }
 }

@@ -172,3 +172,15 @@ body {
     --header-height: 100px;
   }
 }
+
+@media screen and (min-width: 2048px) {
+  body {
+      zoom: 1.4;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  body {
+    zoom: 2;
+  }
+}
