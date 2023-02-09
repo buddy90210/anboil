@@ -9,6 +9,17 @@
 <div class="{{ class }}__form">
   <form action="/api/v1/get-fuel-story?format=json">
 
+    <div class="fuel-story_select">
+      <label for="bazis">Базис</label>
+
+      <select name="bazis" id="bazis">
+        <option value="anb">Нефтебазы "АНБ"</option>
+        <option value="БП-000011">Склад "АГРОПРОДУКТ"</option>
+        <option value="БП-000003">Склад "Дин-Юг Ойл"</option>
+        <option value="БП-000010">Склад "НПК"</option>
+      </select>
+    </div>
+
     <div class="fuelstory-dates">
       <div class="fuel-story_from">
         <label for="fuel-from">Дата начала</label>
@@ -20,7 +31,6 @@
         <input type="date" class="datepicker" name="fuel-to" id="fuel-to" required />
       </div>
     </div>
-
 
     <div class="fuel-story_submit">
       <input type="submit" value="Получить" />

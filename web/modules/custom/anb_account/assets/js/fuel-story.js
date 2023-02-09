@@ -59,6 +59,7 @@
         template += '<div class="transit">' +
           '<div class="transit__col fuel-story__doc"><span class="label">Номер документа</span></span>' + item['ДокументНомер'] + '</div>' +
           '<div class="transit__col fuel-story__date"><span class="label">Дата документа</span></span>' + dateCreatedFormatted + '</div>' +
+          '<div class="transit__col fuel-story__car"><span class="label">Водитель</span></span>' + item['Водитель'] + '<br />'+ item['НомерТелефона'] +'</div>' +
           '<div class="transit__col fuel-story__car"><span class="label">Автомобиль</span></span>' + item['Автомобиль'] + '</div>' +
           '<div class="transit__col fuel-story__place"><span class="label">Место разгрузки</span></span>' + item['МестоРазгрузки'] + '</div>' +
           '<div class="transit__col fuel-story__type"><span class="label">Вид топлива</span></span>' + good['Номенклатура'] + '</div>' +

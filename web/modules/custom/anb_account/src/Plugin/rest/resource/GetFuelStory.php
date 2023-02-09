@@ -106,8 +106,13 @@ class GetFuelStory extends ResourceBase {
       return new ModifiedResourceResponse($dateError, 400);
     }
 
+    //get bazis form value
+    if (isset($_GET['bazis']) && !empty($_GET['bazis']) && $_GET['bazis'] !== 'anb') {
+      $request_url = $api_url . '/buh_anb/hs/exchange_/sale_history?inn=' . $account_identifier . '&token=' . $api_token.'&time_start='.$dateFrom.'&time_end='.$dateTo.'&storage='.$_GET['bazis'];
+    } else {
+      $request_url = $api_url . '/tank_farm_anb/hs/exchange_/sale_history?inn=' . $account_identifier . '&token=' . $api_token.'&time_start='.$dateFrom.'&time_end='.$dateTo;
+    }
     // Send API request.
-    $request_url = $api_url . '/tank_farm_anb/hs/exchange_/sale_history?inn=' . $account_identifier . '&token=' . $api_token.'&time_start='.$dateFrom.'&time_end='.$dateTo;
     $request = $this->httpClient->request('GET', $request_url);
 
     if ($request->getStatusCode() !== 200) {

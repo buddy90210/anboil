@@ -10,43 +10,45 @@ use Drupal\Core\Template\Attribute;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Implements hook_theme().
  */
-function anb_theme($existing, $type, $theme, $path) {
+function anb_theme($existing, $type, $theme, $path)
+{
   return [
     'account_menu_link' => [
       'variables' => [],
-      'path' => $path.'/templates/block'
+      'path' => $path . '/templates/block'
     ],
     'header_actions' => [
       'variables' => [],
-      'path' => $path.'/templates/block'
+      'path' => $path . '/templates/block'
     ],
     'header_contacts' => [
       'variables' => [
         'phone' => NULL,
       ],
-      'path' => $path.'/templates/block'
+      'path' => $path . '/templates/block'
     ],
     'footer_contacts' => [
       'variables' => [
         'contacts' => NULL,
       ],
-      'path' => $path.'/templates/block'
+      'path' => $path . '/templates/block'
     ],
     'footer_copyright' => [
       'variables' => [
         'policy_url' => NULL,
       ],
-      'path' => $path.'/templates/block'
+      'path' => $path . '/templates/block'
     ],
     'social_widgets' => [
       'variables' => [
         'data' => NULL,
       ],
-      'path' => $path.'/templates/block'
+      'path' => $path . '/templates/block'
     ],
   ];
 }
@@ -54,7 +56,8 @@ function anb_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_page_attachments_alter().
  */
-function anb_page_attachments_alter(array &$attachments) {
+function anb_page_attachments_alter(array &$attachments)
+{
   $route = \Drupal::routeMatch();
   $current_route = $route->getRouteName();
   $is_front = \Drupal::service('path.matcher')->isFrontPage();
@@ -131,13 +134,13 @@ function anb_page_attachments_alter(array &$attachments) {
   if (in_array($current_route, $account_routes)) {
     $attachments['#attached']['library'][] = 'anb/account';
   }
-  
 }
 
 /**
  * Implements hook_preprocess_html().
  */
-function anb_preprocess_html(&$variables) {
+function anb_preprocess_html(&$variables)
+{
   if (\Drupal::service('path.matcher')->isFrontPage()) {
     $variables['attributes']['class'][] = 'is-front';
   }
@@ -146,7 +149,8 @@ function anb_preprocess_html(&$variables) {
 /**
  * Implements hook_preprocess_page().
  */
-function anb_preprocess_page(&$variables) {
+function anb_preprocess_page(&$variables)
+{
   $page = &$variables['page'];
 
   // Layout attributes.
@@ -225,7 +229,8 @@ function anb_preprocess_page(&$variables) {
 /**
  * Implements hook_preprocess_block().
  */
-function anb_preprocess_block(&$variables) {
+function anb_preprocess_block(&$variables)
+{
   $block_class = Html::cleanCssIdentifier($variables['elements']['#id']);
   $variables['block_class'] = $block_class;
 
@@ -253,13 +258,13 @@ function anb_preprocess_block(&$variables) {
       }
     }
   }
-
 }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function anb_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+function anb_theme_suggestions_block_alter(array &$suggestions, array $variables)
+{
   if (isset($variables['elements']['content']['#block_content'])) {
     array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
   }
@@ -268,7 +273,8 @@ function anb_theme_suggestions_block_alter(array &$suggestions, array $variables
 /**
  * Implements template_preprocess_field().
  */
-function anb_preprocess_field(&$variables) {
+function anb_preprocess_field(&$variables)
+{
   $field_name = $variables['field_name'];
   $variables['field_name'] = Html::cleanCssIdentifier($field_name);
 
@@ -292,7 +298,8 @@ function anb_preprocess_field(&$variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function anb_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+function anb_theme_suggestions_field_alter(array &$suggestions, array $variables)
+{
   $field_name = $variables['element']['#field_name'];
   $suggestion_name = [
     'field',
@@ -317,7 +324,8 @@ function anb_theme_suggestions_field_alter(array &$suggestions, array $variables
 /**
  * Implements hook_menu_local_tasks_alter().
  */
-function anb_preprocess_menu_local_tasks(&$variables) {
+function anb_preprocess_menu_local_tasks(&$variables)
+{
   if (isset($variables['primary']['entity.node.delete_form'])) {
     $variables['primary']['entity.node.delete_form']['#weight'] = 101;
   }
@@ -326,14 +334,16 @@ function anb_preprocess_menu_local_tasks(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function anb_preprocess_region(&$variables) {
+function anb_preprocess_region(&$variables)
+{
   $variables['region'] = Html::cleanCssIdentifier($variables['region']);
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function anb_preprocess_node(&$variables) {
+function anb_preprocess_node(&$variables)
+{
   $node = $variables['elements']['#node'];
 
   if ($node->id() === '4') {
@@ -345,27 +355,65 @@ function anb_preprocess_node(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function anb_preprocess_fuel_residues(&$variables) {
+function anb_preprocess_fuel_residues(&$variables)
+{
   $variables['#attached']['library'][] = 'anb/fuel-residues';
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function anb_preprocess_fuel_transit(&$variables) {
+function anb_preprocess_fuel_transit(&$variables)
+{
   $variables['#attached']['library'][] = 'anb/fuel-transit';
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function anb_preprocess_fuel_story(&$variables) {
+function anb_preprocess_fuel_story(&$variables)
+{
   $variables['#attached']['library'][] = 'anb/fuel-story';
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function anb_preprocess_payment_history(&$variables) {
+function anb_preprocess_payment_history(&$variables)
+{
   $variables['#attached']['library'][] = 'anb/payment-history';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Login Form
+ */
+function anb_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  $form['name']['#description'] = 'Укажите ваше имя или e-mail на сайте Ангелинская Нефтебаза.';
+  $form['name']['#title'] = 'Имя пользователя или E-mail';
+  $form['#validate'] = ['anb_user_login_form_validate','::validateName', '::validateAuthentication', '::validateFinal', '::validateForm'];
+}
+/**
+ * Custom validate handler for the login form.
+ */
+function anb_user_login_form_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
+  $values = $form_state->cleanValues()->getValues();
+  if (filter_var($values['name'], FILTER_VALIDATE_EMAIL)) {
+    $user = user_load_by_mail($values['name']);
+    if ($user) {
+      $password = $values['pass'];
+      $password_hasher = \Drupal::service('password');
+      $hashed_password = $user->getPassword();
+      $check = $password_hasher->check($password, $hashed_password);
+      if ($check) {
+        $form_state->setValue('name', $user->getAccountName());
+      } else {
+        $form_state->setErrorByName('', 'Проверьте правильность ввода пароля!');
+      }
+    } else {
+      $form_state->setErrorByName('', 'Пользователь с таким e-mail не найден!');
+    }
+  }
 }

@@ -3,6 +3,10 @@
   margin: 20px auto 0;
   border: 1px solid red;
 }
+.fuel-story_select {
+  margin-bottom: 15px;
+  margin-right: 0;
+}
 .fuel-story__result{
   margin-top: 20px;
 }
@@ -80,7 +84,7 @@
 }
 
 .fuel-story__place {
-  width: 28%;
+  width: 16%;
 }
 
 .fuel-story__type {
@@ -117,6 +121,10 @@
   }
   .fuel-story_submit{
     margin-left: 1%;
+  }
+  .fuel-story_select{
+    margin-right: 1%;
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 1160px) {

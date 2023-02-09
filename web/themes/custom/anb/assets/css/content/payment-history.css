@@ -53,12 +53,12 @@
 
 .transit .table-header {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .transit .table-sub-header, .transit .table-sub-header-lighter, .transit .table-body {
     display: grid;
-    grid-template-columns: 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+    grid-template-columns: 1fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
 }
 
 .transit .table-col {

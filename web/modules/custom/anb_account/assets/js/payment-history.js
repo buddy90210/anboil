@@ -131,28 +131,28 @@
                         ${item['Договор']}
                     </div>
                     <div class="table-col">
-                        ${item['ДолгНаНачало'] ? item['ДолгНаНачало'] : ''}
+                        ${item['ДолгНаНачало'] ? item['ДолгНаНачало'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                     <div class="table-col">
-                        ${item['АвансНаНачало'] ? item['АвансНаНачало'] : ''}
+                        ${item['АвансНаНачало'] ? item['АвансНаНачало'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                     <div class="table-col">
-                        ${item['Продано'] ? item['Продано'] : ''}
+                        ${item['Продано'] ? item['Продано'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                     <div class="table-col">
-                        ${item['Оплачено'] ? item['Оплачено'] : ''}
+                        ${item['Оплачено'] ? item['Оплачено'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                     <div class="table-col">
-                        ${item['УвеличениеАванса'] ? item['УвеличениеАванса'] : ''}
+                        ${item['УвеличениеАванса'] ? item['УвеличениеАванса'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                     <div class="table-col">
-                        ${item['ПогашениеАванса'] ? item['ПогашениеАванса'] : ''}
+                        ${item['ПогашениеАванса'] ? item['ПогашениеАванса'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                     <div class="table-col">
-                        ${item['ДолгНаКонец'] ? item['ДолгНаКонец'] : ''}
+                        ${item['ДолгНаКонец'] ? item['ДолгНаКонец'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                     <div class="table-col">
-                        ${item['АвансНаКонец'] ? item['АвансНаКонец'] : ''}
+                        ${item['АвансНаКонец'] ? item['АвансНаКонец'].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                     </div>
                 </div>
             `;
@@ -165,28 +165,28 @@
                     <span class="col-label">${userName} ИНН: ${userINN}</span>
                 </div>
                 <div class="table-col">
-                    ${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало.toFixed(2) : ''}
+                    ${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.АвансНаНачало ? itemSums.АвансНаНачало.toFixed(2) : ''}
+                    ${itemSums.АвансНаНачало ? itemSums.АвансНаНачало.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.Продано ? itemSums.Продано.toFixed(2) : ''}
+                    ${itemSums.Продано ? itemSums.Продано.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.Оплачено ? itemSums.Оплачено.toFixed(2) : ''}
+                    ${itemSums.Оплачено ? itemSums.Оплачено.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса.toFixed(2) : ''}
+                    ${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса.toFixed(2) : ''}
+                    ${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
                 <div class="table-col">
-                    ${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец.toFixed(2) : ''}
+                    ${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
                 <div class="table-col">
-                   ${itemSums.АвансНаКонец ? itemSums.АвансНаКонец.toFixed(2) : ''}
+                   ${itemSums.АвансНаКонец ? itemSums.АвансНаКонец.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}
                 </div>
             </div>
         `;
@@ -199,28 +199,28 @@
                     <span class="col-label"><strong>Итого</strong></span>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало.toFixed(2) : ''}</strong>
+                    <strong>${itemSums.ДолгНаНачало ? itemSums.ДолгНаНачало.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.АвансНаНачало ? itemSums.АвансНаНачало.toFixed(2) : ''}</strong>
+                    <strong>${itemSums.АвансНаНачало ? itemSums.АвансНаНачало.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.Продано ? itemSums.Продано.toFixed(2) : ''}</strong>
+                    <strong>${itemSums.Продано ? itemSums.Продано.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.Оплачено ? itemSums.Оплачено.toFixed(2) : ''}</strong>
+                    <strong>${itemSums.Оплачено ? itemSums.Оплачено.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса.toFixed(2) : ''}</strong>
+                    <strong>${itemSums.УвеличениеАванса ? itemSums.УвеличениеАванса.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса.toFixed(2) : ''}</strong>
+                    <strong>${itemSums.ПогашениеАванса ? itemSums.ПогашениеАванса.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
                 <div class="table-col">
-                    <strong>${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец.toFixed(2) : ''}</strong>
+                    <strong>${itemSums.ДолгНаКонец ? itemSums.ДолгНаКонец.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
                 <div class="table-col">
-                   <strong>${itemSums.АвансНаКонец ? itemSums.АвансНаКонец.toFixed(2) : ''}</strong>
+                   <strong>${itemSums.АвансНаКонец ? itemSums.АвансНаКонец.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : ''}</strong>
                 </div>
             </div>
         `;
