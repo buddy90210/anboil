@@ -1,9 +1,9 @@
-uuid: 23660175-319b-4b25-b420-b561dca13f14
+uuid: d42b1dba-4fe9-4fa1-886a-e32f5d997664
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:basic:c1a439a4-4ce3-4375-85f0-d3955caff803'
+    - 'block_content:basic:7525bb03-213b-47bf-8186-36897099612f'
   module:
     - anb_base
     - block_content
@@ -18,9 +18,9 @@ theme: anb
 region: header_bottom
 weight: 0
 provider: null
-plugin: 'block_content:c1a439a4-4ce3-4375-85f0-d3955caff803'
+plugin: 'block_content:7525bb03-213b-47bf-8186-36897099612f'
 settings:
-  id: 'block_content:c1a439a4-4ce3-4375-85f0-d3955caff803'
+  id: 'block_content:7525bb03-213b-47bf-8186-36897099612f'
   label: 'Меню пользователя'
   provider: block_content
   label_display: '0'
